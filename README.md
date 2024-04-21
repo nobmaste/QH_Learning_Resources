@@ -6,6 +6,9 @@
 
 - [目录：](目录)
   - [Docs](#docs)
+    - [Main_Docs](Docs/Main_Docs.md)
+    - [HowToUseGithub](Docs/HowToUseGithub.md)
+    - [Upload_Specification](Docs/Upload_Specification.md)
   - [Competition](#competition)
   - [Module](#module)
   - [Skill\_Developing](#skill_developing)
