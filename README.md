@@ -10,8 +10,14 @@
     - [HowToUseGithub](Docs/HowToUseGithub.md)
     - [Upload_Specification](Docs/Upload_Specification.md)
   - [Competition](#competition)
+    - [China_College_IC_Competition(集创赛)](Competition/China_College-IC_Competition) 
+    - [LanQiaoBei(蓝桥杯)](Competition/LanQiaoBei)
+    - [National_Undergraduate_Electronics_Design_Contest(电赛)](Competition/National_Undergraduate_Electronics_Design_Contest)
+      - [reference_docs(电赛相关文档)](Competition/National_Undergraduate_Electronics_Design_Contest/reference_docs/) 
   - [Module](#module)
   - [Skill\_Developing](#skill_developing)
+    - [FPGA](Skill_Developing/FPGA)
+      - [E-BOOK](Skill_Developing/FPGA/E-BOOK/) 
 
 ## Docs
 
