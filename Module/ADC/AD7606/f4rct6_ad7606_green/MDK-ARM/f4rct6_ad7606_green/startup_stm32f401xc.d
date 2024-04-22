@@ -1,0 +1,1 @@
+f4rct6_ad7606_green\startup_stm32f401xc.o: startup_stm32f401xc.s
