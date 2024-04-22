@@ -1,0 +1,2369 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0046)https://www.amobbs.com/thread-4954127-1-1.html -->
+<html xmlns="http://www.w3.org/1999/xhtml" class=" widthauto"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <title>2级AD603_AGC仿真实例(multisim 10.1)  (amoBBS 阿莫电子论坛) </title>
+<link href="https://www.amobbs.com/thread-4954127-1-1.html" rel="canonical">
+<meta name="keywords" content="2级AD603_AGC仿真实例(multisim 10.1)amoBBS 阿莫电子论坛电路仿真电子技术">
+<meta name="description" content="2级AD603_AGC仿真实例(multisim 10.1)amoBBS 阿莫电子论坛电路仿真电子技术 ">
+<meta name="MSSmartTagsPreventParsing" content="True">
+<meta http-equiv="MSThemeCompatible" content="Yes">
+<!--<base href="https://www.amobbs.com/">--><base href="."><link rel="stylesheet" type="text/css" href="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/style_1_common.css"><link rel="stylesheet" type="text/css" href="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/style_1_forum_viewthread.css"><script type="text/javascript">var STYLEID = '1', STATICURL = 'static/', IMGDIR = 'static/image/common', VERHASH = 'YhY', charset = 'utf-8', discuz_uid = '37896', cookiepre = 'K1VB_e732_', cookiedomain = 'www.amobbs.com', cookiepath = '/', showusercard = '0', attackevasive = '0', disallowfloat = 'newthread|reply', creditnotice = '1|威望|,2|莫元|,3|飞币|', defaultstyle = '', REPORTURL = 'aHR0cDovL3d3dy5hbW9iYnMuY29tL3RocmVhZC00OTU0MTI3LTEtMS5odG1s', SITEURL = 'https://www.amobbs.com/', JSPATH = 'data/cache/', CSSPATH = 'data/cache/style_', DYNAMICURL = '';</script>
+<script src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/common.js" type="text/javascript"></script>
+<meta name="application-name" content="amoBBS 阿莫电子论坛">
+<meta name="msapplication-tooltip" content="amoBBS 阿莫电子论坛">
+<meta name="msapplication-task" content="name=论坛首页;action-uri=https://www.amobbs.com/forum.php;icon-uri=https://www.amobbs.com/static/image/common/bbs.ico">
+<link rel="archives" title="amoBBS 阿莫电子论坛" href="https://www.amobbs.com/archiver/">
+<link rel="stylesheet" id="css_widthauto" type="text/css" href="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/style_1_widthauto.css">
+<script type="text/javascript">HTMLNODE.className += ' widthauto'</script>
+<script src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/forum.js" type="text/javascript"></script>
+<script type="text/javascript" id="YWPWYYWYDaYOIEHEaOXFOOuDuQJZabEJ" charset="UTF-8" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/smilies.js"></script><script type="text/javascript" id="ZXljeZWYDaYYKIIKJUanPNWXFOOuDuQJ" charset="UTF-8" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/common_extra.js"></script></head>
+
+<body id="nv_forum" class="pg_viewthread" onkeydown="if(event.keyCode==27) return false;">
+<div id="append_parent"><div id="fastpostsml_menu" class="sllt" style="display: none;"><div id="fastpostsmiliesdiv" style="overflow: hidden;"><div id="fastpostsmiliesdiv_tb" class="tb tb_s cl" style="width: 288px;"><ul><li class="current" id="fastpoststype_1" onclick="smilies_switch(&#39;fastpostsmiliesdiv&#39;, &#39;8&#39;, 1, 1, &#39;fastpost&#39;);if(CURRENTSTYPE) {$(&#39;fastpoststype_&#39;+CURRENTSTYPE).className=&#39;&#39;;}this.className=&#39;current&#39;;CURRENTSTYPE=1;doane(event);"><a href="javascript:;" hidefocus="true">默认</a></li><li id="fastpoststype_2" onclick="smilies_switch(&#39;fastpostsmiliesdiv&#39;, &#39;8&#39;, 2, 1, &#39;fastpost&#39;);if(CURRENTSTYPE) {$(&#39;fastpoststype_&#39;+CURRENTSTYPE).className=&#39;&#39;;}this.className=&#39;current&#39;;CURRENTSTYPE=2;doane(event);"><a href="javascript:;" hidefocus="true">酷猴</a></li><li id="fastpoststype_3" onclick="smilies_switch(&#39;fastpostsmiliesdiv&#39;, &#39;8&#39;, 3, 1, &#39;fastpost&#39;);if(CURRENTSTYPE) {$(&#39;fastpoststype_&#39;+CURRENTSTYPE).className=&#39;&#39;;}this.className=&#39;current&#39;;CURRENTSTYPE=3;doane(event);"><a href="javascript:;" hidefocus="true">呆呆男</a></li></ul></div><div id="fastpostsmiliesdiv_data"><table id="fastpostsmiliesdiv_table" cellpadding="0" cellspacing="0"><tbody><tr><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastpostsmiliesdiv&#39;, this, 20)" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:smile:}&#39;)" id="fastpostsmilie_1_td"><img id="smilie_1" width="20" height="20" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/smile.gif" alt="{:smile:}"></td><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastpostsmiliesdiv&#39;, this, 20)" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:sad:}&#39;)" id="fastpostsmilie_2_td"><img id="smilie_2" width="20" height="20" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/sad.gif" alt="{:sad:}"></td><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastpostsmiliesdiv&#39;, this, 20)" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:biggrin:}&#39;)" id="fastpostsmilie_3_td"><img id="smilie_3" width="20" height="20" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/biggrin.gif" alt="{:biggrin:}"></td><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastpostsmiliesdiv&#39;, this, 20)" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:cry:}&#39;)" id="fastpostsmilie_4_td"><img id="smilie_4" width="20" height="20" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/cry.gif" alt="{:cry:}"></td><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastpostsmiliesdiv&#39;, this, 20)" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:huffy:}&#39;)" id="fastpostsmilie_5_td"><img id="smilie_5" width="20" height="20" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/huffy.gif" alt="{:huffy:}"></td><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastpostsmiliesdiv&#39;, this, 20)" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:shocked:}&#39;)" id="fastpostsmilie_6_td"><img id="smilie_6" width="20" height="20" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/shocked.gif" alt="{:shocked:}"></td><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastpostsmiliesdiv&#39;, this, 20)" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:tongue:}&#39;)" id="fastpostsmilie_7_td"><img id="smilie_7" width="20" height="20" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/tongue.gif" alt="{:tongue:}"></td><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastpostsmiliesdiv&#39;, this, 20)" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:shy:}&#39;)" id="fastpostsmilie_8_td"><img id="smilie_8" width="20" height="20" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/shy.gif" alt="{:shy:}"></td></tr><tr><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastpostsmiliesdiv&#39;, this, 20)" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:titter:}&#39;)" id="fastpostsmilie_9_td"><img id="smilie_9" width="20" height="20" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/titter.gif" alt="{:titter:}"></td><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastpostsmiliesdiv&#39;, this, 20)" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:sweat:}&#39;)" id="fastpostsmilie_10_td"><img id="smilie_10" width="20" height="20" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/sweat.gif" alt="{:sweat:}"></td><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastpostsmiliesdiv&#39;, this, 20)" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:mad:}&#39;)" id="fastpostsmilie_11_td"><img id="smilie_11" width="20" height="20" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/mad.gif" alt="{:mad:}"></td><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastpostsmiliesdiv&#39;, this, 20)" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:lol:}&#39;)" id="fastpostsmilie_12_td"><img id="smilie_12" width="20" height="20" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/lol.gif" alt="{:lol:}"></td><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastpostsmiliesdiv&#39;, this, 20)" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:loveliness:}&#39;)" id="fastpostsmilie_13_td"><img id="smilie_13" width="20" height="20" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/loveliness.gif" alt="{:loveliness:}"></td><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastpostsmiliesdiv&#39;, this, 20)" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:funk:}&#39;)" id="fastpostsmilie_14_td"><img id="smilie_14" width="20" height="20" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/funk.gif" alt="{:funk:}"></td><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastpostsmiliesdiv&#39;, this, 20)" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:curse:}&#39;)" id="fastpostsmilie_15_td"><img id="smilie_15" width="20" height="20" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/curse.gif" alt="{:curse:}"></td><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastpostsmiliesdiv&#39;, this, 20)" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:dizzy:}&#39;)" id="fastpostsmilie_16_td"><img id="smilie_16" width="20" height="20" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/dizzy.gif" alt="{:dizzy:}"></td></tr><tr><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastpostsmiliesdiv&#39;, this, 20)" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:shutup:}&#39;)" id="fastpostsmilie_17_td"><img id="smilie_17" width="20" height="20" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/shutup.gif" alt="{:shutup:}"></td><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastpostsmiliesdiv&#39;, this, 20)" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:sleepy:}&#39;)" id="fastpostsmilie_18_td"><img id="smilie_18" width="20" height="20" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/sleepy.gif" alt="{:sleepy:}"></td><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastpostsmiliesdiv&#39;, this, 20)" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:hug:}&#39;)" id="fastpostsmilie_19_td"><img id="smilie_19" width="20" height="20" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/hug.gif" alt="{:hug:}"></td><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastpostsmiliesdiv&#39;, this, 20)" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:victory:}&#39;)" id="fastpostsmilie_20_td"><img id="smilie_20" width="20" height="20" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/victory.gif" alt="{:victory:}"></td><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastpostsmiliesdiv&#39;, this, 20)" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:time:}&#39;)" id="fastpostsmilie_21_td"><img id="smilie_21" width="20" height="20" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/time.gif" alt="{:time:}"></td><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastpostsmiliesdiv&#39;, this, 20)" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:kiss:}&#39;)" id="fastpostsmilie_22_td"><img id="smilie_22" width="20" height="20" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/kiss.gif" alt="{:kiss:}"></td><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastpostsmiliesdiv&#39;, this, 20)" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:handshake:}&#39;)" id="fastpostsmilie_23_td"><img id="smilie_23" width="20" height="20" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/handshake.gif" alt="{:handshake:}"></td><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastpostsmiliesdiv&#39;, this, 20)" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:call:}&#39;)" id="fastpostsmilie_24_td"><img id="smilie_24" width="20" height="20" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/call.gif" alt="{:call:}"></td></tr></tbody></table></div><div class="sllt_p" id="fastpostsmiliesdiv_page"></div></div></div><script type="text/javascript" charset="utf-8" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/common_smilies_var.js"></script></div><div id="ajaxwaitid"></div>
+<div id="toptb" class="cl">
+<div class="wp">
+<div class="z"></div>
+<div class="y">
+<a id="switchblind" href="javascript:;" onclick="toggleBlind(this)" title="开启辅助访问" class="switchblind">开启辅助访问</a>
+</div>
+</div>
+</div>
+
+<ul id="myprompt_menu" class="p_pop" style="display: none;">
+<li><a href="https://www.amobbs.com/home.php?mod=space&amp;do=pm" id="pm_ntc" style="background-repeat: no-repeat; background-position: 0 50%;"><em class="prompt_news_0"></em>消息</a></li>
+<li><a href="https://www.amobbs.com/home.php?mod=follow&amp;do=follower"><em class="prompt_follower_0"></em>新听众</a></li>
+<li class="ignore_noticeli"><a href="javascript:;" onclick="setcookie(&#39;ignore_notice&#39;, 1);hideMenu(&#39;myprompt_menu&#39;)" title="暂不提醒"><em class="ignore_notice"></em></a></li>
+</ul>
+<ul id="myitem_menu" class="p_pop" style="display: none;">
+<li><a href="https://www.amobbs.com/forum.php?mod=guide&amp;view=my">帖子</a></li>
+<li><a href="https://www.amobbs.com/home.php?mod=space&amp;do=favorite&amp;view=me">收藏</a></li>
+<li><a href="https://www.amobbs.com/home.php?mod=space&amp;do=friend">好友</a></li>
+</ul>
+<div id="qmenu_menu" class="p_pop " style="display: none;">
+<ul class="cl nav"><li><a href="https://www.amobbs.com/home.php?mod=space&amp;do=favorite&amp;view=me" style="background-image:url(https://www.amobbs.com/static/image/feed/favorite_b.png) !important">收藏</a></li>
+<li><a href="https://www.amobbs.com/forum.php?mod=guide&amp;view=my" style="background-image:url(https://www.amobbs.com/static/image/feed/thread_b.png) !important">帖子</a></li>
+<li><a href="https://www.amobbs.com/home.php?mod=space&amp;do=friend" style="background-image:url(https://www.amobbs.com/static/image/feed/friend_b.png) !important">好友</a></li>
+<li><a href="https://www.amobbs.com/forum.php?mod=guide" style="background-image:url(https://www.amobbs.com/static/image/feed/guide_b.png) !important">导读</a></li>
+</ul>
+<div id="fjump_menu" class="btda"></div></div><div id="hd">
+<div class="wp">
+<div class="hdc cl"><h2><a href="http://www.amobbs.com/" title="amoBBS 阿莫电子论坛"><img src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/logo.png" alt="amoBBS 阿莫电子论坛" border="0"></a></h2><div id="um">
+<div class="avt y"><a href="https://www.amobbs.com/space-uid-37896.html"><img src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/96_avatar_small.jpg" onerror="this.onerror=null;this.src=&#39;https://passport.amobbs.com/uc_server/images/noavatar_small.gif&#39;"></a></div>
+<p>
+<strong class="vwmy"><a href="https://www.amobbs.com/space-uid-37896.html" target="_blank" title="访问我的空间">whuer</a></strong>
+<span class="pipe">|</span><a href="javascript:;" id="myitem" class="showmenu" onmouseover="showMenu({&#39;ctrlid&#39;:&#39;myitem&#39;});">我的</a>
+<span class="pipe">|</span><a href="https://www.amobbs.com/home.php?mod=spacecp">设置</a>
+<span class="pipe">|</span><a href="https://www.amobbs.com/home.php?mod=space&amp;do=pm" id="pm_ntc">消息</a>
+<span class="pipe">|</span><a href="https://www.amobbs.com/home.php?mod=space&amp;do=notice" id="myprompt" class="a showmenu" onmouseover="showMenu({&#39;ctrlid&#39;:&#39;myprompt&#39;});">提醒</a><span id="myprompt_check"></span>
+<span class="pipe">|</span><a href="https://www.amobbs.com/member.php?mod=logging&amp;action=logout&amp;formhash=78fb776c">退出</a>
+</p>
+<p>
+<a href="https://www.amobbs.com/home.php?mod=spacecp&amp;ac=credit&amp;showcredit=1" id="extcreditmenu" onmouseover="delayShow(this, showCreditmenu);" class="showmenu">积分: 1169</a>
+<span class="pipe">|</span><a href="https://www.amobbs.com/home.php?mod=spacecp&amp;ac=usergroup" id="g_upmine" class="showmenu" onmouseover="delayShow(this, showUpgradeinfo)">用户组: 高级会员</a>
+</p>
+</div>
+</div>
+
+<div id="nv" style="top: 0px; left: 15.4375px; z-index: 199;">
+<a href="javascript:;" id="qmenu" onmouseover="delayShow(this, function () {showMenu({&#39;ctrlid&#39;:&#39;qmenu&#39;,&#39;pos&#39;:&#39;34!&#39;,&#39;ctrlclass&#39;:&#39;a&#39;,&#39;duration&#39;:2});showForummenu(1037);})">快捷导航</a>
+<ul><li id="mn_N9ec7"><a href="https://www.amobbs.com/forum.php" hidefocus="true" title="迟些门户开放时，指向门户首页">首页<span>迟些门户开放时，指向门户首页</span></a></li><li id="mn_N402e"><a href="https://www.amobbs.com/forum-9949-1.html" hidefocus="true">全部汇总</a></li><li id="mn_Nedf1"><a href="https://www.amobbs.com/forum-9889-1.html" hidefocus="true" title="所有技术性的帖子汇总，方便阅读">纯技术汇总<span>所有技术性的帖子汇总，方便阅读</span></a></li><li id="mn_Nd7c6"><a href="http://www.amobbs.com/forum.php?mod=forumdisplay&amp;fid=9949&amp;filter=digest&amp;digest=1" hidefocus="true" target="_blank">精华汇总</a></li><li id="mn_Nf6b9"><a href="http://www.mailshop.cn/product_list.jsp?kind=normal&amp;class_id=3704&amp;super_id=1682&amp;view_kind=picture_list" hidefocus="true" title="本论坛由阿莫电子邮购独家赞助" target="_blank">【阿莫二手Thinkpad】<span>本论坛由阿莫电子邮购独家赞助</span></a></li></ul>
+</div>
+<div id="mu" class="cl">
+</div><div id="scbar" class="cl">
+<form id="scbar_form" method="post" autocomplete="off" onsubmit="searchFocus($(&#39;scbar_txt&#39;))" action="https://www.amobbs.com/search.php?searchsubmit=yes" target="_blank">
+<input type="hidden" name="mod" id="scbar_mod" value="forum">
+<input type="hidden" name="formhash" value="78fb776c">
+<input type="hidden" name="srchtype" value="title">
+<input type="hidden" name="srhfid" value="1037">
+<input type="hidden" name="srhlocality" value="forum::viewthread">
+<table cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td class="scbar_icon_td"></td>
+<td class="scbar_txt_td"><input type="text" name="srchtxt" id="scbar_txt" value="请输入搜索内容" autocomplete="off" x-webkit-speech="" speech="" class=" xg1" placeholder="请输入搜索内容"></td>
+<td class="scbar_type_td"><a href="javascript:;" id="scbar_type" class="xg1" onclick="showMenu(this.id)" hidefocus="true">帖子</a></td>
+<td class="scbar_btn_td"><button type="submit" name="searchsubmit" id="scbar_btn" sc="1" class="pn pnc" value="true"><strong class="xi2">搜索</strong></button></td>
+<td class="scbar_hot_td">
+<div id="scbar_hot">
+</div>
+</td>
+</tr>
+</tbody></table>
+</form>
+</div>
+<ul id="scbar_type_menu" class="p_pop" style="display: none;"><li><a href="javascript:;" rel="curforum" fid="1037">本版</a></li><li><a href="javascript:;" rel="forum" class="curtype">帖子</a></li><li><a href="javascript:;" rel="user">用户</a></li></ul>
+<script type="text/javascript">
+initSearchmenu('scbar', '');
+</script>
+</div>
+</div>
+
+
+<div id="wp" class="wp">
+<script type="text/javascript">var fid = parseInt('1037'), tid = parseInt('4954127');</script>
+
+<script src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/forum_viewthread.js" type="text/javascript"></script>
+<script type="text/javascript">zoomstatus = parseInt(0);var imagemaxwidth = '1300';var aimgcount = new Array();</script>
+
+<style id="diy_style" type="text/css"></style>
+<!--[diy=diynavtop]--><div id="diynavtop" class="area"></div><!--[/diy]-->
+<div id="pt" class="bm cl">
+<div class="z">
+<a href="https://www.amobbs.com/" class="nvhm" title="首页">amoBBS 阿莫电子论坛</a><em>»</em><a href="https://www.amobbs.com/forum.php">论坛首页</a> <em>›</em> <a href="https://www.amobbs.com/forum.php?gid=12">电子技术</a> <em>›</em> <a href="https://www.amobbs.com/forum-1037-1.html">电路仿真</a> <em>›</em> <a href="https://www.amobbs.com/thread-4954127-1-1.html">2级AD603_AGC仿真实例(multisim 10.1)</a>
+</div>
+<div style="display:inline-block;float:right">
+
+                <a href="javascript:window.scrollTo(0,document.body.scrollHeight)">bottom↓</a>
+
+        </div>
+</div>
+
+<style id="diy_style" type="text/css"></style>
+<div class="wp">
+<!--[diy=diy1]--><div id="diy1" class="area"></div><!--[/diy]-->
+</div>
+
+<div id="ct" class="wp cl">
+<div id="pgt" class="pgs mbm cl ">
+<div class="pgt"></div>
+<span class="y pgb" id="visitedforums" onmouseover="$(&#39;visitedforums&#39;).id = &#39;visitedforumstmp&#39;;this.id = &#39;visitedforums&#39;;showMenu({&#39;ctrlid&#39;:this.id,&#39;pos&#39;:&#39;34&#39;})"><a href="https://www.amobbs.com/forum-1037-1.html">返回列表</a></span>
+<a id="newspecial" onmouseover="$(&#39;newspecial&#39;).id = &#39;newspecialtmp&#39;;this.id = &#39;newspecial&#39;;showMenu({&#39;ctrlid&#39;:this.id})" onclick="showWindow(&#39;newthread&#39;, &#39;forum.php?mod=post&amp;action=newthread&amp;fid=1037&#39;)" href="javascript:;" title="发新帖"><img src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/pn_post.png" alt="发新帖"></a><a id="post_reply" onclick="showWindow(&#39;reply&#39;, &#39;forum.php?mod=post&amp;action=reply&amp;fid=1037&amp;tid=4954127&#39;)" href="javascript:;" title="回复"><img src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/pn_reply.png" alt="回复"></a>
+</div>
+
+<ul class="p_pop" id="newspecial_menu" style="display: none">
+<li><a href="https://www.amobbs.com/forum.php?mod=post&amp;action=newthread&amp;fid=1037">发表帖子</a></li><li class="reward"><a href="https://www.amobbs.com/forum.php?mod=post&amp;action=newthread&amp;fid=1037&amp;special=3">发布悬赏</a></li></ul>
+
+
+<div id="postlist" class="pl bm">
+<table cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td class="pls ptn pbn">
+<div class="hm ptn">
+<span class="xg1">查看:</span> <span class="xi1">3958</span><span class="pipe">|</span><span class="xg1">回复:</span> <span class="xi1">20</span>
+</div>
+</td>
+<td class="plc ptm pbn vwthd">
+<div class="y">
+<a href="https://www.amobbs.com/forum.php?mod=viewthread&amp;action=printable&amp;tid=4954127" title="打印" target="_blank"><img src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/print.png" alt="打印" class="vm"></a>
+<a href="https://www.amobbs.com/forum.php?mod=redirect&amp;goto=nextoldset&amp;tid=4954127" title="上一主题"><img src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/thread-prev.png" alt="上一主题" class="vm"></a>
+<a href="https://www.amobbs.com/forum.php?mod=redirect&amp;goto=nextnewset&amp;tid=4954127" title="下一主题"><img src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/thread-next.png" alt="下一主题" class="vm"></a>
+</div>
+<h1 class="ts">
+<span id="thread_subject">2级AD603_AGC仿真实例(multisim 10.1)</span>
+</h1>
+<span class="xg1">
+<a href="https://www.amobbs.com/thread-4954127-1-1.html" onclick="return copyThreadUrl(this, &#39;amoBBS 阿莫电子论坛&#39;)">[复制链接]</a>
+</span>
+</td>
+</tr>
+</tbody></table>
+
+
+<table cellspacing="0" cellpadding="0" class="ad">
+<tbody><tr>
+<td class="pls">
+</td>
+<td class="plc">
+</td>
+</tr>
+</tbody></table>                    <div id="post_5641390">
+            <table id="pid5641390" class="plhin" summary="pid5641390" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td class="pls" rowspan="2">
+<div id="favatar5641390" class="pls favatar">
+ <div class="pi">
+<div class="authi"><a href="https://www.amobbs.com/space-uid-53129.html" target="_blank" class="xw1">eezm</a>
+</div>
+</div>
+<div class="p_pop blk bui card_gender_0" id="userinfo5641390" style="display: none; margin-top: -11px;">
+<div class="m z">
+<div id="userinfo5641390_ma"></div>
+</div>
+<div class="i y">
+<div>
+<strong><a href="https://www.amobbs.com/space-uid-53129.html" target="_blank" class="xi2">eezm</a></strong>
+<em>当前离线</em>
+</div><dl class="cl">
+<dt>积分</dt><dd><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=53129&amp;do=profile" target="_blank" class="xi2">1173</a></dd>
+</dl><div class="imicn">
+<a href="https://www.amobbs.com/home.php?mod=space&amp;uid=53129&amp;do=profile" target="_blank" title="查看详细资料"><img src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/userinfo.gif" alt="查看详细资料"></a>
+</div>
+<div id="avatarfeed"><span id="threadsortswait"></span></div>
+</div>
+</div>
+<div>
+<div class="avatar" onmouseover="showauthor(this, &#39;userinfo5641390&#39;)"><a href="https://www.amobbs.com/space-uid-53129.html" class="avtm" target="_blank"><img src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/29_avatar_middle.jpg" onerror="this.onerror=null;this.src=&#39;https://passport.amobbs.com/uc_server/images/noavatar_middle.gif&#39;"></a></div>
+</div>
+<div class="tns xg2"><table cellspacing="0" cellpadding="0"><tbody><tr><th><p><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=53129&amp;do=profile" class="xi2">1173</a></p>积分</th><th><p><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=53129&amp;do=profile" class="xi2">1171</a></p>莫元</th><td><p><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=53129&amp;do=profile" class="xi2">0</a></p>飞币</td></tr></tbody></table></div>
+
+<p><em><a href="https://www.amobbs.com/home.php?mod=spacecp&amp;ac=usergroup&amp;gid=14" target="_blank">金牌会员</a></em></p><ul class="xl xl2 o cl">
+<li class="pm2"><a href="https://www.amobbs.com/home.php?mod=spacecp&amp;ac=pm&amp;op=showmsg&amp;handlekey=showmsg_53129&amp;touid=53129&amp;pmid=0&amp;daterange=2&amp;pid=5641390&amp;tid=4954127" onclick="showWindow(&#39;sendpm&#39;, this.href);" title="发消息" class="xi2">发消息</a></li>
+</ul>
+</div>
+</td>
+<td class="plc">
+<div class="pi">
+<div id="fj" class="y">
+<label class="z">电梯直达</label>
+<input type="text" class="px p_fre z" size="2" onkeyup="$(&#39;fj_btn&#39;).href=&#39;forum.php?mod=redirect&amp;ptid=4954127&amp;authorid=0&amp;postno=&#39;+this.value" onkeydown="if(event.keyCode==13) {window.location=$(&#39;fj_btn&#39;).href;return false;}" title="跳转到指定楼层">
+<a href="javascript:;" id="fj_btn" class="z" title="跳转到指定楼层"><img src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/fj_btn.png" alt="跳转到指定楼层" class="vm"></a>
+</div>
+<strong>
+<a href="https://www.amobbs.com/thread-4954127-1-1.html" id="postnum5641390" onclick="setCopy(this.href, &#39;帖子地址复制成功&#39;);return false;">
+<em>1</em>楼</a>
+</strong>
+<div class="pti">
+<div class="pdbt">
+</div>
+<div class="authi">
+<img class="authicn vm" id="authicon5641390" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/online_member.gif">
+<em id="authorposton5641390">发表于 2011-8-11 05:40:42</em>
+<span class="pipe">|</span>
+<a href="https://www.amobbs.com/forum.php?mod=viewthread&amp;tid=4954127&amp;page=1&amp;authorid=53129" rel="nofollow">只看该作者</a>
+<span class="none"><img src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/arw_r.gif" class="vm" alt="回帖奖励"></span>
+<span class="pipe show">|</span><a href="https://www.amobbs.com/forum.php?mod=viewthread&amp;tid=4954127&amp;extra=page%3D1&amp;ordertype=1" class="show">倒序浏览</a>
+<span class="pipe show">|</span><a href="javascript:;" onclick="readmode($(&#39;thread_subject&#39;).innerHTML, 5641390);" class="show">阅读模式</a>
+</div>
+</div>
+</div><div class="pct"><style type="text/css">.pcb{margin-right:0}</style><div class="pcb">
+ 
+<div class="t_fsz">
+<table cellspacing="0" cellpadding="0"><tbody><tr><td class="t_f" id="postmessage_5641390">
+许多网友仿真两级AD603 AGC感到困难，现发一仿真实例供大家参考。<br>
+<br>
+<img id="aimg_F9gZZ" onclick="zoom(this, this.src, 0, 0, 0)" class="zoom" file="http://cache.amobbs.com/bbs_upload782111/files_44/ourdev_666381RV7CGY.png" onmouseover="img_onmouseoverfunc(this)" lazyloadthumb="1" border="0" alt="" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/ourdev_666381RV7CGY.png" lazyloaded="true" width="1235" height="897"><br>
+ <font color="green">(原文件名:AD603_AGC0.png)</font> <br>
+<br>
+<img id="aimg_MPQ55" onclick="zoom(this, this.src, 0, 0, 0)" class="zoom" file="http://cache.amobbs.com/bbs_upload782111/files_44/ourdev_666382BRQ5XI.png" onmouseover="img_onmouseoverfunc(this)" lazyloadthumb="1" border="0" alt="" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/ourdev_666382BRQ5XI.png" lazyloaded="true" width="1270" height="972"><br>
+ <font color="green">(原文件名:AD603_AGC1.png)</font> <br>
+<br>
+点击此处下载 <a href="http://cache.amobbs.com/bbs_upload782111/files_44/ourdev_666383ANHQ56.rar" target="_blank">ourdev_666383ANHQ56.rar(文件大小:813K)</a> <font color="green">(原文件名:2_AD603_AGC.rar)</font></td></tr></tbody></table>
+
+<form method="post" autocomplete="off" id="vfastpostform" action="https://www.amobbs.com/forum.php?mod=post&amp;action=reply&amp;fid=1037&amp;tid=4954127&amp;fromvf=1&amp;extra=page=1&amp;replysubmit=yes&amp;infloat=yes&amp;handlekey=vfastpost" onsubmit="this.message.value = parseurl(this.message.value);ajaxpost(&#39;vfastpostform&#39;, &#39;return_reply&#39;, &#39;return_reply&#39;, &#39;onerror&#39;);return false;">
+<div id="vfastpost" class="fullvfastpost">				
+<input type="hidden" name="formhash" value="78fb776c">
+<table cellspacing="0" cellpadding="0" id="vfastposttb">
+<tbody><tr>
+<td id="vf_l"></td>
+<td id="vf_m"><input type="text" name="message" id="vmessage" onkeydown="seditor_ctlent(event, &#39;$(\&#39;vfastpostform\&#39;).submit()&#39;);" style="color: rgb(205, 205, 205);"></td>
+<td id="vf_r"></td>						
+<td id="vf_b">
+<button type="submit" class="pn pnc" name="replysubmit" id="vreplysubmit" value="true" style="">post_newreply</button>								
+</td>						
+</tr>
+</tbody></table>				
+</div>
+<div id="vfastpostseccheck"></div>				
+</form>
+<script type="text/javascript">vmessage();</script>
+
+</div>
+<div id="comment_5641390" class="cm">
+</div>
+
+<div id="post_rate_div_5641390"></div>
+</div>
+</div>
+
+</td></tr>
+<tr><td class="plc plm">
+<div id="p_btn" class="mtw mbm hm cl">
+
+<a href="https://www.amobbs.com/home.php?mod=spacecp&amp;ac=favorite&amp;type=thread&amp;id=4954127&amp;formhash=78fb776c" id="k_favorite" onclick="showWindow(this.id, this.href, &#39;get&#39;, 0);" onmouseover="this.title = $(&#39;favoritenumber&#39;).innerHTML + &#39; 人收藏&#39;" title="收藏本帖"><i><img src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/fav.gif" alt="收藏">收藏<span id="favoritenumber">3</span></i></a>
+</div>
+</td>
+</tr>
+<tr id="_postposition5641390"></tr>
+<tr>
+<td class="pls"></td>
+<td class="plc" style="overflow:visible;">
+<div class="po hin">
+<div class="pob cl">
+<em>
+<a class="fastre" href="https://www.amobbs.com/forum.php?mod=post&amp;action=reply&amp;fid=1037&amp;tid=4954127&amp;reppost=5641390&amp;extra=page%3D1&amp;page=1" onclick="showWindow(&#39;reply&#39;, this.href)">回复</a>
+</em>
+
+<p>
+<a href="javascript:;" onclick="showWindow(&#39;miscreport5641390&#39;, &#39;misc.php?mod=report&amp;rtype=post&amp;rid=5641390&amp;tid=4954127&amp;fid=1037&#39;, &#39;get&#39;, -1);return false;">举报</a>
+</p>
+
+</div>
+</div>
+</td>
+</tr>
+<tr class="ad">
+<td class="pls">
+</td>
+<td class="plc">
+</td>
+</tr>
+</tbody></table>
+<script type="text/javascript" reload="1">
+aimgcount[5641390] = ['F9gZZ','MPQ55'];
+attachimggroup(5641390);
+var aimgfid = 0;
+</script>
+            </div>
+                            <div id="post_4954244">
+            <table id="pid4954244" class="plhin" summary="pid4954244" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td class="pls" rowspan="2">
+<div id="favatar4954244" class="pls favatar">
+ <div class="pi">
+<div class="authi"><a href="https://www.amobbs.com/space-uid-187654.html" target="_blank" class="xw1">fuwa</a>
+</div>
+</div>
+<div class="p_pop blk bui card_gender_0" id="userinfo4954244" style="display: none; margin-top: -11px;">
+<div class="m z">
+<div id="userinfo4954244_ma"></div>
+</div>
+<div class="i y">
+<div>
+<strong><a href="https://www.amobbs.com/space-uid-187654.html" target="_blank" class="xi2">fuwa</a></strong>
+<em>当前离线</em>
+</div><dl class="cl">
+<dt>积分</dt><dd><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=187654&amp;do=profile" target="_blank" class="xi2">66</a></dd>
+</dl><div class="imicn">
+<a href="https://www.amobbs.com/home.php?mod=space&amp;uid=187654&amp;do=profile" target="_blank" title="查看详细资料"><img src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/userinfo.gif" alt="查看详细资料"></a>
+</div>
+<div id="avatarfeed"><span id="threadsortswait"></span></div>
+</div>
+</div>
+<div>
+<div class="avatar" onmouseover="showauthor(this, &#39;userinfo4954244&#39;)"><a href="https://www.amobbs.com/space-uid-187654.html" class="avtm" target="_blank"><img src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/noavatar_middle.gif" onerror="this.onerror=null;this.src=&#39;https://passport.amobbs.com/uc_server/images/noavatar_middle.gif&#39;"></a></div>
+</div>
+<div class="tns xg2"><table cellspacing="0" cellpadding="0"><tbody><tr><th><p><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=187654&amp;do=profile" class="xi2">66</a></p>积分</th><th><p><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=187654&amp;do=profile" class="xi2">66</a></p>莫元</th><td><p><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=187654&amp;do=profile" class="xi2">0</a></p>飞币</td></tr></tbody></table></div>
+
+<p><em><a href="https://www.amobbs.com/home.php?mod=spacecp&amp;ac=usergroup&amp;gid=7" target="_blank">游客</a></em></p><ul class="xl xl2 o cl">
+<li class="pm2"><a href="https://www.amobbs.com/home.php?mod=spacecp&amp;ac=pm&amp;op=showmsg&amp;handlekey=showmsg_187654&amp;touid=187654&amp;pmid=0&amp;daterange=2&amp;pid=4954244&amp;tid=4954127" onclick="showWindow(&#39;sendpm&#39;, this.href);" title="发消息" class="xi2">发消息</a></li>
+</ul>
+</div>
+</td>
+<td class="plc">
+<div class="pi">
+<strong>
+<a href="https://www.amobbs.com/forum.php?mod=redirect&amp;goto=findpost&amp;ptid=4954127&amp;pid=4954244" id="postnum4954244" onclick="setCopy(this.href, &#39;帖子地址复制成功&#39;);return false;">
+<em>2</em>楼</a>
+</strong>
+<div class="pti">
+<div class="pdbt">
+</div>
+<div class="authi">
+<img class="authicn vm" id="authicon4954244" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/online_member.gif">
+<em id="authorposton4954244">发表于 2011-8-11 08:42:02</em>
+<span class="pipe">|</span>
+<a href="https://www.amobbs.com/forum.php?mod=viewthread&amp;tid=4954127&amp;page=1&amp;authorid=187654" rel="nofollow">只看该作者</a>
+</div>
+</div>
+</div><div class="pct"><div class="pcb">
+<div class="t_fsz">
+<table cellspacing="0" cellpadding="0"><tbody><tr><td class="t_f" id="postmessage_4954244">
+谢谢eezm大神！！！</td></tr></tbody></table>
+
+
+</div>
+<div id="comment_4954244" class="cm">
+</div>
+
+<div id="post_rate_div_4954244"></div>
+</div>
+</div>
+
+</td></tr>
+<tr><td class="plc plm">
+</td>
+</tr>
+<tr id="_postposition4954244"></tr>
+<tr>
+<td class="pls"></td>
+<td class="plc" style="overflow:visible;">
+<div class="po hin">
+<div class="pob cl">
+<em>
+<a class="fastre" href="https://www.amobbs.com/forum.php?mod=post&amp;action=reply&amp;fid=1037&amp;tid=4954127&amp;repquote=4954244&amp;extra=page%3D1&amp;page=1" onclick="showWindow(&#39;reply&#39;, this.href)">回复</a>
+</em>
+
+<p>
+<a href="javascript:;" onclick="showWindow(&#39;miscreport4954244&#39;, &#39;misc.php?mod=report&amp;rtype=post&amp;rid=4954244&amp;tid=4954127&amp;fid=1037&#39;, &#39;get&#39;, -1);return false;">举报</a>
+</p>
+
+</div>
+</div>
+</td>
+</tr>
+<tr class="ad">
+<td class="pls">
+</td>
+<td class="plc">
+</td>
+</tr>
+</tbody></table>
+            </div>
+                            <div id="post_4954249">
+            <table id="pid4954249" class="plhin" summary="pid4954249" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td class="pls" rowspan="2">
+<div id="favatar4954249" class="pls favatar">
+ <div class="pi">
+<div class="authi"><a href="https://www.amobbs.com/space-uid-7362.html" target="_blank" class="xw1">yuzr</a>
+</div>
+</div>
+<div class="p_pop blk bui card_gender_0" id="userinfo4954249" style="display: none; margin-top: -11px;">
+<div class="m z">
+<div id="userinfo4954249_ma"></div>
+</div>
+<div class="i y">
+<div>
+<strong><a href="https://www.amobbs.com/space-uid-7362.html" target="_blank" class="xi2">yuzr</a></strong>
+<em>当前离线</em>
+</div><dl class="cl">
+<dt>积分</dt><dd><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=7362&amp;do=profile" target="_blank" class="xi2">2703</a></dd>
+</dl><div class="imicn">
+<a href="https://www.amobbs.com/home.php?mod=space&amp;uid=7362&amp;do=profile" target="_blank" title="查看详细资料"><img src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/userinfo.gif" alt="查看详细资料"></a>
+</div>
+<div id="avatarfeed"><span id="threadsortswait"></span></div>
+</div>
+</div>
+<div>
+<div class="avatar" onmouseover="showauthor(this, &#39;userinfo4954249&#39;)"><a href="https://www.amobbs.com/space-uid-7362.html" class="avtm" target="_blank"><img src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/62_avatar_middle.jpg" onerror="this.onerror=null;this.src=&#39;https://passport.amobbs.com/uc_server/images/noavatar_middle.gif&#39;"></a></div>
+</div>
+<div class="tns xg2"><table cellspacing="0" cellpadding="0"><tbody><tr><th><p><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=7362&amp;do=profile" class="xi2">2703</a></p>积分</th><th><p><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=7362&amp;do=profile" class="xi2">1414</a></p>莫元</th><td><p><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=7362&amp;do=profile" class="xi2">477</a></p>飞币</td></tr></tbody></table></div>
+
+<p><em><a href="https://www.amobbs.com/home.php?mod=spacecp&amp;ac=usergroup&amp;gid=14" target="_blank">金牌会员</a></em></p><ul class="xl xl2 o cl">
+<li class="pm2"><a href="https://www.amobbs.com/home.php?mod=spacecp&amp;ac=pm&amp;op=showmsg&amp;handlekey=showmsg_7362&amp;touid=7362&amp;pmid=0&amp;daterange=2&amp;pid=4954249&amp;tid=4954127" onclick="showWindow(&#39;sendpm&#39;, this.href);" title="发消息" class="xi2">发消息</a></li>
+</ul>
+</div>
+</td>
+<td class="plc">
+<div class="pi">
+<strong>
+<a href="https://www.amobbs.com/forum.php?mod=redirect&amp;goto=findpost&amp;ptid=4954127&amp;pid=4954249" id="postnum4954249" onclick="setCopy(this.href, &#39;帖子地址复制成功&#39;);return false;">
+<em>3</em>楼</a>
+</strong>
+<div class="pti">
+<div class="pdbt">
+</div>
+<div class="authi">
+<img class="authicn vm" id="authicon4954249" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/online_member.gif">
+<em id="authorposton4954249">发表于 2011-8-11 08:43:14</em>
+<span class="pipe">|</span>
+<a href="https://www.amobbs.com/forum.php?mod=viewthread&amp;tid=4954127&amp;page=1&amp;authorid=7362" rel="nofollow">只看该作者</a>
+</div>
+</div>
+</div><div class="pct"><div class="pcb">
+<div class="t_fsz">
+<table cellspacing="0" cellpadding="0"><tbody><tr><td class="t_f" id="postmessage_4954249">
+mark</td></tr></tbody></table>
+
+
+</div>
+<div id="comment_4954249" class="cm">
+</div>
+
+<div id="post_rate_div_4954249"></div>
+</div>
+</div>
+
+</td></tr>
+<tr><td class="plc plm">
+</td>
+</tr>
+<tr id="_postposition4954249"></tr>
+<tr>
+<td class="pls"></td>
+<td class="plc" style="overflow:visible;">
+<div class="po hin">
+<div class="pob cl">
+<em>
+<a class="fastre" href="https://www.amobbs.com/forum.php?mod=post&amp;action=reply&amp;fid=1037&amp;tid=4954127&amp;repquote=4954249&amp;extra=page%3D1&amp;page=1" onclick="showWindow(&#39;reply&#39;, this.href)">回复</a>
+</em>
+
+<p>
+<a href="javascript:;" onclick="showWindow(&#39;miscreport4954249&#39;, &#39;misc.php?mod=report&amp;rtype=post&amp;rid=4954249&amp;tid=4954127&amp;fid=1037&#39;, &#39;get&#39;, -1);return false;">举报</a>
+</p>
+
+</div>
+</div>
+</td>
+</tr>
+<tr class="ad">
+<td class="pls">
+</td>
+<td class="plc">
+</td>
+</tr>
+</tbody></table>
+            </div>
+                            <div id="post_4954437">
+            <table id="pid4954437" class="plhin" summary="pid4954437" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td class="pls" rowspan="2">
+<div id="favatar4954437" class="pls favatar">
+ <div class="pi">
+<div class="authi"><a href="https://www.amobbs.com/space-uid-25587.html" target="_blank" class="xw1">Jigsaw</a>
+</div>
+</div>
+<div class="p_pop blk bui card_gender_1" id="userinfo4954437" style="display: none; margin-top: -11px;">
+<div class="m z">
+<div id="userinfo4954437_ma"></div>
+</div>
+<div class="i y">
+<div>
+<strong><a href="https://www.amobbs.com/space-uid-25587.html" target="_blank" class="xi2">Jigsaw</a></strong>
+<em>当前离线</em>
+</div><dl class="cl">
+<dt>积分</dt><dd><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=25587&amp;do=profile" target="_blank" class="xi2">7241</a></dd>
+</dl><div class="imicn">
+<a href="http:" target="_blank" title="查看个人网站"><img src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/forumlink.gif" alt="查看个人网站"></a><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=25587&amp;do=profile" target="_blank" title="查看详细资料"><img src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/userinfo.gif" alt="查看详细资料"></a>
+</div>
+<div id="avatarfeed"><span id="threadsortswait"></span></div>
+</div>
+</div>
+<div>
+<div class="avatar" onmouseover="showauthor(this, &#39;userinfo4954437&#39;)"><a href="https://www.amobbs.com/space-uid-25587.html" class="avtm" target="_blank"><img src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/87_avatar_middle.jpg" onerror="this.onerror=null;this.src=&#39;https://passport.amobbs.com/uc_server/images/noavatar_middle.gif&#39;"></a></div>
+</div>
+<div class="tns xg2"><table cellspacing="0" cellpadding="0"><tbody><tr><th><p><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=25587&amp;do=profile" class="xi2">7241</a></p>积分</th><th><p><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=25587&amp;do=profile" class="xi2">4161</a></p>莫元</th><td><p><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=25587&amp;do=profile" class="xi2">18</a></p>飞币</td></tr></tbody></table></div>
+
+<p><em><a href="https://www.amobbs.com/home.php?mod=spacecp&amp;ac=usergroup&amp;gid=15" target="_blank">论坛元老</a></em></p><ul class="xl xl2 o cl">
+<li class="pm2"><a href="https://www.amobbs.com/home.php?mod=spacecp&amp;ac=pm&amp;op=showmsg&amp;handlekey=showmsg_25587&amp;touid=25587&amp;pmid=0&amp;daterange=2&amp;pid=4954437&amp;tid=4954127" onclick="showWindow(&#39;sendpm&#39;, this.href);" title="发消息" class="xi2">发消息</a></li>
+</ul>
+</div>
+</td>
+<td class="plc">
+<div class="pi">
+<strong>
+<a href="https://www.amobbs.com/forum.php?mod=redirect&amp;goto=findpost&amp;ptid=4954127&amp;pid=4954437" id="postnum4954437" onclick="setCopy(this.href, &#39;帖子地址复制成功&#39;);return false;">
+<em>4</em>楼</a>
+</strong>
+<div class="pti">
+<div class="pdbt">
+</div>
+<div class="authi">
+<img class="authicn vm" id="authicon4954437" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/online_member.gif">
+<em id="authorposton4954437">发表于 2011-8-11 09:44:22</em>
+<span class="pipe">|</span>
+<a href="https://www.amobbs.com/forum.php?mod=viewthread&amp;tid=4954127&amp;page=1&amp;authorid=25587" rel="nofollow">只看该作者</a>
+</div>
+</div>
+</div><div class="pct"><div class="pcb">
+<div class="t_fsz">
+<table cellspacing="0" cellpadding="0"><tbody><tr><td class="t_f" id="postmessage_4954437">
+还以为是和花生一样的电路，不同的软件呢</td></tr></tbody></table>
+
+
+</div>
+<div id="comment_4954437" class="cm">
+</div>
+
+<div id="post_rate_div_4954437"></div>
+</div>
+</div>
+
+</td></tr>
+<tr><td class="plc plm">
+</td>
+</tr>
+<tr id="_postposition4954437"></tr>
+<tr>
+<td class="pls"></td>
+<td class="plc" style="overflow:visible;">
+<div class="po hin">
+<div class="pob cl">
+<em>
+<a class="fastre" href="https://www.amobbs.com/forum.php?mod=post&amp;action=reply&amp;fid=1037&amp;tid=4954127&amp;repquote=4954437&amp;extra=page%3D1&amp;page=1" onclick="showWindow(&#39;reply&#39;, this.href)">回复</a>
+</em>
+
+<p>
+<a href="javascript:;" onclick="showWindow(&#39;miscreport4954437&#39;, &#39;misc.php?mod=report&amp;rtype=post&amp;rid=4954437&amp;tid=4954127&amp;fid=1037&#39;, &#39;get&#39;, -1);return false;">举报</a>
+</p>
+
+</div>
+</div>
+</td>
+</tr>
+<tr class="ad">
+<td class="pls">
+</td>
+<td class="plc">
+</td>
+</tr>
+</tbody></table>
+            </div>
+                            <div id="post_4954668">
+            <table id="pid4954668" class="plhin" summary="pid4954668" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td class="pls" rowspan="2">
+<div id="favatar4954668" class="pls favatar">
+ <div class="pi">
+<div class="authi"><a href="https://www.amobbs.com/space-uid-142437.html" target="_blank" class="xw1">gyp20047</a>
+</div>
+</div>
+<div class="p_pop blk bui card_gender_0" id="userinfo4954668" style="display: none; margin-top: -11px;">
+<div class="m z">
+<div id="userinfo4954668_ma"></div>
+</div>
+<div class="i y">
+<div>
+<strong><a href="https://www.amobbs.com/space-uid-142437.html" target="_blank" class="xi2">gyp20047</a></strong>
+<em>当前离线</em>
+</div><dl class="cl">
+<dt>积分</dt><dd><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=142437&amp;do=profile" target="_blank" class="xi2">90</a></dd>
+</dl><div class="imicn">
+<a href="http://wpa.qq.com/msgrd?v=3&amp;uin=370108965&amp;site=amoBBS%20%E9%98%BF%E8%8E%AB%E7%94%B5%E5%AD%90%E8%AE%BA%E5%9D%9B&amp;menu=yes&amp;from=discuz" target="_blank" title="QQ"><img src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/qq.gif" alt="QQ"></a><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=142437&amp;do=profile" target="_blank" title="查看详细资料"><img src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/userinfo.gif" alt="查看详细资料"></a>
+</div>
+<div id="avatarfeed"><span id="threadsortswait"></span></div>
+</div>
+</div>
+<div>
+<div class="avatar" onmouseover="showauthor(this, &#39;userinfo4954668&#39;)"><a href="https://www.amobbs.com/space-uid-142437.html" class="avtm" target="_blank"><img src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/37_avatar_middle.jpg" onerror="this.onerror=null;this.src=&#39;https://passport.amobbs.com/uc_server/images/noavatar_middle.gif&#39;"></a></div>
+</div>
+<div class="tns xg2"><table cellspacing="0" cellpadding="0"><tbody><tr><th><p><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=142437&amp;do=profile" class="xi2">90</a></p>积分</th><th><p><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=142437&amp;do=profile" class="xi2">84</a></p>莫元</th><td><p><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=142437&amp;do=profile" class="xi2">0</a></p>飞币</td></tr></tbody></table></div>
+
+<p><em><a href="https://www.amobbs.com/home.php?mod=spacecp&amp;ac=usergroup&amp;gid=11" target="_blank">注册会员</a></em></p><ul class="xl xl2 o cl">
+<li class="pm2"><a href="https://www.amobbs.com/home.php?mod=spacecp&amp;ac=pm&amp;op=showmsg&amp;handlekey=showmsg_142437&amp;touid=142437&amp;pmid=0&amp;daterange=2&amp;pid=4954668&amp;tid=4954127" onclick="showWindow(&#39;sendpm&#39;, this.href);" title="发消息" class="xi2">发消息</a></li>
+</ul>
+</div>
+</td>
+<td class="plc">
+<div class="pi">
+<strong>
+<a href="https://www.amobbs.com/forum.php?mod=redirect&amp;goto=findpost&amp;ptid=4954127&amp;pid=4954668" id="postnum4954668" onclick="setCopy(this.href, &#39;帖子地址复制成功&#39;);return false;">
+<em>5</em>楼</a>
+</strong>
+<div class="pti">
+<div class="pdbt">
+</div>
+<div class="authi">
+<img class="authicn vm" id="authicon4954668" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/online_member.gif">
+<em id="authorposton4954668">发表于 2011-8-11 10:56:30</em>
+<span class="pipe">|</span>
+<a href="https://www.amobbs.com/forum.php?mod=viewthread&amp;tid=4954127&amp;page=1&amp;authorid=142437" rel="nofollow">只看该作者</a>
+</div>
+</div>
+</div><div class="pct"><div class="pcb">
+<div class="t_fsz">
+<table cellspacing="0" cellpadding="0"><tbody><tr><td class="t_f" id="postmessage_4954668">
+mark!!!</td></tr></tbody></table>
+
+
+</div>
+<div id="comment_4954668" class="cm">
+</div>
+
+<div id="post_rate_div_4954668"></div>
+</div>
+</div>
+
+</td></tr>
+<tr><td class="plc plm">
+</td>
+</tr>
+<tr id="_postposition4954668"></tr>
+<tr>
+<td class="pls"></td>
+<td class="plc" style="overflow:visible;">
+<div class="po hin">
+<div class="pob cl">
+<em>
+<a class="fastre" href="https://www.amobbs.com/forum.php?mod=post&amp;action=reply&amp;fid=1037&amp;tid=4954127&amp;repquote=4954668&amp;extra=page%3D1&amp;page=1" onclick="showWindow(&#39;reply&#39;, this.href)">回复</a>
+</em>
+
+<p>
+<a href="javascript:;" onclick="showWindow(&#39;miscreport4954668&#39;, &#39;misc.php?mod=report&amp;rtype=post&amp;rid=4954668&amp;tid=4954127&amp;fid=1037&#39;, &#39;get&#39;, -1);return false;">举报</a>
+</p>
+
+</div>
+</div>
+</td>
+</tr>
+<tr class="ad">
+<td class="pls">
+</td>
+<td class="plc">
+</td>
+</tr>
+</tbody></table>
+            </div>
+                            <div id="post_4954736">
+            <table id="pid4954736" class="plhin" summary="pid4954736" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td class="pls" rowspan="2">
+<div id="favatar4954736" class="pls favatar">
+ <div class="pi">
+<div class="authi"><a href="https://www.amobbs.com/space-uid-97878.html" target="_blank" class="xw1">huangdog</a>
+</div>
+</div>
+<div class="p_pop blk bui card_gender_0" id="userinfo4954736" style="display: none; margin-top: -11px;">
+<div class="m z">
+<div id="userinfo4954736_ma"></div>
+</div>
+<div class="i y">
+<div>
+<strong><a href="https://www.amobbs.com/space-uid-97878.html" target="_blank" class="xi2">huangdog</a></strong>
+<em>当前在线</em>
+</div><dl class="cl">
+<dt>积分</dt><dd><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=97878&amp;do=profile" target="_blank" class="xi2">3540</a></dd>
+</dl><div class="imicn">
+<a href="http://wpa.qq.com/msgrd?v=3&amp;uin=425881346&amp;site=amoBBS%20%E9%98%BF%E8%8E%AB%E7%94%B5%E5%AD%90%E8%AE%BA%E5%9D%9B&amp;menu=yes&amp;from=discuz" target="_blank" title="QQ"><img src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/qq.gif" alt="QQ"></a><a href="http:" target="_blank" title="查看个人网站"><img src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/forumlink.gif" alt="查看个人网站"></a><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=97878&amp;do=profile" target="_blank" title="查看详细资料"><img src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/userinfo.gif" alt="查看详细资料"></a>
+</div>
+<div id="avatarfeed"><span id="threadsortswait"></span></div>
+</div>
+</div>
+<div>
+<div class="avatar" onmouseover="showauthor(this, &#39;userinfo4954736&#39;)"><a href="https://www.amobbs.com/space-uid-97878.html" class="avtm" target="_blank"><img src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/78_avatar_middle.jpg" onerror="this.onerror=null;this.src=&#39;https://passport.amobbs.com/uc_server/images/noavatar_middle.gif&#39;"></a></div>
+</div>
+<div class="tns xg2"><table cellspacing="0" cellpadding="0"><tbody><tr><th><p><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=97878&amp;do=profile" class="xi2">3540</a></p>积分</th><th><p><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=97878&amp;do=profile" class="xi2">1819</a></p>莫元</th><td><p><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=97878&amp;do=profile" class="xi2">536</a></p>飞币</td></tr></tbody></table></div>
+
+<p><em><a href="https://www.amobbs.com/home.php?mod=spacecp&amp;ac=usergroup&amp;gid=14" target="_blank">金牌会员</a></em></p><ul class="xl xl2 o cl">
+<li class="pm2"><a href="https://www.amobbs.com/home.php?mod=spacecp&amp;ac=pm&amp;op=showmsg&amp;handlekey=showmsg_97878&amp;touid=97878&amp;pmid=0&amp;daterange=2&amp;pid=4954736&amp;tid=4954127" onclick="showWindow(&#39;sendpm&#39;, this.href);" title="发消息" class="xi2">发消息</a></li>
+</ul>
+</div>
+</td>
+<td class="plc">
+<div class="pi">
+<strong>
+<a href="https://www.amobbs.com/forum.php?mod=redirect&amp;goto=findpost&amp;ptid=4954127&amp;pid=4954736" id="postnum4954736" onclick="setCopy(this.href, &#39;帖子地址复制成功&#39;);return false;">
+<em>6</em>楼</a>
+</strong>
+<div class="pti">
+<div class="pdbt">
+</div>
+<div class="authi">
+<img class="authicn vm" id="authicon4954736" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/online_member.gif">
+<em id="authorposton4954736">发表于 2011-8-11 11:15:55</em>
+<span class="pipe">|</span>
+<a href="https://www.amobbs.com/forum.php?mod=viewthread&amp;tid=4954127&amp;page=1&amp;authorid=97878" rel="nofollow">只看该作者</a>
+</div>
+</div>
+</div><div class="pct"><div class="pcb">
+<div class="t_fsz">
+<table cellspacing="0" cellpadding="0"><tbody><tr><td class="t_f" id="postmessage_4954736">
+记号~</td></tr></tbody></table>
+
+
+</div>
+<div id="comment_4954736" class="cm">
+</div>
+
+<div id="post_rate_div_4954736"></div>
+</div>
+</div>
+
+</td></tr>
+<tr><td class="plc plm">
+</td>
+</tr>
+<tr id="_postposition4954736"></tr>
+<tr>
+<td class="pls"></td>
+<td class="plc" style="overflow:visible;">
+<div class="po hin">
+<div class="pob cl">
+<em>
+<a class="fastre" href="https://www.amobbs.com/forum.php?mod=post&amp;action=reply&amp;fid=1037&amp;tid=4954127&amp;repquote=4954736&amp;extra=page%3D1&amp;page=1" onclick="showWindow(&#39;reply&#39;, this.href)">回复</a>
+</em>
+
+<p>
+<a href="javascript:;" onclick="showWindow(&#39;miscreport4954736&#39;, &#39;misc.php?mod=report&amp;rtype=post&amp;rid=4954736&amp;tid=4954127&amp;fid=1037&#39;, &#39;get&#39;, -1);return false;">举报</a>
+</p>
+
+</div>
+</div>
+</td>
+</tr>
+<tr class="ad">
+<td class="pls">
+</td>
+<td class="plc">
+</td>
+</tr>
+</tbody></table>
+            </div>
+                            <div id="post_4954932">
+            <table id="pid4954932" class="plhin" summary="pid4954932" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td class="pls" rowspan="2">
+<div id="favatar4954932" class="pls favatar">
+ <div class="pi">
+<div class="authi"><a href="https://www.amobbs.com/space-uid-165939.html" target="_blank" class="xw1">huayuliang</a>
+</div>
+</div>
+<div class="p_pop blk bui card_gender_0" id="userinfo4954932" style="display: none; margin-top: -11px;">
+<div class="m z">
+<div id="userinfo4954932_ma"></div>
+</div>
+<div class="i y">
+<div>
+<strong><a href="https://www.amobbs.com/space-uid-165939.html" target="_blank" class="xi2">huayuliang</a></strong>
+<em>当前离线</em>
+</div><dl class="cl">
+<dt>积分</dt><dd><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=165939&amp;do=profile" target="_blank" class="xi2">12002</a></dd>
+</dl><div class="imicn">
+<a href="https://www.amobbs.com/home.php?mod=space&amp;uid=165939&amp;do=profile" target="_blank" title="查看详细资料"><img src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/userinfo.gif" alt="查看详细资料"></a>
+</div>
+<div id="avatarfeed"><span id="threadsortswait"></span></div>
+</div>
+</div>
+<div>
+<div class="avatar" onmouseover="showauthor(this, &#39;userinfo4954932&#39;)"><a href="https://www.amobbs.com/space-uid-165939.html" class="avtm" target="_blank"><img src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/39_avatar_middle.jpg" onerror="this.onerror=null;this.src=&#39;https://passport.amobbs.com/uc_server/images/noavatar_middle.gif&#39;"></a></div>
+</div>
+<div class="tns xg2"><table cellspacing="0" cellpadding="0"><tbody><tr><th><p><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=165939&amp;do=profile" class="xi2"><span title="12002">1万</span></a></p>积分</th><th><p><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=165939&amp;do=profile" class="xi2"><span title="11923">1万</span></a></p>莫元</th><td><p><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=165939&amp;do=profile" class="xi2">0</a></p>飞币</td></tr></tbody></table></div>
+
+<p><em><a href="https://www.amobbs.com/home.php?mod=spacecp&amp;ac=usergroup&amp;gid=15" target="_blank">论坛元老</a></em></p><ul class="xl xl2 o cl">
+<li class="pm2"><a href="https://www.amobbs.com/home.php?mod=spacecp&amp;ac=pm&amp;op=showmsg&amp;handlekey=showmsg_165939&amp;touid=165939&amp;pmid=0&amp;daterange=2&amp;pid=4954932&amp;tid=4954127" onclick="showWindow(&#39;sendpm&#39;, this.href);" title="发消息" class="xi2">发消息</a></li>
+</ul>
+</div>
+</td>
+<td class="plc">
+<div class="pi">
+<strong>
+<a href="https://www.amobbs.com/forum.php?mod=redirect&amp;goto=findpost&amp;ptid=4954127&amp;pid=4954932" id="postnum4954932" onclick="setCopy(this.href, &#39;帖子地址复制成功&#39;);return false;">
+<em>7</em>楼</a>
+</strong>
+<div class="pti">
+<div class="pdbt">
+</div>
+<div class="authi">
+<img class="authicn vm" id="authicon4954932" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/online_member.gif">
+<em id="authorposton4954932">发表于 2011-8-11 12:16:56</em>
+<span class="pipe">|</span>
+<a href="https://www.amobbs.com/forum.php?mod=viewthread&amp;tid=4954127&amp;page=1&amp;authorid=165939" rel="nofollow">只看该作者</a>
+</div>
+</div>
+</div><div class="pct"><div class="pcb">
+<div class="t_fsz">
+<table cellspacing="0" cellpadding="0"><tbody><tr><td class="t_f" id="postmessage_4954932">
+回复【3楼】Jigsaw&nbsp;&nbsp;<br>
+-----------------------------------------------------------------------<br>
+<br>
+是一样的电路，仿真软件不同，分析采用的方法也不同。<br>
+总体来说，MC要比MS难些。汗，让俺缩写的快没了。。<br>
+<br>
+eezm 能否仿真下10M左右的信号变化？幅度和频率，看下AGC。<br>
+<br>
+还有就是这个电路的频率响应啥的。</td></tr></tbody></table>
+
+
+</div>
+<div id="comment_4954932" class="cm">
+</div>
+
+<div id="post_rate_div_4954932"></div>
+</div>
+</div>
+
+</td></tr>
+<tr><td class="plc plm">
+</td>
+</tr>
+<tr id="_postposition4954932"></tr>
+<tr>
+<td class="pls"></td>
+<td class="plc" style="overflow:visible;">
+<div class="po hin">
+<div class="pob cl">
+<em>
+<a class="fastre" href="https://www.amobbs.com/forum.php?mod=post&amp;action=reply&amp;fid=1037&amp;tid=4954127&amp;repquote=4954932&amp;extra=page%3D1&amp;page=1" onclick="showWindow(&#39;reply&#39;, this.href)">回复</a>
+</em>
+
+<p>
+<a href="javascript:;" onclick="showWindow(&#39;miscreport4954932&#39;, &#39;misc.php?mod=report&amp;rtype=post&amp;rid=4954932&amp;tid=4954127&amp;fid=1037&#39;, &#39;get&#39;, -1);return false;">举报</a>
+</p>
+
+</div>
+</div>
+</td>
+</tr>
+<tr class="ad">
+<td class="pls">
+</td>
+<td class="plc">
+</td>
+</tr>
+</tbody></table>
+            </div>
+                            <div id="post_4954975">
+            <table id="pid4954975" class="plhin" summary="pid4954975" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td class="pls" rowspan="2">
+<div id="favatar4954975" class="pls favatar">
+ <div class="pi">
+<div class="authi"><a href="https://www.amobbs.com/space-uid-187654.html" target="_blank" class="xw1">fuwa</a>
+</div>
+</div>
+<div class="p_pop blk bui card_gender_0" id="userinfo4954975" style="display: none; margin-top: -11px;">
+<div class="m z">
+<div id="userinfo4954975_ma"></div>
+</div>
+<div class="i y">
+<div>
+<strong><a href="https://www.amobbs.com/space-uid-187654.html" target="_blank" class="xi2">fuwa</a></strong>
+<em>当前离线</em>
+</div><dl class="cl">
+<dt>积分</dt><dd><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=187654&amp;do=profile" target="_blank" class="xi2">66</a></dd>
+</dl><div class="imicn">
+<a href="https://www.amobbs.com/home.php?mod=space&amp;uid=187654&amp;do=profile" target="_blank" title="查看详细资料"><img src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/userinfo.gif" alt="查看详细资料"></a>
+</div>
+<div id="avatarfeed"><span id="threadsortswait"></span></div>
+</div>
+</div>
+<div>
+<div class="avatar" onmouseover="showauthor(this, &#39;userinfo4954975&#39;)"><a href="https://www.amobbs.com/space-uid-187654.html" class="avtm" target="_blank"><img src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/noavatar_middle.gif" onerror="this.onerror=null;this.src=&#39;https://passport.amobbs.com/uc_server/images/noavatar_middle.gif&#39;"></a></div>
+</div>
+<div class="tns xg2"><table cellspacing="0" cellpadding="0"><tbody><tr><th><p><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=187654&amp;do=profile" class="xi2">66</a></p>积分</th><th><p><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=187654&amp;do=profile" class="xi2">66</a></p>莫元</th><td><p><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=187654&amp;do=profile" class="xi2">0</a></p>飞币</td></tr></tbody></table></div>
+
+<p><em><a href="https://www.amobbs.com/home.php?mod=spacecp&amp;ac=usergroup&amp;gid=7" target="_blank">游客</a></em></p><ul class="xl xl2 o cl">
+<li class="pm2"><a href="https://www.amobbs.com/home.php?mod=spacecp&amp;ac=pm&amp;op=showmsg&amp;handlekey=showmsg_187654&amp;touid=187654&amp;pmid=0&amp;daterange=2&amp;pid=4954975&amp;tid=4954127" onclick="showWindow(&#39;sendpm&#39;, this.href);" title="发消息" class="xi2">发消息</a></li>
+</ul>
+</div>
+</td>
+<td class="plc">
+<div class="pi">
+<strong>
+<a href="https://www.amobbs.com/forum.php?mod=redirect&amp;goto=findpost&amp;ptid=4954127&amp;pid=4954975" id="postnum4954975" onclick="setCopy(this.href, &#39;帖子地址复制成功&#39;);return false;">
+<em>8</em>楼</a>
+</strong>
+<div class="pti">
+<div class="pdbt">
+</div>
+<div class="authi">
+<img class="authicn vm" id="authicon4954975" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/online_member.gif">
+<em id="authorposton4954975">发表于 2011-8-11 12:32:35</em>
+<span class="pipe">|</span>
+<a href="https://www.amobbs.com/forum.php?mod=viewthread&amp;tid=4954127&amp;page=1&amp;authorid=187654" rel="nofollow">只看该作者</a>
+</div>
+</div>
+</div><div class="pct"><div class="pcb">
+<div class="t_fsz">
+<table cellspacing="0" cellpadding="0"><tbody><tr><td class="t_f" id="postmessage_4954975">
+回复【楼主位】eezm <br>
+-----------------------------------------------------------------------<br>
+<br>
+我按你的电路画，仿真，图形如下：<br>
+<img id="aimg_oiVGB" onclick="zoom(this, this.src, 0, 0, 0)" class="zoom" file="http://cache.amobbs.com/bbs_upload782111/files_44/ourdev_666503LTIEJA.JPG" onmouseover="img_onmouseoverfunc(this)" lazyloadthumb="1" border="0" alt="" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/ourdev_666503LTIEJA.JPG" lazyloaded="true" _load="1" width="1148" height="582" style=""><br>
+ <font color="green">(原文件名:tu.JPG)</font> <br>
+<br>
+第二条线是输出，怎么看起来想被截了，但是占空比又不对呀~~~这是什么原因啊？</td></tr></tbody></table>
+
+
+</div>
+<div id="comment_4954975" class="cm">
+</div>
+
+<div id="post_rate_div_4954975"></div>
+</div>
+</div>
+
+</td></tr>
+<tr><td class="plc plm">
+</td>
+</tr>
+<tr id="_postposition4954975"></tr>
+<tr>
+<td class="pls"></td>
+<td class="plc" style="overflow:visible;">
+<div class="po hin">
+<div class="pob cl">
+<em>
+<a class="fastre" href="https://www.amobbs.com/forum.php?mod=post&amp;action=reply&amp;fid=1037&amp;tid=4954127&amp;repquote=4954975&amp;extra=page%3D1&amp;page=1" onclick="showWindow(&#39;reply&#39;, this.href)">回复</a>
+</em>
+
+<p>
+<a href="javascript:;" onclick="showWindow(&#39;miscreport4954975&#39;, &#39;misc.php?mod=report&amp;rtype=post&amp;rid=4954975&amp;tid=4954127&amp;fid=1037&#39;, &#39;get&#39;, -1);return false;">举报</a>
+</p>
+
+</div>
+</div>
+</td>
+</tr>
+<tr class="ad">
+<td class="pls">
+</td>
+<td class="plc">
+</td>
+</tr>
+</tbody></table>
+<script type="text/javascript" reload="1">
+aimgcount[4954975] = ['oiVGB'];
+attachimggroup(4954975);
+var aimgfid = 0;
+</script>
+            </div>
+                            <div id="post_4954983">
+            <table id="pid4954983" class="plhin" summary="pid4954983" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td class="pls" rowspan="2">
+<div id="favatar4954983" class="pls favatar">
+ <div class="pi">
+<div class="authi"><a href="https://www.amobbs.com/space-uid-187654.html" target="_blank" class="xw1">fuwa</a>
+</div>
+</div>
+<div class="p_pop blk bui card_gender_0" id="userinfo4954983" style="display: none; margin-top: -11px;">
+<div class="m z">
+<div id="userinfo4954983_ma"></div>
+</div>
+<div class="i y">
+<div>
+<strong><a href="https://www.amobbs.com/space-uid-187654.html" target="_blank" class="xi2">fuwa</a></strong>
+<em>当前离线</em>
+</div><dl class="cl">
+<dt>积分</dt><dd><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=187654&amp;do=profile" target="_blank" class="xi2">66</a></dd>
+</dl><div class="imicn">
+<a href="https://www.amobbs.com/home.php?mod=space&amp;uid=187654&amp;do=profile" target="_blank" title="查看详细资料"><img src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/userinfo.gif" alt="查看详细资料"></a>
+</div>
+<div id="avatarfeed"><span id="threadsortswait"></span></div>
+</div>
+</div>
+<div>
+<div class="avatar" onmouseover="showauthor(this, &#39;userinfo4954983&#39;)"><a href="https://www.amobbs.com/space-uid-187654.html" class="avtm" target="_blank"><img src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/noavatar_middle.gif" onerror="this.onerror=null;this.src=&#39;https://passport.amobbs.com/uc_server/images/noavatar_middle.gif&#39;"></a></div>
+</div>
+<div class="tns xg2"><table cellspacing="0" cellpadding="0"><tbody><tr><th><p><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=187654&amp;do=profile" class="xi2">66</a></p>积分</th><th><p><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=187654&amp;do=profile" class="xi2">66</a></p>莫元</th><td><p><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=187654&amp;do=profile" class="xi2">0</a></p>飞币</td></tr></tbody></table></div>
+
+<p><em><a href="https://www.amobbs.com/home.php?mod=spacecp&amp;ac=usergroup&amp;gid=7" target="_blank">游客</a></em></p><ul class="xl xl2 o cl">
+<li class="pm2"><a href="https://www.amobbs.com/home.php?mod=spacecp&amp;ac=pm&amp;op=showmsg&amp;handlekey=showmsg_187654&amp;touid=187654&amp;pmid=0&amp;daterange=2&amp;pid=4954983&amp;tid=4954127" onclick="showWindow(&#39;sendpm&#39;, this.href);" title="发消息" class="xi2">发消息</a></li>
+</ul>
+</div>
+</td>
+<td class="plc">
+<div class="pi">
+<strong>
+<a href="https://www.amobbs.com/forum.php?mod=redirect&amp;goto=findpost&amp;ptid=4954127&amp;pid=4954983" id="postnum4954983" onclick="setCopy(this.href, &#39;帖子地址复制成功&#39;);return false;">
+<em>9</em>楼</a>
+</strong>
+<div class="pti">
+<div class="pdbt">
+</div>
+<div class="authi">
+<img class="authicn vm" id="authicon4954983" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/online_member.gif">
+<em id="authorposton4954983">发表于 2011-8-11 12:35:49</em>
+<span class="pipe">|</span>
+<a href="https://www.amobbs.com/forum.php?mod=viewthread&amp;tid=4954127&amp;page=1&amp;authorid=187654" rel="nofollow">只看该作者</a>
+</div>
+</div>
+</div><div class="pct"><div class="pcb">
+<div class="t_fsz">
+<table cellspacing="0" cellpadding="0"><tbody><tr><td class="t_f" id="postmessage_4954983">
+并且是衰减的，时间长了，就变成如下图形了：<br>
+<img id="aimg_IS3tZ" onclick="zoom(this, this.src, 0, 0, 0)" class="zoom" file="http://cache.amobbs.com/bbs_upload782111/files_44/ourdev_666505SQBJVK.JPG" onmouseover="img_onmouseoverfunc(this)" lazyloadthumb="1" border="0" alt="" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/ourdev_666505SQBJVK.JPG" lazyloaded="true" _load="1" width="621" height="455" style=""><br>
+ <font color="green">(原文件名:tu2.JPG)</font> <br>
+输出直接变成了直流量~~~</td></tr></tbody></table>
+
+
+</div>
+<div id="comment_4954983" class="cm">
+</div>
+
+<div id="post_rate_div_4954983"></div>
+</div>
+</div>
+
+</td></tr>
+<tr><td class="plc plm">
+</td>
+</tr>
+<tr id="_postposition4954983"></tr>
+<tr>
+<td class="pls"></td>
+<td class="plc" style="overflow:visible;">
+<div class="po hin">
+<div class="pob cl">
+<em>
+<a class="fastre" href="https://www.amobbs.com/forum.php?mod=post&amp;action=reply&amp;fid=1037&amp;tid=4954127&amp;repquote=4954983&amp;extra=page%3D1&amp;page=1" onclick="showWindow(&#39;reply&#39;, this.href)">回复</a>
+</em>
+
+<p>
+<a href="javascript:;" onclick="showWindow(&#39;miscreport4954983&#39;, &#39;misc.php?mod=report&amp;rtype=post&amp;rid=4954983&amp;tid=4954127&amp;fid=1037&#39;, &#39;get&#39;, -1);return false;">举报</a>
+</p>
+
+</div>
+</div>
+</td>
+</tr>
+<tr class="ad">
+<td class="pls">
+</td>
+<td class="plc">
+</td>
+</tr>
+</tbody></table>
+<script type="text/javascript" reload="1">
+aimgcount[4954983] = ['IS3tZ'];
+attachimggroup(4954983);
+var aimgfid = 0;
+</script>
+            </div>
+                            <div id="post_4954993">
+            <table id="pid4954993" class="plhin" summary="pid4954993" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td class="pls" rowspan="2">
+<div id="favatar4954993" class="pls favatar">
+ <div class="pi">
+<div class="authi"><a href="https://www.amobbs.com/space-uid-113954.html" target="_blank" class="xw1">mzbhy</a>
+</div>
+</div>
+<div class="p_pop blk bui card_gender_0" id="userinfo4954993" style="display: none; margin-top: -11px;">
+<div class="m z">
+<div id="userinfo4954993_ma"></div>
+</div>
+<div class="i y">
+<div>
+<strong><a href="https://www.amobbs.com/space-uid-113954.html" target="_blank" class="xi2">mzbhy</a></strong>
+<em>当前离线</em>
+</div><dl class="cl">
+<dt>积分</dt><dd><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=113954&amp;do=profile" target="_blank" class="xi2">1151</a></dd>
+</dl><div class="imicn">
+<a href="https://www.amobbs.com/home.php?mod=space&amp;uid=113954&amp;do=profile" target="_blank" title="查看详细资料"><img src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/userinfo.gif" alt="查看详细资料"></a>
+</div>
+<div id="avatarfeed"><span id="threadsortswait"></span></div>
+</div>
+</div>
+<div>
+<div class="avatar" onmouseover="showauthor(this, &#39;userinfo4954993&#39;)"><a href="https://www.amobbs.com/space-uid-113954.html" class="avtm" target="_blank"><img src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/noavatar_middle.gif" onerror="this.onerror=null;this.src=&#39;https://passport.amobbs.com/uc_server/images/noavatar_middle.gif&#39;"></a></div>
+</div>
+<div class="tns xg2"><table cellspacing="0" cellpadding="0"><tbody><tr><th><p><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=113954&amp;do=profile" class="xi2">1151</a></p>积分</th><th><p><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=113954&amp;do=profile" class="xi2">1152</a></p>莫元</th><td><p><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=113954&amp;do=profile" class="xi2">0</a></p>飞币</td></tr></tbody></table></div>
+
+<p><em><a href="https://www.amobbs.com/home.php?mod=spacecp&amp;ac=usergroup&amp;gid=14" target="_blank">金牌会员</a></em></p><ul class="xl xl2 o cl">
+<li class="pm2"><a href="https://www.amobbs.com/home.php?mod=spacecp&amp;ac=pm&amp;op=showmsg&amp;handlekey=showmsg_113954&amp;touid=113954&amp;pmid=0&amp;daterange=2&amp;pid=4954993&amp;tid=4954127" onclick="showWindow(&#39;sendpm&#39;, this.href);" title="发消息" class="xi2">发消息</a></li>
+</ul>
+</div>
+</td>
+<td class="plc">
+<div class="pi">
+<strong>
+<a href="https://www.amobbs.com/forum.php?mod=redirect&amp;goto=findpost&amp;ptid=4954127&amp;pid=4954993" id="postnum4954993" onclick="setCopy(this.href, &#39;帖子地址复制成功&#39;);return false;">
+<em>10</em>楼</a>
+</strong>
+<div class="pti">
+<div class="pdbt">
+</div>
+<div class="authi">
+<img class="authicn vm" id="authicon4954993" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/online_member.gif">
+<em id="authorposton4954993">发表于 2011-8-11 12:38:38</em>
+<span class="pipe">|</span>
+<a href="https://www.amobbs.com/forum.php?mod=viewthread&amp;tid=4954127&amp;page=1&amp;authorid=113954" rel="nofollow">只看该作者</a>
+</div>
+</div>
+</div><div class="pct"><div class="pcb">
+<div class="t_fsz">
+<table cellspacing="0" cellpadding="0"><tbody><tr><td class="t_f" id="postmessage_4954993">
+恩学习学习。</td></tr></tbody></table>
+
+
+</div>
+<div id="comment_4954993" class="cm">
+</div>
+
+<div id="post_rate_div_4954993"></div>
+</div>
+</div>
+
+</td></tr>
+<tr><td class="plc plm">
+</td>
+</tr>
+<tr id="_postposition4954993"></tr>
+<tr>
+<td class="pls"></td>
+<td class="plc" style="overflow:visible;">
+<div class="po hin">
+<div class="pob cl">
+<em>
+<a class="fastre" href="https://www.amobbs.com/forum.php?mod=post&amp;action=reply&amp;fid=1037&amp;tid=4954127&amp;repquote=4954993&amp;extra=page%3D1&amp;page=1" onclick="showWindow(&#39;reply&#39;, this.href)">回复</a>
+</em>
+
+<p>
+<a href="javascript:;" onclick="showWindow(&#39;miscreport4954993&#39;, &#39;misc.php?mod=report&amp;rtype=post&amp;rid=4954993&amp;tid=4954127&amp;fid=1037&#39;, &#39;get&#39;, -1);return false;">举报</a>
+</p>
+
+</div>
+</div>
+</td>
+</tr>
+<tr class="ad">
+<td class="pls">
+</td>
+<td class="plc">
+</td>
+</tr>
+</tbody></table>
+            </div>
+                            <div id="post_4955059">
+            <table id="pid4955059" class="plhin" summary="pid4955059" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td class="pls" rowspan="2">
+<div id="favatar4955059" class="pls favatar">
+ <div class="pi">
+<div class="authi"><a href="https://www.amobbs.com/space-uid-187654.html" target="_blank" class="xw1">fuwa</a>
+</div>
+</div>
+<div class="p_pop blk bui card_gender_0" id="userinfo4955059" style="display: none; margin-top: -11px;">
+<div class="m z">
+<div id="userinfo4955059_ma"></div>
+</div>
+<div class="i y">
+<div>
+<strong><a href="https://www.amobbs.com/space-uid-187654.html" target="_blank" class="xi2">fuwa</a></strong>
+<em>当前离线</em>
+</div><dl class="cl">
+<dt>积分</dt><dd><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=187654&amp;do=profile" target="_blank" class="xi2">66</a></dd>
+</dl><div class="imicn">
+<a href="https://www.amobbs.com/home.php?mod=space&amp;uid=187654&amp;do=profile" target="_blank" title="查看详细资料"><img src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/userinfo.gif" alt="查看详细资料"></a>
+</div>
+<div id="avatarfeed"><span id="threadsortswait"></span></div>
+</div>
+</div>
+<div>
+<div class="avatar" onmouseover="showauthor(this, &#39;userinfo4955059&#39;)"><a href="https://www.amobbs.com/space-uid-187654.html" class="avtm" target="_blank"><img src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/noavatar_middle.gif" onerror="this.onerror=null;this.src=&#39;https://passport.amobbs.com/uc_server/images/noavatar_middle.gif&#39;"></a></div>
+</div>
+<div class="tns xg2"><table cellspacing="0" cellpadding="0"><tbody><tr><th><p><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=187654&amp;do=profile" class="xi2">66</a></p>积分</th><th><p><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=187654&amp;do=profile" class="xi2">66</a></p>莫元</th><td><p><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=187654&amp;do=profile" class="xi2">0</a></p>飞币</td></tr></tbody></table></div>
+
+<p><em><a href="https://www.amobbs.com/home.php?mod=spacecp&amp;ac=usergroup&amp;gid=7" target="_blank">游客</a></em></p><ul class="xl xl2 o cl">
+<li class="pm2"><a href="https://www.amobbs.com/home.php?mod=spacecp&amp;ac=pm&amp;op=showmsg&amp;handlekey=showmsg_187654&amp;touid=187654&amp;pmid=0&amp;daterange=2&amp;pid=4955059&amp;tid=4954127" onclick="showWindow(&#39;sendpm&#39;, this.href);" title="发消息" class="xi2">发消息</a></li>
+</ul>
+</div>
+</td>
+<td class="plc">
+<div class="pi">
+<strong>
+<a href="https://www.amobbs.com/forum.php?mod=redirect&amp;goto=findpost&amp;ptid=4954127&amp;pid=4955059" id="postnum4955059" onclick="setCopy(this.href, &#39;帖子地址复制成功&#39;);return false;">
+<em>11</em>楼</a>
+</strong>
+<div class="pti">
+<div class="pdbt">
+</div>
+<div class="authi">
+<img class="authicn vm" id="authicon4955059" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/online_member.gif">
+<em id="authorposton4955059">发表于 2011-8-11 12:57:15</em>
+<span class="pipe">|</span>
+<a href="https://www.amobbs.com/forum.php?mod=viewthread&amp;tid=4954127&amp;page=1&amp;authorid=187654" rel="nofollow">只看该作者</a>
+</div>
+</div>
+</div><div class="pct"><div class="pcb">
+<div class="t_fsz">
+<table cellspacing="0" cellpadding="0"><tbody><tr><td class="t_f" id="postmessage_4955059">
+直接用eezm的电路图仿真能实现自动增益，但是用幅值1mv,频率10MHz信号时，输出有3.107伏，超过了AD603能输出的电压范围，导致失真。如图：<br>
+<img id="aimg_EGnlL" onclick="zoom(this, this.src, 0, 0, 0)" class="zoom" file="http://cache.amobbs.com/bbs_upload782111/files_44/ourdev_666510Y16PCB.JPG" onmouseover="img_onmouseoverfunc(this)" lazyloadthumb="1" border="0" alt="" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/ourdev_666510Y16PCB.JPG" lazyloaded="true" _load="1" width="610" height="396" style=""><br>
+ <font color="green">(原文件名:tu3.JPG)</font> <br>
+<br>
+<br>
+我在想难道是multisimAD603的仿真模型有问题？？我的是11版的~~~</td></tr></tbody></table>
+
+
+</div>
+<div id="comment_4955059" class="cm">
+</div>
+
+<div id="post_rate_div_4955059"></div>
+</div>
+</div>
+
+</td></tr>
+<tr><td class="plc plm">
+</td>
+</tr>
+<tr id="_postposition4955059"></tr>
+<tr>
+<td class="pls"></td>
+<td class="plc" style="overflow:visible;">
+<div class="po hin">
+<div class="pob cl">
+<em>
+<a class="fastre" href="https://www.amobbs.com/forum.php?mod=post&amp;action=reply&amp;fid=1037&amp;tid=4954127&amp;repquote=4955059&amp;extra=page%3D1&amp;page=1" onclick="showWindow(&#39;reply&#39;, this.href)">回复</a>
+</em>
+
+<p>
+<a href="javascript:;" onclick="showWindow(&#39;miscreport4955059&#39;, &#39;misc.php?mod=report&amp;rtype=post&amp;rid=4955059&amp;tid=4954127&amp;fid=1037&#39;, &#39;get&#39;, -1);return false;">举报</a>
+</p>
+
+</div>
+</div>
+</td>
+</tr>
+<tr class="ad">
+<td class="pls">
+</td>
+<td class="plc">
+</td>
+</tr>
+</tbody></table>
+<script type="text/javascript" reload="1">
+aimgcount[4955059] = ['EGnlL'];
+attachimggroup(4955059);
+var aimgfid = 0;
+</script>
+            </div>
+                            <div id="post_4955068">
+            <table id="pid4955068" class="plhin" summary="pid4955068" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td class="pls" rowspan="2">
+<div id="favatar4955068" class="pls favatar">
+ <div class="pi">
+<div class="authi"><a href="https://www.amobbs.com/space-uid-187654.html" target="_blank" class="xw1">fuwa</a>
+</div>
+</div>
+<div class="p_pop blk bui card_gender_0" id="userinfo4955068" style="display: none; margin-top: -11px;">
+<div class="m z">
+<div id="userinfo4955068_ma"></div>
+</div>
+<div class="i y">
+<div>
+<strong><a href="https://www.amobbs.com/space-uid-187654.html" target="_blank" class="xi2">fuwa</a></strong>
+<em>当前离线</em>
+</div><dl class="cl">
+<dt>积分</dt><dd><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=187654&amp;do=profile" target="_blank" class="xi2">66</a></dd>
+</dl><div class="imicn">
+<a href="https://www.amobbs.com/home.php?mod=space&amp;uid=187654&amp;do=profile" target="_blank" title="查看详细资料"><img src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/userinfo.gif" alt="查看详细资料"></a>
+</div>
+<div id="avatarfeed"><span id="threadsortswait"></span></div>
+</div>
+</div>
+<div>
+<div class="avatar" onmouseover="showauthor(this, &#39;userinfo4955068&#39;)"><a href="https://www.amobbs.com/space-uid-187654.html" class="avtm" target="_blank"><img src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/noavatar_middle.gif" onerror="this.onerror=null;this.src=&#39;https://passport.amobbs.com/uc_server/images/noavatar_middle.gif&#39;"></a></div>
+</div>
+<div class="tns xg2"><table cellspacing="0" cellpadding="0"><tbody><tr><th><p><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=187654&amp;do=profile" class="xi2">66</a></p>积分</th><th><p><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=187654&amp;do=profile" class="xi2">66</a></p>莫元</th><td><p><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=187654&amp;do=profile" class="xi2">0</a></p>飞币</td></tr></tbody></table></div>
+
+<p><em><a href="https://www.amobbs.com/home.php?mod=spacecp&amp;ac=usergroup&amp;gid=7" target="_blank">游客</a></em></p><ul class="xl xl2 o cl">
+<li class="pm2"><a href="https://www.amobbs.com/home.php?mod=spacecp&amp;ac=pm&amp;op=showmsg&amp;handlekey=showmsg_187654&amp;touid=187654&amp;pmid=0&amp;daterange=2&amp;pid=4955068&amp;tid=4954127" onclick="showWindow(&#39;sendpm&#39;, this.href);" title="发消息" class="xi2">发消息</a></li>
+</ul>
+</div>
+</td>
+<td class="plc">
+<div class="pi">
+<strong>
+<a href="https://www.amobbs.com/forum.php?mod=redirect&amp;goto=findpost&amp;ptid=4954127&amp;pid=4955068" id="postnum4955068" onclick="setCopy(this.href, &#39;帖子地址复制成功&#39;);return false;">
+<em>12</em>楼</a>
+</strong>
+<div class="pti">
+<div class="pdbt">
+</div>
+<div class="authi">
+<img class="authicn vm" id="authicon4955068" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/online_member.gif">
+<em id="authorposton4955068">发表于 2011-8-11 12:59:50</em>
+<span class="pipe">|</span>
+<a href="https://www.amobbs.com/forum.php?mod=viewthread&amp;tid=4954127&amp;page=1&amp;authorid=187654" rel="nofollow">只看该作者</a>
+</div>
+</div>
+</div><div class="pct"><div class="pcb">
+<div class="t_fsz">
+<table cellspacing="0" cellpadding="0"><tbody><tr><td class="t_f" id="postmessage_4955068">
+或者我把我按照eezm大神图画的贴上来吧，或许我图画的有问题~~，恳请大家指出错误啊~~~<br>
+<div style="width: 100px; height: 100px;background: url(static/image/common/loading.gif) no-repeat center center;"></div><img id="aimg_f3a43" onclick="zoom(this, this.src, 0, 0, 0)" class="zoom" file="http://cache.amobbs.com/bbs_upload782111/files_44/ourdev_666511G3X09B.JPG" onmouseover="img_onmouseoverfunc(this)" lazyloadthumb="1" border="0" alt="" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/ourdev_666511G3X09B.JPG" lazyloaded="true" style="height: 1px; width: 1px;"><br>
+ <font color="green">(原文件名:tu4.JPG)</font> <br>
+<br>
+谢谢~~~</td></tr></tbody></table>
+
+
+</div>
+<div id="comment_4955068" class="cm">
+</div>
+
+<div id="post_rate_div_4955068"></div>
+</div>
+</div>
+
+</td></tr>
+<tr><td class="plc plm">
+</td>
+</tr>
+<tr id="_postposition4955068"></tr>
+<tr>
+<td class="pls"></td>
+<td class="plc" style="overflow:visible;">
+<div class="po hin">
+<div class="pob cl">
+<em>
+<a class="fastre" href="https://www.amobbs.com/forum.php?mod=post&amp;action=reply&amp;fid=1037&amp;tid=4954127&amp;repquote=4955068&amp;extra=page%3D1&amp;page=1" onclick="showWindow(&#39;reply&#39;, this.href)">回复</a>
+</em>
+
+<p>
+<a href="javascript:;" onclick="showWindow(&#39;miscreport4955068&#39;, &#39;misc.php?mod=report&amp;rtype=post&amp;rid=4955068&amp;tid=4954127&amp;fid=1037&#39;, &#39;get&#39;, -1);return false;">举报</a>
+</p>
+
+</div>
+</div>
+</td>
+</tr>
+<tr class="ad">
+<td class="pls">
+</td>
+<td class="plc">
+</td>
+</tr>
+</tbody></table>
+<script type="text/javascript" reload="1">
+aimgcount[4955068] = ['f3a43'];
+attachimggroup(4955068);
+var aimgfid = 0;
+</script>
+            </div>
+                            <div id="post_4955276">
+            <table id="pid4955276" class="plhin" summary="pid4955276" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td class="pls" rowspan="2">
+<div id="favatar4955276" class="pls favatar">
+ <div class="pi">
+<div class="authi"><a href="https://www.amobbs.com/space-uid-187654.html" target="_blank" class="xw1">fuwa</a>
+</div>
+</div>
+<div class="p_pop blk bui card_gender_0" id="userinfo4955276" style="display: none; margin-top: -11px;">
+<div class="m z">
+<div id="userinfo4955276_ma"></div>
+</div>
+<div class="i y">
+<div>
+<strong><a href="https://www.amobbs.com/space-uid-187654.html" target="_blank" class="xi2">fuwa</a></strong>
+<em>当前离线</em>
+</div><dl class="cl">
+<dt>积分</dt><dd><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=187654&amp;do=profile" target="_blank" class="xi2">66</a></dd>
+</dl><div class="imicn">
+<a href="https://www.amobbs.com/home.php?mod=space&amp;uid=187654&amp;do=profile" target="_blank" title="查看详细资料"><img src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/userinfo.gif" alt="查看详细资料"></a>
+</div>
+<div id="avatarfeed"><span id="threadsortswait"></span></div>
+</div>
+</div>
+<div>
+<div class="avatar" onmouseover="showauthor(this, &#39;userinfo4955276&#39;)"><a href="https://www.amobbs.com/space-uid-187654.html" class="avtm" target="_blank"><img src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/noavatar_middle.gif" onerror="this.onerror=null;this.src=&#39;https://passport.amobbs.com/uc_server/images/noavatar_middle.gif&#39;"></a></div>
+</div>
+<div class="tns xg2"><table cellspacing="0" cellpadding="0"><tbody><tr><th><p><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=187654&amp;do=profile" class="xi2">66</a></p>积分</th><th><p><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=187654&amp;do=profile" class="xi2">66</a></p>莫元</th><td><p><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=187654&amp;do=profile" class="xi2">0</a></p>飞币</td></tr></tbody></table></div>
+
+<p><em><a href="https://www.amobbs.com/home.php?mod=spacecp&amp;ac=usergroup&amp;gid=7" target="_blank">游客</a></em></p><ul class="xl xl2 o cl">
+<li class="pm2"><a href="https://www.amobbs.com/home.php?mod=spacecp&amp;ac=pm&amp;op=showmsg&amp;handlekey=showmsg_187654&amp;touid=187654&amp;pmid=0&amp;daterange=2&amp;pid=4955276&amp;tid=4954127" onclick="showWindow(&#39;sendpm&#39;, this.href);" title="发消息" class="xi2">发消息</a></li>
+</ul>
+</div>
+</td>
+<td class="plc">
+<div class="pi">
+<strong>
+<a href="https://www.amobbs.com/forum.php?mod=redirect&amp;goto=findpost&amp;ptid=4954127&amp;pid=4955276" id="postnum4955276" onclick="setCopy(this.href, &#39;帖子地址复制成功&#39;);return false;">
+<em>13</em>楼</a>
+</strong>
+<div class="pti">
+<div class="pdbt">
+</div>
+<div class="authi">
+<img class="authicn vm" id="authicon4955276" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/online_member.gif">
+<em id="authorposton4955276">发表于 2011-8-11 14:02:00</em>
+<span class="pipe">|</span>
+<a href="https://www.amobbs.com/forum.php?mod=viewthread&amp;tid=4954127&amp;page=1&amp;authorid=187654" rel="nofollow">只看该作者</a>
+</div>
+</div>
+</div><div class="pct"><div class="pcb">
+<div class="t_fsz">
+<table cellspacing="0" cellpadding="0"><tbody><tr><td class="t_f" id="postmessage_4955276">
+回复【10楼】fuwa <br>
+-----------------------------------------------------------------------<br>
+<br>
+刚才说错了，10MHz时同样能实现稳定输出，只是随着频率的增大，得到稳定输出信号的时间越来越长，相对的，10MHz也才500us。输出幅值大约在1.14左右（输入信号为10mv和100mv均为），相当不错~~~</td></tr></tbody></table>
+
+
+</div>
+<div id="comment_4955276" class="cm">
+</div>
+
+<div id="post_rate_div_4955276"></div>
+</div>
+</div>
+
+</td></tr>
+<tr><td class="plc plm">
+</td>
+</tr>
+<tr id="_postposition4955276"></tr>
+<tr>
+<td class="pls"></td>
+<td class="plc" style="overflow:visible;">
+<div class="po hin">
+<div class="pob cl">
+<em>
+<a class="fastre" href="https://www.amobbs.com/forum.php?mod=post&amp;action=reply&amp;fid=1037&amp;tid=4954127&amp;repquote=4955276&amp;extra=page%3D1&amp;page=1" onclick="showWindow(&#39;reply&#39;, this.href)">回复</a>
+</em>
+
+<p>
+<a href="javascript:;" onclick="showWindow(&#39;miscreport4955276&#39;, &#39;misc.php?mod=report&amp;rtype=post&amp;rid=4955276&amp;tid=4954127&amp;fid=1037&#39;, &#39;get&#39;, -1);return false;">举报</a>
+</p>
+
+</div>
+</div>
+</td>
+</tr>
+<tr class="ad">
+<td class="pls">
+</td>
+<td class="plc">
+</td>
+</tr>
+</tbody></table>
+            </div>
+                            <div id="post_4968319">
+            <table id="pid4968319" class="plhin" summary="pid4968319" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td class="pls" rowspan="2">
+<div id="favatar4968319" class="pls favatar">
+ <div class="pi">
+<div class="authi"><a href="https://www.amobbs.com/space-uid-161469.html" target="_blank" class="xw1">wzyllgx</a>
+</div>
+</div>
+<div class="p_pop blk bui card_gender_0" id="userinfo4968319" style="display: none; margin-top: -11px;">
+<div class="m z">
+<div id="userinfo4968319_ma"></div>
+</div>
+<div class="i y">
+<div>
+<strong><a href="https://www.amobbs.com/space-uid-161469.html" target="_blank" class="xi2">wzyllgx</a></strong>
+<em>当前离线</em>
+</div><dl class="cl">
+<dt>积分</dt><dd><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=161469&amp;do=profile" target="_blank" class="xi2">3406</a></dd>
+</dl><div class="imicn">
+<a href="http:" target="_blank" title="查看个人网站"><img src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/forumlink.gif" alt="查看个人网站"></a><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=161469&amp;do=profile" target="_blank" title="查看详细资料"><img src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/userinfo.gif" alt="查看详细资料"></a>
+</div>
+<div id="avatarfeed"><span id="threadsortswait"></span></div>
+</div>
+</div>
+<div>
+<div class="avatar" onmouseover="showauthor(this, &#39;userinfo4968319&#39;)"><a href="https://www.amobbs.com/space-uid-161469.html" class="avtm" target="_blank"><img src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/69_avatar_middle.jpg" onerror="this.onerror=null;this.src=&#39;https://passport.amobbs.com/uc_server/images/noavatar_middle.gif&#39;"></a></div>
+</div>
+<div class="tns xg2"><table cellspacing="0" cellpadding="0"><tbody><tr><th><p><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=161469&amp;do=profile" class="xi2">3406</a></p>积分</th><th><p><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=161469&amp;do=profile" class="xi2">1669</a></p>莫元</th><td><p><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=161469&amp;do=profile" class="xi2">36</a></p>飞币</td></tr></tbody></table></div>
+
+<p><em><a href="https://www.amobbs.com/home.php?mod=spacecp&amp;ac=usergroup&amp;gid=14" target="_blank">金牌会员</a></em></p><ul class="xl xl2 o cl">
+<li class="pm2"><a href="https://www.amobbs.com/home.php?mod=spacecp&amp;ac=pm&amp;op=showmsg&amp;handlekey=showmsg_161469&amp;touid=161469&amp;pmid=0&amp;daterange=2&amp;pid=4968319&amp;tid=4954127" onclick="showWindow(&#39;sendpm&#39;, this.href);" title="发消息" class="xi2">发消息</a></li>
+</ul>
+</div>
+</td>
+<td class="plc">
+<div class="pi">
+<strong>
+<a href="https://www.amobbs.com/forum.php?mod=redirect&amp;goto=findpost&amp;ptid=4954127&amp;pid=4968319" id="postnum4968319" onclick="setCopy(this.href, &#39;帖子地址复制成功&#39;);return false;">
+<em>14</em>楼</a>
+</strong>
+<div class="pti">
+<div class="pdbt">
+</div>
+<div class="authi">
+<img class="authicn vm" id="authicon4968319" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/online_member.gif">
+<em id="authorposton4968319">发表于 2011-8-16 11:03:41</em>
+<span class="pipe">|</span>
+<a href="https://www.amobbs.com/forum.php?mod=viewthread&amp;tid=4954127&amp;page=1&amp;authorid=161469" rel="nofollow">只看该作者</a>
+</div>
+</div>
+</div><div class="pct"><div class="pcb">
+<div class="t_fsz">
+<table cellspacing="0" cellpadding="0"><tbody><tr><td class="t_f" id="postmessage_4968319">
+mark</td></tr></tbody></table>
+
+
+</div>
+<div id="comment_4968319" class="cm">
+</div>
+
+<div id="post_rate_div_4968319"></div>
+</div>
+</div>
+
+</td></tr>
+<tr><td class="plc plm">
+</td>
+</tr>
+<tr id="_postposition4968319"></tr>
+<tr>
+<td class="pls"></td>
+<td class="plc" style="overflow:visible;">
+<div class="po hin">
+<div class="pob cl">
+<em>
+<a class="fastre" href="https://www.amobbs.com/forum.php?mod=post&amp;action=reply&amp;fid=1037&amp;tid=4954127&amp;repquote=4968319&amp;extra=page%3D1&amp;page=1" onclick="showWindow(&#39;reply&#39;, this.href)">回复</a>
+</em>
+
+<p>
+<a href="javascript:;" onclick="showWindow(&#39;miscreport4968319&#39;, &#39;misc.php?mod=report&amp;rtype=post&amp;rid=4968319&amp;tid=4954127&amp;fid=1037&#39;, &#39;get&#39;, -1);return false;">举报</a>
+</p>
+
+</div>
+</div>
+</td>
+</tr>
+<tr class="ad">
+<td class="pls">
+</td>
+<td class="plc">
+</td>
+</tr>
+</tbody></table>
+            </div>
+                                    <div id="post_5044696">
+            <table id="pid5044696" class="plhin" summary="pid5044696" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td class="pls" rowspan="2">
+<div id="favatar5044696" class="pls favatar">
+ <div class="pi">
+<div class="authi"><a href="https://www.amobbs.com/space-uid-50956.html" target="_blank" class="xw1">loongsuns</a>
+</div>
+</div>
+<div class="p_pop blk bui card_gender_1" id="userinfo5044696" style="display: none; margin-top: -11px;">
+<div class="m z">
+<div id="userinfo5044696_ma"></div>
+</div>
+<div class="i y">
+<div>
+<strong><a href="https://www.amobbs.com/space-uid-50956.html" target="_blank" class="xi2">loongsuns</a></strong>
+<em>当前离线</em>
+</div><dl class="cl">
+<dt>积分</dt><dd><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=50956&amp;do=profile" target="_blank" class="xi2">1866</a></dd>
+</dl><div class="imicn">
+<a href="http:" target="_blank" title="查看个人网站"><img src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/forumlink.gif" alt="查看个人网站"></a><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=50956&amp;do=profile" target="_blank" title="查看详细资料"><img src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/userinfo.gif" alt="查看详细资料"></a>
+</div>
+<div id="avatarfeed"><span id="threadsortswait"></span></div>
+</div>
+</div>
+<div>
+<div class="avatar" onmouseover="showauthor(this, &#39;userinfo5044696&#39;)"><a href="https://www.amobbs.com/space-uid-50956.html" class="avtm" target="_blank"><img src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/56_avatar_middle.jpg" onerror="this.onerror=null;this.src=&#39;https://passport.amobbs.com/uc_server/images/noavatar_middle.gif&#39;"></a></div>
+</div>
+<div class="tns xg2"><table cellspacing="0" cellpadding="0"><tbody><tr><th><p><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=50956&amp;do=profile" class="xi2">1866</a></p>积分</th><th><p><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=50956&amp;do=profile" class="xi2">933</a></p>莫元</th><td><p><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=50956&amp;do=profile" class="xi2">0</a></p>飞币</td></tr></tbody></table></div>
+
+<p><em><a href="https://www.amobbs.com/home.php?mod=spacecp&amp;ac=usergroup&amp;gid=14" target="_blank">金牌会员</a></em></p><ul class="xl xl2 o cl">
+<li class="pm2"><a href="https://www.amobbs.com/home.php?mod=spacecp&amp;ac=pm&amp;op=showmsg&amp;handlekey=showmsg_50956&amp;touid=50956&amp;pmid=0&amp;daterange=2&amp;pid=5044696&amp;tid=4954127" onclick="showWindow(&#39;sendpm&#39;, this.href);" title="发消息" class="xi2">发消息</a></li>
+</ul>
+</div>
+</td>
+<td class="plc">
+<div class="pi">
+<strong>
+<a href="https://www.amobbs.com/forum.php?mod=redirect&amp;goto=findpost&amp;ptid=4954127&amp;pid=5044696" id="postnum5044696" onclick="setCopy(this.href, &#39;帖子地址复制成功&#39;);return false;">
+<em>16</em>楼</a>
+</strong>
+<div class="pti">
+<div class="pdbt">
+</div>
+<div class="authi">
+<img class="authicn vm" id="authicon5044696" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/online_member.gif">
+<em id="authorposton5044696">发表于 2011-9-13 14:46:35</em>
+<span class="pipe">|</span>
+<a href="https://www.amobbs.com/forum.php?mod=viewthread&amp;tid=4954127&amp;page=1&amp;authorid=50956" rel="nofollow">只看该作者</a>
+</div>
+</div>
+</div><div class="pct"><div class="pcb">
+<div class="t_fsz">
+<table cellspacing="0" cellpadding="0"><tbody><tr><td class="t_f" id="postmessage_5044696">
+mark</td></tr></tbody></table>
+
+
+</div>
+<div id="comment_5044696" class="cm">
+</div>
+
+<div id="post_rate_div_5044696"></div>
+</div>
+</div>
+
+</td></tr>
+<tr><td class="plc plm">
+</td>
+</tr>
+<tr id="_postposition5044696"></tr>
+<tr>
+<td class="pls"></td>
+<td class="plc" style="overflow:visible;">
+<div class="po hin">
+<div class="pob cl">
+<em>
+<a class="fastre" href="https://www.amobbs.com/forum.php?mod=post&amp;action=reply&amp;fid=1037&amp;tid=4954127&amp;repquote=5044696&amp;extra=page%3D1&amp;page=1" onclick="showWindow(&#39;reply&#39;, this.href)">回复</a>
+</em>
+
+<p>
+<a href="javascript:;" onclick="showWindow(&#39;miscreport5044696&#39;, &#39;misc.php?mod=report&amp;rtype=post&amp;rid=5044696&amp;tid=4954127&amp;fid=1037&#39;, &#39;get&#39;, -1);return false;">举报</a>
+</p>
+
+</div>
+</div>
+</td>
+</tr>
+<tr class="ad">
+<td class="pls">
+</td>
+<td class="plc">
+</td>
+</tr>
+</tbody></table>
+            </div>
+                            <div id="post_5071015">
+            <table id="pid5071015" class="plhin" summary="pid5071015" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td class="pls" rowspan="2">
+<div id="favatar5071015" class="pls favatar">
+ <div class="pi">
+<div class="authi"><a href="https://www.amobbs.com/space-uid-13841.html" target="_blank" class="xw1">xinfa190</a>
+</div>
+</div>
+<div class="p_pop blk bui card_gender_0" id="userinfo5071015" style="display: none; margin-top: -11px;">
+<div class="m z">
+<div id="userinfo5071015_ma"></div>
+</div>
+<div class="i y">
+<div>
+<strong><a href="https://www.amobbs.com/space-uid-13841.html" target="_blank" class="xi2">xinfa190</a></strong>
+<em>当前离线</em>
+</div><dl class="cl">
+<dt>积分</dt><dd><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=13841&amp;do=profile" target="_blank" class="xi2">2821</a></dd>
+</dl><div class="imicn">
+<a href="https://www.amobbs.com/home.php?mod=space&amp;uid=13841&amp;do=profile" target="_blank" title="查看详细资料"><img src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/userinfo.gif" alt="查看详细资料"></a>
+</div>
+<div id="avatarfeed"><span id="threadsortswait"></span></div>
+</div>
+</div>
+<div>
+<div class="avatar" onmouseover="showauthor(this, &#39;userinfo5071015&#39;)"><a href="https://www.amobbs.com/space-uid-13841.html" class="avtm" target="_blank"><img src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/41_avatar_middle.jpg" onerror="this.onerror=null;this.src=&#39;https://passport.amobbs.com/uc_server/images/noavatar_middle.gif&#39;"></a></div>
+</div>
+<div class="tns xg2"><table cellspacing="0" cellpadding="0"><tbody><tr><th><p><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=13841&amp;do=profile" class="xi2">2821</a></p>积分</th><th><p><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=13841&amp;do=profile" class="xi2">1691</a></p>莫元</th><td><p><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=13841&amp;do=profile" class="xi2">96</a></p>飞币</td></tr></tbody></table></div>
+
+<p><em><a href="https://www.amobbs.com/home.php?mod=spacecp&amp;ac=usergroup&amp;gid=14" target="_blank">金牌会员</a></em></p><ul class="xl xl2 o cl">
+<li class="pm2"><a href="https://www.amobbs.com/home.php?mod=spacecp&amp;ac=pm&amp;op=showmsg&amp;handlekey=showmsg_13841&amp;touid=13841&amp;pmid=0&amp;daterange=2&amp;pid=5071015&amp;tid=4954127" onclick="showWindow(&#39;sendpm&#39;, this.href);" title="发消息" class="xi2">发消息</a></li>
+</ul>
+</div>
+</td>
+<td class="plc">
+<div class="pi">
+<strong>
+<a href="https://www.amobbs.com/forum.php?mod=redirect&amp;goto=findpost&amp;ptid=4954127&amp;pid=5071015" id="postnum5071015" onclick="setCopy(this.href, &#39;帖子地址复制成功&#39;);return false;">
+<em>17</em>楼</a>
+</strong>
+<div class="pti">
+<div class="pdbt">
+</div>
+<div class="authi">
+<img class="authicn vm" id="authicon5071015" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/online_member.gif">
+<em id="authorposton5071015">发表于 2011-9-23 22:14:08</em>
+<span class="pipe">|</span>
+<a href="https://www.amobbs.com/forum.php?mod=viewthread&amp;tid=4954127&amp;page=1&amp;authorid=13841" rel="nofollow">只看该作者</a>
+</div>
+</div>
+</div><div class="pct"><div class="pcb">
+<div class="t_fsz">
+<table cellspacing="0" cellpadding="0"><tbody><tr><td class="t_f" id="postmessage_5071015">
+mark too</td></tr></tbody></table>
+
+
+</div>
+<div id="comment_5071015" class="cm">
+</div>
+
+<div id="post_rate_div_5071015"></div>
+</div>
+</div>
+
+</td></tr>
+<tr><td class="plc plm">
+</td>
+</tr>
+<tr id="_postposition5071015"></tr>
+<tr>
+<td class="pls"></td>
+<td class="plc" style="overflow:visible;">
+<div class="po hin">
+<div class="pob cl">
+<em>
+<a class="fastre" href="https://www.amobbs.com/forum.php?mod=post&amp;action=reply&amp;fid=1037&amp;tid=4954127&amp;repquote=5071015&amp;extra=page%3D1&amp;page=1" onclick="showWindow(&#39;reply&#39;, this.href)">回复</a>
+</em>
+
+<p>
+<a href="javascript:;" onclick="showWindow(&#39;miscreport5071015&#39;, &#39;misc.php?mod=report&amp;rtype=post&amp;rid=5071015&amp;tid=4954127&amp;fid=1037&#39;, &#39;get&#39;, -1);return false;">举报</a>
+</p>
+
+</div>
+</div>
+</td>
+</tr>
+<tr class="ad">
+<td class="pls">
+</td>
+<td class="plc">
+</td>
+</tr>
+</tbody></table>
+            </div>
+                            <div id="post_5133065">
+            <table id="pid5133065" class="plhin" summary="pid5133065" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td class="pls" rowspan="2">
+<div id="favatar5133065" class="pls favatar">
+ <div class="pi">
+<div class="authi"><a href="https://www.amobbs.com/space-uid-268221.html" target="_blank" class="xw1">lkklkk</a>
+</div>
+</div>
+<div class="p_pop blk bui card_gender_0" id="userinfo5133065" style="display: none; margin-top: -11px;">
+<div class="m z">
+<div id="userinfo5133065_ma"></div>
+</div>
+<div class="i y">
+<div>
+<strong><a href="https://www.amobbs.com/space-uid-268221.html" target="_blank" class="xi2">lkklkk</a></strong>
+<em>当前离线</em>
+</div><dl class="cl">
+<dt>积分</dt><dd><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=268221&amp;do=profile" target="_blank" class="xi2">5</a></dd>
+</dl><div class="imicn">
+<a href="https://www.amobbs.com/home.php?mod=space&amp;uid=268221&amp;do=profile" target="_blank" title="查看详细资料"><img src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/userinfo.gif" alt="查看详细资料"></a>
+</div>
+<div id="avatarfeed"><span id="threadsortswait"></span></div>
+</div>
+</div>
+<div>
+<div class="avatar" onmouseover="showauthor(this, &#39;userinfo5133065&#39;)"><a href="https://www.amobbs.com/space-uid-268221.html" class="avtm" target="_blank"><img src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/noavatar_middle.gif" onerror="this.onerror=null;this.src=&#39;https://passport.amobbs.com/uc_server/images/noavatar_middle.gif&#39;"></a></div>
+</div>
+<div class="tns xg2"><table cellspacing="0" cellpadding="0"><tbody><tr><th><p><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=268221&amp;do=profile" class="xi2">5</a></p>积分</th><th><p><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=268221&amp;do=profile" class="xi2">5</a></p>莫元</th><td><p><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=268221&amp;do=profile" class="xi2">0</a></p>飞币</td></tr></tbody></table></div>
+
+<p><em><a href="https://www.amobbs.com/home.php?mod=spacecp&amp;ac=usergroup&amp;gid=22" target="_blank">新手上路</a></em></p><ul class="xl xl2 o cl">
+<li class="pm2"><a href="https://www.amobbs.com/home.php?mod=spacecp&amp;ac=pm&amp;op=showmsg&amp;handlekey=showmsg_268221&amp;touid=268221&amp;pmid=0&amp;daterange=2&amp;pid=5133065&amp;tid=4954127" onclick="showWindow(&#39;sendpm&#39;, this.href);" title="发消息" class="xi2">发消息</a></li>
+</ul>
+</div>
+</td>
+<td class="plc">
+<div class="pi">
+<strong>
+<a href="https://www.amobbs.com/forum.php?mod=redirect&amp;goto=findpost&amp;ptid=4954127&amp;pid=5133065" id="postnum5133065" onclick="setCopy(this.href, &#39;帖子地址复制成功&#39;);return false;">
+<em>18</em>楼</a>
+</strong>
+<div class="pti">
+<div class="pdbt">
+</div>
+<div class="authi">
+<img class="authicn vm" id="authicon5133065" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/online_member.gif">
+<em id="authorposton5133065">发表于 2011-10-20 13:14:26</em>
+<span class="pipe">|</span>
+<a href="https://www.amobbs.com/forum.php?mod=viewthread&amp;tid=4954127&amp;page=1&amp;authorid=268221" rel="nofollow">只看该作者</a>
+</div>
+</div>
+</div><div class="pct"><div class="pcb">
+<div class="t_fsz">
+<table cellspacing="0" cellpadding="0"><tbody><tr><td class="t_f" id="postmessage_5133065">
+学习</td></tr></tbody></table>
+
+
+</div>
+<div id="comment_5133065" class="cm">
+</div>
+
+<div id="post_rate_div_5133065"></div>
+</div>
+</div>
+
+</td></tr>
+<tr><td class="plc plm">
+</td>
+</tr>
+<tr id="_postposition5133065"></tr>
+<tr>
+<td class="pls"></td>
+<td class="plc" style="overflow:visible;">
+<div class="po hin">
+<div class="pob cl">
+<em>
+<a class="fastre" href="https://www.amobbs.com/forum.php?mod=post&amp;action=reply&amp;fid=1037&amp;tid=4954127&amp;repquote=5133065&amp;extra=page%3D1&amp;page=1" onclick="showWindow(&#39;reply&#39;, this.href)">回复</a>
+</em>
+
+<p>
+<a href="javascript:;" onclick="showWindow(&#39;miscreport5133065&#39;, &#39;misc.php?mod=report&amp;rtype=post&amp;rid=5133065&amp;tid=4954127&amp;fid=1037&#39;, &#39;get&#39;, -1);return false;">举报</a>
+</p>
+
+</div>
+</div>
+</td>
+</tr>
+<tr class="ad">
+<td class="pls">
+</td>
+<td class="plc">
+</td>
+</tr>
+</tbody></table>
+            </div>
+                            <div id="post_6823121">
+            <table id="pid6823121" class="plhin" summary="pid6823121" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td class="pls" rowspan="2">
+<div id="favatar6823121" class="pls favatar">
+ <div class="pi">
+<div class="authi"><a href="https://www.amobbs.com/space-uid-1279661.html" target="_blank" class="xw1">石境Per</a>
+</div>
+</div>
+<div class="p_pop blk bui card_gender_1" id="userinfo6823121" style="display: none; margin-top: -11px;">
+<div class="m z">
+<div id="userinfo6823121_ma"></div>
+</div>
+<div class="i y">
+<div>
+<strong><a href="https://www.amobbs.com/space-uid-1279661.html" target="_blank" class="xi2">石境Per</a></strong>
+<em>当前离线</em>
+</div><dl class="cl">
+<dt>积分</dt><dd><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=1279661&amp;do=profile" target="_blank" class="xi2">54</a></dd>
+</dl><div class="imicn">
+<a href="https://www.amobbs.com/home.php?mod=space&amp;uid=1279661&amp;do=profile" target="_blank" title="查看详细资料"><img src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/userinfo.gif" alt="查看详细资料"></a>
+</div>
+<div id="avatarfeed"><span id="threadsortswait"></span></div>
+</div>
+</div>
+<div>
+<div class="avatar" onmouseover="showauthor(this, &#39;userinfo6823121&#39;)"><a href="https://www.amobbs.com/space-uid-1279661.html" class="avtm" target="_blank"><img src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/61_avatar_middle.jpg" onerror="this.onerror=null;this.src=&#39;https://passport.amobbs.com/uc_server/images/noavatar_middle.gif&#39;"></a></div>
+</div>
+<div class="tns xg2"><table cellspacing="0" cellpadding="0"><tbody><tr><th><p><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=1279661&amp;do=profile" class="xi2">54</a></p>积分</th><th><p><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=1279661&amp;do=profile" class="xi2">42</a></p>莫元</th><td><p><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=1279661&amp;do=profile" class="xi2">0</a></p>飞币</td></tr></tbody></table></div>
+
+<p><em><a href="https://www.amobbs.com/home.php?mod=spacecp&amp;ac=usergroup&amp;gid=11" target="_blank">注册会员</a></em></p><ul class="xl xl2 o cl">
+<li class="pm2"><a href="https://www.amobbs.com/home.php?mod=spacecp&amp;ac=pm&amp;op=showmsg&amp;handlekey=showmsg_1279661&amp;touid=1279661&amp;pmid=0&amp;daterange=2&amp;pid=6823121&amp;tid=4954127" onclick="showWindow(&#39;sendpm&#39;, this.href);" title="发消息" class="xi2">发消息</a></li>
+</ul>
+</div>
+</td>
+<td class="plc">
+<div class="pi">
+<strong>
+<a href="https://www.amobbs.com/forum.php?mod=redirect&amp;goto=findpost&amp;ptid=4954127&amp;pid=6823121" id="postnum6823121" onclick="setCopy(this.href, &#39;帖子地址复制成功&#39;);return false;">
+<em>19</em>楼</a>
+</strong>
+<div class="pti">
+<div class="pdbt">
+</div>
+<div class="authi">
+<img class="authicn vm" id="authicon6823121" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/online_member.gif">
+<em id="authorposton6823121">发表于 2013-7-16 11:32:31</em>
+<span class="pipe">|</span>
+<a href="https://www.amobbs.com/forum.php?mod=viewthread&amp;tid=4954127&amp;page=1&amp;authorid=1279661" rel="nofollow">只看该作者</a>
+</div>
+</div>
+</div><div class="pct"><div class="pcb">
+<div class="t_fsz">
+<table cellspacing="0" cellpadding="0"><tbody><tr><td class="t_f" id="postmessage_6823121">
+楼主，这个仿真图有有问题啊。不能稳幅，没有实现AGC的功能......</td></tr></tbody></table>
+
+
+</div>
+<div id="comment_6823121" class="cm">
+</div>
+
+<div id="post_rate_div_6823121"></div>
+</div>
+</div>
+
+</td></tr>
+<tr><td class="plc plm">
+</td>
+</tr>
+<tr id="_postposition6823121"></tr>
+<tr>
+<td class="pls"></td>
+<td class="plc" style="overflow:visible;">
+<div class="po hin">
+<div class="pob cl">
+<em>
+<a class="fastre" href="https://www.amobbs.com/forum.php?mod=post&amp;action=reply&amp;fid=1037&amp;tid=4954127&amp;repquote=6823121&amp;extra=page%3D1&amp;page=1" onclick="showWindow(&#39;reply&#39;, this.href)">回复</a>
+</em>
+
+<p>
+<a href="javascript:;" onclick="showWindow(&#39;miscreport6823121&#39;, &#39;misc.php?mod=report&amp;rtype=post&amp;rid=6823121&amp;tid=4954127&amp;fid=1037&#39;, &#39;get&#39;, -1);return false;">举报</a>
+</p>
+
+</div>
+</div>
+</td>
+</tr>
+<tr class="ad">
+<td class="pls">
+</td>
+<td class="plc">
+</td>
+</tr>
+</tbody></table>
+            </div>
+                            <div id="post_7091557">
+            <table id="pid7091557" class="plhin" summary="pid7091557" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td class="pls" rowspan="2">
+<div id="favatar7091557" class="pls favatar">
+ <div class="pi">
+<div class="authi"><a href="https://www.amobbs.com/space-uid-1309268.html" target="_blank" class="xw1">chujidashi</a>
+</div>
+</div>
+<div class="p_pop blk bui card_gender_1" id="userinfo7091557" style="display: none; margin-top: -11px;">
+<div class="m z">
+<div id="userinfo7091557_ma"></div>
+</div>
+<div class="i y">
+<div>
+<strong><a href="https://www.amobbs.com/space-uid-1309268.html" target="_blank" class="xi2">chujidashi</a></strong>
+<em>当前离线</em>
+</div><dl class="cl">
+<dt>积分</dt><dd><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=1309268&amp;do=profile" target="_blank" class="xi2">87</a></dd>
+</dl><div class="imicn">
+<a href="https://www.amobbs.com/home.php?mod=space&amp;uid=1309268&amp;do=profile" target="_blank" title="查看详细资料"><img src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/userinfo.gif" alt="查看详细资料"></a>
+</div>
+<div id="avatarfeed"><span id="threadsortswait"></span></div>
+</div>
+</div>
+<div>
+<div class="avatar" onmouseover="showauthor(this, &#39;userinfo7091557&#39;)"><a href="https://www.amobbs.com/space-uid-1309268.html" class="avtm" target="_blank"><img src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/68_avatar_middle.jpg" onerror="this.onerror=null;this.src=&#39;https://passport.amobbs.com/uc_server/images/noavatar_middle.gif&#39;"></a></div>
+</div>
+<div class="tns xg2"><table cellspacing="0" cellpadding="0"><tbody><tr><th><p><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=1309268&amp;do=profile" class="xi2">87</a></p>积分</th><th><p><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=1309268&amp;do=profile" class="xi2">72</a></p>莫元</th><td><p><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=1309268&amp;do=profile" class="xi2">0</a></p>飞币</td></tr></tbody></table></div>
+
+<p><em><a href="https://www.amobbs.com/home.php?mod=spacecp&amp;ac=usergroup&amp;gid=11" target="_blank">注册会员</a></em></p><ul class="xl xl2 o cl">
+<li class="pm2"><a href="https://www.amobbs.com/home.php?mod=spacecp&amp;ac=pm&amp;op=showmsg&amp;handlekey=showmsg_1309268&amp;touid=1309268&amp;pmid=0&amp;daterange=2&amp;pid=7091557&amp;tid=4954127" onclick="showWindow(&#39;sendpm&#39;, this.href);" title="发消息" class="xi2">发消息</a></li>
+</ul>
+</div>
+</td>
+<td class="plc">
+<div class="pi">
+<strong>
+<a href="https://www.amobbs.com/forum.php?mod=redirect&amp;goto=findpost&amp;ptid=4954127&amp;pid=7091557" id="postnum7091557" onclick="setCopy(this.href, &#39;帖子地址复制成功&#39;);return false;">
+<em>20</em>楼</a>
+</strong>
+<div class="pti">
+<div class="pdbt">
+</div>
+<div class="authi">
+<img class="authicn vm" id="authicon7091557" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/online_member.gif">
+<em id="authorposton7091557">发表于 2013-11-4 13:24:50</em>
+<span class="pipe">|</span>
+<a href="https://www.amobbs.com/forum.php?mod=viewthread&amp;tid=4954127&amp;page=1&amp;authorid=1309268" rel="nofollow">只看该作者</a>
+</div>
+</div>
+</div><div class="pct"><div class="pcb">
+<div class="t_fsz">
+<table cellspacing="0" cellpadding="0"><tbody><tr><td class="t_f" id="postmessage_7091557">
+仿真很容易通过，但实际电路不容易调试。感觉模拟电路特别是高频的，调试起来比数字电路要难很多。</td></tr></tbody></table>
+
+
+</div>
+<div id="comment_7091557" class="cm">
+</div>
+
+<div id="post_rate_div_7091557"></div>
+</div>
+</div>
+
+</td></tr>
+<tr><td class="plc plm">
+</td>
+</tr>
+<tr id="_postposition7091557"></tr>
+<tr>
+<td class="pls"></td>
+<td class="plc" style="overflow:visible;">
+<div class="po hin">
+<div class="pob cl">
+<em>
+<a class="fastre" href="https://www.amobbs.com/forum.php?mod=post&amp;action=reply&amp;fid=1037&amp;tid=4954127&amp;repquote=7091557&amp;extra=page%3D1&amp;page=1" onclick="showWindow(&#39;reply&#39;, this.href)">回复</a>
+</em>
+
+<p>
+<a href="javascript:;" onclick="showWindow(&#39;miscreport7091557&#39;, &#39;misc.php?mod=report&amp;rtype=post&amp;rid=7091557&amp;tid=4954127&amp;fid=1037&#39;, &#39;get&#39;, -1);return false;">举报</a>
+</p>
+
+</div>
+</div>
+</td>
+</tr>
+<tr class="ad">
+<td class="pls">
+</td>
+<td class="plc">
+</td>
+</tr>
+</tbody></table>
+            </div>
+                            <div id="post_8555156">
+            <table id="pid8555156" class="plhin" summary="pid8555156" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td class="pls" rowspan="2">
+<div id="favatar8555156" class="pls favatar">
+ <a name="lastpost"></a><div class="pi">
+<div class="authi"><a href="https://www.amobbs.com/space-uid-1324713.html" target="_blank" class="xw1">lydmom</a>
+</div>
+</div>
+<div class="p_pop blk bui card_gender_1" id="userinfo8555156" style="display: none; margin-top: -11px;">
+<div class="m z">
+<div id="userinfo8555156_ma"></div>
+</div>
+<div class="i y">
+<div>
+<strong><a href="https://www.amobbs.com/space-uid-1324713.html" target="_blank" class="xi2">lydmom</a></strong>
+<em>当前离线</em>
+</div><dl class="cl">
+<dt>积分</dt><dd><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=1324713&amp;do=profile" target="_blank" class="xi2">74</a></dd>
+</dl><div class="imicn">
+<a href="http://wpa.qq.com/msgrd?v=3&amp;uin=1609099954&amp;site=amoBBS%20%E9%98%BF%E8%8E%AB%E7%94%B5%E5%AD%90%E8%AE%BA%E5%9D%9B&amp;menu=yes&amp;from=discuz" target="_blank" title="QQ"><img src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/qq.gif" alt="QQ"></a><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=1324713&amp;do=profile" target="_blank" title="查看详细资料"><img src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/userinfo.gif" alt="查看详细资料"></a>
+</div>
+<div id="avatarfeed"><span id="threadsortswait"></span></div>
+</div>
+</div>
+<div>
+<div class="avatar" onmouseover="showauthor(this, &#39;userinfo8555156&#39;)"><a href="https://www.amobbs.com/space-uid-1324713.html" class="avtm" target="_blank"><img src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/13_avatar_middle.jpg" onerror="this.onerror=null;this.src=&#39;https://passport.amobbs.com/uc_server/images/noavatar_middle.gif&#39;"></a></div>
+</div>
+<div class="tns xg2"><table cellspacing="0" cellpadding="0"><tbody><tr><th><p><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=1324713&amp;do=profile" class="xi2">74</a></p>积分</th><th><p><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=1324713&amp;do=profile" class="xi2">65</a></p>莫元</th><td><p><a href="https://www.amobbs.com/home.php?mod=space&amp;uid=1324713&amp;do=profile" class="xi2">6</a></p>飞币</td></tr></tbody></table></div>
+
+<p><em><a href="https://www.amobbs.com/home.php?mod=spacecp&amp;ac=usergroup&amp;gid=11" target="_blank">注册会员</a></em></p><ul class="xl xl2 o cl">
+<li class="pm2"><a href="https://www.amobbs.com/home.php?mod=spacecp&amp;ac=pm&amp;op=showmsg&amp;handlekey=showmsg_1324713&amp;touid=1324713&amp;pmid=0&amp;daterange=2&amp;pid=8555156&amp;tid=4954127" onclick="showWindow(&#39;sendpm&#39;, this.href);" title="发消息" class="xi2">发消息</a></li>
+</ul>
+</div>
+</td>
+<td class="plc">
+<div class="pi">
+<strong>
+<a href="https://www.amobbs.com/forum.php?mod=redirect&amp;goto=findpost&amp;ptid=4954127&amp;pid=8555156" id="postnum8555156" onclick="setCopy(this.href, &#39;帖子地址复制成功&#39;);return false;">
+<em>21</em>楼</a>
+</strong>
+<div class="pti">
+<div class="pdbt">
+</div>
+<div class="authi">
+<img class="authicn vm" id="authicon8555156" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/online_member.gif">
+<em id="authorposton8555156">发表于 2015-5-1 22:58:45</em>
+<span class="pipe">|</span>
+<a href="https://www.amobbs.com/forum.php?mod=viewthread&amp;tid=4954127&amp;page=1&amp;authorid=1324713" rel="nofollow">只看该作者</a>
+</div>
+</div>
+</div><div class="pct"><div class="pcb">
+<div class="t_fsz">
+<table cellspacing="0" cellpadding="0"><tbody><tr><td class="t_f" id="postmessage_8555156">
+楼主，请问您的电路能直接用在实际吗？我做一个做品想用AGC。</td></tr></tbody></table>
+
+
+</div>
+<div id="comment_8555156" class="cm">
+</div>
+
+<div id="post_rate_div_8555156"></div>
+</div>
+</div>
+
+</td></tr>
+<tr><td class="plc plm">
+</td>
+</tr>
+<tr id="_postposition8555156"></tr>
+<tr>
+<td class="pls"></td>
+<td class="plc" style="overflow:visible;">
+<div class="po hin">
+<div class="pob cl">
+<em>
+<a class="fastre" href="https://www.amobbs.com/forum.php?mod=post&amp;action=reply&amp;fid=1037&amp;tid=4954127&amp;repquote=8555156&amp;extra=page%3D1&amp;page=1" onclick="showWindow(&#39;reply&#39;, this.href)">回复</a>
+</em>
+
+<p>
+<a href="javascript:;" onclick="showWindow(&#39;miscreport8555156&#39;, &#39;misc.php?mod=report&amp;rtype=post&amp;rid=8555156&amp;tid=4954127&amp;fid=1037&#39;, &#39;get&#39;, -1);return false;">举报</a>
+</p>
+
+</div>
+</div>
+</td>
+</tr>
+<tr class="ad">
+<td class="pls">
+</td>
+<td class="plc">
+</td>
+</tr>
+</tbody></table>
+            </div>
+        <div id="postlistreply" class="pl"><div id="post_new" class="viewthread_table" style="display: none"></div></div>
+</div>
+
+
+<form method="post" autocomplete="off" name="modactions" id="modactions">
+<input type="hidden" name="formhash" value="78fb776c">
+<input type="hidden" name="optgroup">
+<input type="hidden" name="operation">
+<input type="hidden" name="listextra" value="page%3D1">
+<input type="hidden" name="page" value="1">
+</form>
+
+
+
+<div class="pgs mtm mbm cl">
+<span class="pgb y" id="visitedforumstmp" onmouseover="$(&#39;visitedforums&#39;).id = &#39;visitedforumstmp&#39;;this.id = &#39;visitedforums&#39;;showMenu({&#39;ctrlid&#39;:this.id,&#39;pos&#39;:&#39;21&#39;})"><a href="https://www.amobbs.com/forum-1037-1.html">返回列表</a></span>
+<a id="newspecialtmp" onmouseover="$(&#39;newspecial&#39;).id = &#39;newspecialtmp&#39;;this.id = &#39;newspecial&#39;;showMenu({&#39;ctrlid&#39;:this.id})" onclick="showWindow(&#39;newthread&#39;, &#39;forum.php?mod=post&amp;action=newthread&amp;fid=1037&#39;)" href="javascript:;" title="发新帖"><img src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/pn_post.png" alt="发新帖"></a>
+<a id="post_replytmp" onclick="showWindow(&#39;reply&#39;, &#39;forum.php?mod=post&amp;action=reply&amp;fid=1037&amp;tid=4954127&#39;)" href="javascript:;" title="回复"><img src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/pn_reply.png" alt="回复"></a>
+</div>
+
+<!--[diy=diyfastposttop]--><div id="diyfastposttop" class="area"></div><!--[/diy]-->
+<script type="text/javascript">
+var postminchars = parseInt('10');
+var postmaxchars = parseInt('100000');
+var disablepostctrl = parseInt('0');
+</script>
+
+<div id="f_pst" class="pl bm bmw">
+<form method="post" autocomplete="off" id="fastpostform" action="https://www.amobbs.com/forum.php?mod=post&amp;action=reply&amp;fid=1037&amp;tid=4954127&amp;extra=page%3D1&amp;replysubmit=yes&amp;infloat=yes&amp;handlekey=fastpost" onsubmit="return fastpostvalidate(this)">
+<table cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td class="pls">
+<div class="avatar avtm"><img src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/96_avatar_middle.jpg" onerror="this.onerror=null;this.src=&#39;https://passport.amobbs.com/uc_server/images/noavatar_middle.gif&#39;"></div></td>
+<td class="plc">
+<div style="display:inline-block;float:right">
+                <a href="javascript:window.scrollTo(0,0)">up↑</a>
+        </div>
+
+    <div class="pbt cl">
+    <span><b>友情提示：</b><font color="red">标题不合格、重复发帖，将会被封锁ID。</font>详情请参考：<a target="_blank" href="http://www.amobbs.com/thread-5511230-1-1.html">论坛通告：封锁ID、获得注册邀请码、恢复被封ID、投诉必读</a></span>
+</div>
+<span id="fastpostreturn"></span>
+
+
+<div class="cl">
+<div id="fastsmiliesdiv" class="y"><div id="fastsmiliesdiv_data"><div id="fastsmilies"><table cellspacing="0" cellpadding="0"><tbody><tr></tr><tr><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastsmiliesdiv&#39;, this, 20)" onmouseout="$(&#39;smilies_preview&#39;).style.display = &#39;none&#39;" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:smile:}&#39;)" id="fastpostsmilie_1_td"><img id="smilie_1" width="20" height="20" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/smile.gif" alt="{:smile:}"></td><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastsmiliesdiv&#39;, this, 20)" onmouseout="$(&#39;smilies_preview&#39;).style.display = &#39;none&#39;" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:sad:}&#39;)" id="fastpostsmilie_2_td"><img id="smilie_2" width="20" height="20" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/sad.gif" alt="{:sad:}"></td><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastsmiliesdiv&#39;, this, 20)" onmouseout="$(&#39;smilies_preview&#39;).style.display = &#39;none&#39;" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:biggrin:}&#39;)" id="fastpostsmilie_3_td"><img id="smilie_3" width="20" height="20" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/biggrin.gif" alt="{:biggrin:}"></td><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastsmiliesdiv&#39;, this, 20)" onmouseout="$(&#39;smilies_preview&#39;).style.display = &#39;none&#39;" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:cry:}&#39;)" id="fastpostsmilie_4_td"><img id="smilie_4" width="20" height="20" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/cry.gif" alt="{:cry:}"></td></tr><tr><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastsmiliesdiv&#39;, this, 20)" onmouseout="$(&#39;smilies_preview&#39;).style.display = &#39;none&#39;" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:huffy:}&#39;)" id="fastpostsmilie_5_td"><img id="smilie_5" width="20" height="20" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/huffy.gif" alt="{:huffy:}"></td><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastsmiliesdiv&#39;, this, 20)" onmouseout="$(&#39;smilies_preview&#39;).style.display = &#39;none&#39;" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:shocked:}&#39;)" id="fastpostsmilie_6_td"><img id="smilie_6" width="20" height="20" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/shocked.gif" alt="{:shocked:}"></td><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastsmiliesdiv&#39;, this, 20)" onmouseout="$(&#39;smilies_preview&#39;).style.display = &#39;none&#39;" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:tongue:}&#39;)" id="fastpostsmilie_7_td"><img id="smilie_7" width="20" height="20" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/tongue.gif" alt="{:tongue:}"></td><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastsmiliesdiv&#39;, this, 20)" onmouseout="$(&#39;smilies_preview&#39;).style.display = &#39;none&#39;" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:shy:}&#39;)" id="fastpostsmilie_8_td"><img id="smilie_8" width="20" height="20" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/shy.gif" alt="{:shy:}"></td></tr><tr><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastsmiliesdiv&#39;, this, 20)" onmouseout="$(&#39;smilies_preview&#39;).style.display = &#39;none&#39;" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:titter:}&#39;)" id="fastpostsmilie_9_td"><img id="smilie_9" width="20" height="20" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/titter.gif" alt="{:titter:}"></td><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastsmiliesdiv&#39;, this, 20)" onmouseout="$(&#39;smilies_preview&#39;).style.display = &#39;none&#39;" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:sweat:}&#39;)" id="fastpostsmilie_10_td"><img id="smilie_10" width="20" height="20" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/sweat.gif" alt="{:sweat:}"></td><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastsmiliesdiv&#39;, this, 20)" onmouseout="$(&#39;smilies_preview&#39;).style.display = &#39;none&#39;" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:mad:}&#39;)" id="fastpostsmilie_11_td"><img id="smilie_11" width="20" height="20" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/mad.gif" alt="{:mad:}"></td><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastsmiliesdiv&#39;, this, 20)" onmouseout="$(&#39;smilies_preview&#39;).style.display = &#39;none&#39;" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:lol:}&#39;)" id="fastpostsmilie_12_td"><img id="smilie_12" width="20" height="20" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/lol.gif" alt="{:lol:}"></td></tr><tr><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastsmiliesdiv&#39;, this, 20)" onmouseout="$(&#39;smilies_preview&#39;).style.display = &#39;none&#39;" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:loveliness:}&#39;)" id="fastpostsmilie_13_td"><img id="smilie_13" width="20" height="20" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/loveliness.gif" alt="{:loveliness:}"></td><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastsmiliesdiv&#39;, this, 20)" onmouseout="$(&#39;smilies_preview&#39;).style.display = &#39;none&#39;" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:funk:}&#39;)" id="fastpostsmilie_14_td"><img id="smilie_14" width="20" height="20" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/funk.gif" alt="{:funk:}"></td><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastsmiliesdiv&#39;, this, 20)" onmouseout="$(&#39;smilies_preview&#39;).style.display = &#39;none&#39;" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:curse:}&#39;)" id="fastpostsmilie_15_td"><img id="smilie_15" width="20" height="20" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/curse.gif" alt="{:curse:}"></td><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastsmiliesdiv&#39;, this, 20)" onmouseout="$(&#39;smilies_preview&#39;).style.display = &#39;none&#39;" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:dizzy:}&#39;)" id="fastpostsmilie_16_td"><img id="smilie_16" width="20" height="20" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/dizzy.gif" alt="{:dizzy:}"></td></tr><tr><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastsmiliesdiv&#39;, this, 20)" onmouseout="$(&#39;smilies_preview&#39;).style.display = &#39;none&#39;" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:shutup:}&#39;)" id="fastpostsmilie_17_td"><img id="smilie_17" width="20" height="20" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/shutup.gif" alt="{:shutup:}"></td><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastsmiliesdiv&#39;, this, 20)" onmouseout="$(&#39;smilies_preview&#39;).style.display = &#39;none&#39;" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:sleepy:}&#39;)" id="fastpostsmilie_18_td"><img id="smilie_18" width="20" height="20" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/sleepy.gif" alt="{:sleepy:}"></td><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastsmiliesdiv&#39;, this, 20)" onmouseout="$(&#39;smilies_preview&#39;).style.display = &#39;none&#39;" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:hug:}&#39;)" id="fastpostsmilie_19_td"><img id="smilie_19" width="20" height="20" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/hug.gif" alt="{:hug:}"></td><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastsmiliesdiv&#39;, this, 20)" onmouseout="$(&#39;smilies_preview&#39;).style.display = &#39;none&#39;" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:victory:}&#39;)" id="fastpostsmilie_20_td"><img id="smilie_20" width="20" height="20" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/victory.gif" alt="{:victory:}"></td></tr><tr><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastsmiliesdiv&#39;, this, 20)" onmouseout="$(&#39;smilies_preview&#39;).style.display = &#39;none&#39;" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:time:}&#39;)" id="fastpostsmilie_21_td"><img id="smilie_21" width="20" height="20" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/time.gif" alt="{:time:}"></td><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastsmiliesdiv&#39;, this, 20)" onmouseout="$(&#39;smilies_preview&#39;).style.display = &#39;none&#39;" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:kiss:}&#39;)" id="fastpostsmilie_22_td"><img id="smilie_22" width="20" height="20" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/kiss.gif" alt="{:kiss:}"></td><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastsmiliesdiv&#39;, this, 20)" onmouseout="$(&#39;smilies_preview&#39;).style.display = &#39;none&#39;" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:handshake:}&#39;)" id="fastpostsmilie_23_td"><img id="smilie_23" width="20" height="20" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/handshake.gif" alt="{:handshake:}"></td><td onmouseover="smilies_preview(&#39;fastpost&#39;, &#39;fastsmiliesdiv&#39;, this, 20)" onmouseout="$(&#39;smilies_preview&#39;).style.display = &#39;none&#39;" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;{:call:}&#39;)" id="fastpostsmilie_24_td"><img id="smilie_24" width="20" height="20" src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/call.gif" alt="{:call:}"></td></tr></tbody></table></div></div></div><div class="hasfsl" id="fastposteditor">
+<div class="tedt mtn">
+<div class="bar">
+<span class="y">
+<a href="https://www.amobbs.com/forum.php?mod=post&amp;action=reply&amp;fid=1037&amp;tid=4954127" onclick="return switchAdvanceMode(this.href)">高级模式</a>
+</span><script src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/seditor.js" type="text/javascript"></script>
+<div class="fpd">
+<a href="javascript:;" title="文字加粗" class="fbld" onclick="seditor_insertunit(&#39;fastpost&#39;, &#39;[b]&#39;, &#39;[/b]&#39;);doane(event);">B</a>
+<a href="javascript:;" title="设置文字颜色" class="fclr" id="fastpostforecolor" onclick="showColorBox(this.id, 2, &#39;fastpost&#39;);doane(event);">Color</a>
+<a id="fastpostimg" href="javascript:;" title="图片" class="fmg" onclick="seditor_menu(&#39;fastpost&#39;, &#39;img&#39;);doane(event);">Image</a>
+<a id="fastposturl" href="javascript:;" title="添加链接" class="flnk" onclick="seditor_menu(&#39;fastpost&#39;, &#39;url&#39;);doane(event);">Link</a>
+<a id="fastpostquote" href="javascript:;" title="引用" class="fqt" onclick="seditor_menu(&#39;fastpost&#39;, &#39;quote&#39;);doane(event);">Quote</a>
+<a id="fastpostcode" href="javascript:;" title="代码" class="fcd" onclick="seditor_menu(&#39;fastpost&#39;, &#39;code&#39;);doane(event);">Code</a>
+<a href="javascript:;" class="fsml" id="fastpostsml" onclick="showMenu({&#39;ctrlid&#39;:this.id,&#39;evt&#39;:&#39;click&#39;,&#39;layer&#39;:2});return false;">Smilies</a>
+<script type="text/javascript" reload="1">smilies_show('fastpostsmiliesdiv', 8, 'fastpost');</script>
+<span class="pipe z">|</span><object id="SWFUpload_0" type="application/x-shockwave-flash" data="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/swfupload.swf" width="17" height="25" class="swfupload"><param name="wmode" value="transparent"><param name="movie" value="static/image/common/swfupload.swf?preventswfcaching=1556197217262"><param name="quality" value="high"><param name="allowScriptAccess" value="always"><param name="flashvars" value="movieName=SWFUpload_0&amp;uploadURL=https%3A%2F%2Fwww.amobbs.com%2Fmisc.php%3Fmod%3Dswfupload%26action%3Dswfupload%26operation%3Dupload%26fid%3D1037&amp;useQueryString=false&amp;requeueOnError=false&amp;httpSuccess=&amp;assumeSuccessTimeout=0&amp;params=uid%3D37896%26amp%3Bhash%3Dc90b7dc8bcae7c7e668d1a09f3764d5f&amp;filePostName=Filedata&amp;fileTypes=*.chm%3B*.pdf%3B*.zip%3B*.rar%3B*.tar%3B*.gz%3B*.bzip2%3B*.gif%3B*.jpg%3B*.jpeg%3B*.png&amp;fileTypesDescription=All%20Support%20Formats&amp;fileSizeLimit=16383&amp;fileUploadLimit=70&amp;fileQueueLimit=0&amp;debugEnabled=false&amp;buttonImageURL=%2Fstatic%2Fimage%2Fcommon%2Fuploadbutton_small.png&amp;buttonWidth=17&amp;buttonHeight=25&amp;buttonText=&amp;buttonTextTopPadding=0&amp;buttonTextLeftPadding=0&amp;buttonTextStyle=color%3A%20%23000000%3B%20font-size%3A%2016pt%3B&amp;buttonAction=-110&amp;buttonDisabled=false&amp;buttonCursor=-2"></object></div></div>
+<div class="area">
+<textarea rows="6" cols="80" name="message" id="fastpostmessage" onkeydown="seditor_ctlent(event, &#39;fastpostvalidate($(\&#39;fastpostform\&#39;))&#39;);" tabindex="4" class="pt"></textarea>
+</div>
+</div>
+</div>
+</div>
+<div id="seccheck_fastpost">
+</div>
+
+<script type="text/javascript">
+var editorid = '';
+var ATTACHNUM = {'imageused':0,'imageunused':0,'attachused':0,'attachunused':0}, ATTACHUNUSEDAID = new Array(), IMGUNUSEDAID = new Array();
+</script>
+
+<input type="hidden" name="posttime" id="posttime" value="1556197213">
+<div class="upfl hasfsl">
+<table cellpadding="0" cellspacing="0" border="0" id="attach_tblheader" style="display: none;">
+<tbody><tr>
+<td>点击附件文件名添加到帖子内容中</td>
+<td class="atds">描述</td>
+<td class="attc"></td>
+</tr>
+</tbody></table>
+<div class="fieldset flash" id="attachlist"></div>
+<script src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/upload.js" type="text/javascript"></script><script type="text/javascript">
+var upload = new SWFUpload({
+upload_url: "https://www.amobbs.com/misc.php?mod=swfupload&action=swfupload&operation=upload&fid=1037",
+post_params: {"uid" : "37896", "hash":"c90b7dc8bcae7c7e668d1a09f3764d5f"},
+file_size_limit : "16383",
+file_types : "*.chm;*.pdf;*.zip;*.rar;*.tar;*.gz;*.bzip2;*.gif;*.jpg;*.jpeg;*.png",
+file_types_description : "All Support Formats",
+file_upload_limit : 70,
+file_queue_limit : 0,
+swfupload_preload_handler : preLoad,
+swfupload_load_failed_handler : loadFailed,
+file_dialog_start_handler : fileDialogStart,
+file_queued_handler : fileQueued,
+file_queue_error_handler : fileQueueError,
+file_dialog_complete_handler : fileDialogComplete,
+upload_start_handler : uploadStart,
+upload_progress_handler : uploadProgress,
+upload_error_handler : uploadError,
+upload_success_handler : uploadSuccess,
+upload_complete_handler : uploadComplete,
+button_image_url : "static/image/common/uploadbutton_small.png",
+button_placeholder_id : "spanButtonPlaceholder",
+button_width: 17,
+button_height: 25,
+button_cursor:SWFUpload.CURSOR.HAND,
+button_window_mode: "transparent",
+custom_settings : {
+progressTarget : "attachlist",
+uploadSource: 'forum',
+uploadType: 'attach',
+maxSizePerDay: 314572800,
+maxAttachNum: 70,
+uploadFrom: 'fastpost'
+},
+debug: false
+});
+</script>
+</div>
+
+<input type="hidden" name="formhash" value="78fb776c">
+<input type="hidden" name="usesig" value="1">
+<input type="hidden" name="subject" value="  ">
+<p class="ptm pnpost">
+<a href="https://www.amobbs.com/home.php?mod=spacecp&amp;ac=credit&amp;op=rule&amp;fid=1037" class="y" target="_blank">本版积分规则</a>
+<button type="submit" onmouseover="checkpostrule(&#39;seccheck_fastpost&#39;, &#39;ac=reply&#39;);this.onmouseover=null" name="replysubmit" id="fastpostsubmit" class="pn pnc vm" value="replysubmit" tabindex="5"><strong>发表回复</strong></button>
+<label for="fastpostrefresh"><input id="fastpostrefresh" type="checkbox" class="pc">回帖后跳转到最后一页</label>
+<script type="text/javascript">if(getcookie('fastpostrefresh') == 1) {$('fastpostrefresh').checked=true;}</script>
+</p>
+</td>
+</tr>
+</tbody></table>
+</form>
+</div>
+
+
+<div id="visitedforums_menu" class="p_pop blk cl" style="display: none;">
+<table cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td id="v_forums">
+<h3 class="mbn pbn bbda xg1">浏览过的版块</h3>
+<ul class="xl xl1">
+<li><a href="https://www.amobbs.com/forum-1000-1.html">AVR</a></li><li><a href="https://www.amobbs.com/forum-2060-1.html">电子综合</a></li><li><a href="https://www.amobbs.com/forum-9948-1.html">STC 1T 8051*</a></li><li><a href="https://www.amobbs.com/forum-3020-1.html">STM32/8</a></li><li><a href="https://www.amobbs.com/forum-1006-1.html">51单片机</a></li><li><a href="https://www.amobbs.com/forum-2070-1.html">其它MCU</a></li><li><a href="https://www.amobbs.com/forum-1032-1.html">ARM</a></li><li><a href="https://www.amobbs.com/forum-3042-1.html">电子产品</a></li><li><a href="https://www.amobbs.com/forum-3054-1.html">仪表仪器</a></li></ul>
+</td>
+</tr>
+</tbody></table>
+</div>
+<script type="text/javascript">
+new lazyload();
+</script>
+<script type="text/javascript">document.onkeyup = function(e){keyPageScroll(e, 0, 0, 'forum.php?mod=viewthread&tid=4954127', 1);}</script>
+</div>
+
+<div class="wp mtn">
+<!--[diy=diy3]--><div id="diy3" class="area"></div><!--[/diy]-->
+</div>
+
+<script type="text/javascript">
+function succeedhandle_followmod(url, msg, values) {
+var fObj = $('followmod_'+values['fuid']);
+if(values['type'] == 'add') {
+fObj.innerHTML = '不收听';
+fObj.href = 'home.php?mod=spacecp&ac=follow&op=del&fuid='+values['fuid'];
+} else if(values['type'] == 'del') {
+fObj.innerHTML = '收听TA';
+fObj.href = 'home.php?mod=spacecp&ac=follow&op=add&hash=78fb776c&fuid='+values['fuid'];
+}
+}
+fixed_top_nv();
+</script>	</div>
+<div id="ft" class="wp cl">
+<div id="flk" class="y">
+<p>
+<a href="javascript:;" onclick="showWindow(&#39;miscreport&#39;, &#39;misc.php?mod=report&amp;url=&#39;+REPORTURL);return false;">举报</a><span class="pipe">|</span><a href="https://www.amobbs.com/forum.php?mobile=yes">手机版</a><span class="pipe">|</span><a href="https://www.amobbs.com/archiver/">Archiver</a><span class="pipe">|</span><strong><a href="https://www.amobbs.com/" target="_blank">阿莫电子论坛(原ourAVR/ourDEV)</a></strong>
+( <a href="http://www.beian.gov.cn/" target="_blank"> 公安备案：44190002001997（交互式论坛） 工信部备案：粤ICP备09047143号 </a> )</p>
+<p class="xs0">
+GMT+8, 2019-4-25 21:00<span id="debuginfo">
+</span>
+</p>
+</div>
+<div id="frt">
+
+
+ 		<div id="frt">
+            <p>阿莫电子论坛, 原"中国电子开发网"</p>
+            <p class="xs0">© 2004-2018 <a href="http://www.amobbs.com/" target="_blank">www.amobbs.com</a>, 原www.ourdev.cn, 原www.ouravr.com</p>
+ 		</div>
+
+
+</div></div>
+<script src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/home.php" type="text/javascript"></script>
+<script src="./2级AD603_AGC仿真实例(multisim 10.1) (amoBBS 阿莫电子论坛)_files/home(1).php" type="text/javascript"></script>
+
+<div id="scrolltop" style="left: auto; right: 0px; visibility: hidden;">
+<span><a href="https://www.amobbs.com/forum.php?mod=post&amp;action=reply&amp;fid=1037&amp;tid=4954127&amp;extra=page%3D1&amp;page=1" onclick="showWindow(&#39;reply&#39;, this.href)" class="replyfast" title="快速回复"><b>快速回复</b></a></span>
+<span hidefocus="true"><a title="返回顶部" onclick="window.scrollTo(&#39;0&#39;,&#39;0&#39;)" class="scrolltopa"><b>返回顶部</b></a></span>
+<span>
+<a href="https://www.amobbs.com/forum-1037-1.html" hidefocus="true" class="returnlist" title="返回列表"><b>返回列表</b></a>
+</span>
+</div>
+<script type="text/javascript">_attachEvent(window, 'scroll', function () { showTopLink(); });checkBlind();</script>
+
+
+</body></html>
