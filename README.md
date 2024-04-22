@@ -20,6 +20,8 @@
         - [线路负载及故障检测](Competition/National_Undergraduate_Electronics_Design_Contest/project/线路负载及故障检测/)
         - [有源二分音频放大电路](Competition/National_Undergraduate_Electronics_Design_Contest/project/有源二分频音频放大电路/)
   - [Module](#module)
+    - [ADC](Module/ADC/)
+      - [AD7606](Module/ADC/AD7606/) 
   - [Skill\_Developing](#skill_developing)
     - [FPGA](Skill_Developing/FPGA)
       - [E-BOOK](Skill_Developing/FPGA/E-BOOK/) 
