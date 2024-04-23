@@ -1,5 +1,5 @@
-# 起航学习仓库
-
+# 起航学习仓库 :laughing: :wink: :angry: :cry: :heart: :+1:
+![LOGO](https://github.com/nobmaste/QH_Learning_Resources/blob/main/Docs/img/logo.jpg)
 ## 目录：
 <u>关于仓库的使用请优先参阅**Docs**文件夹下内容。</u>
 参阅每个文件夹时请优先阅读该文件夹下Main_floder-name.md文档中的内容<br>
