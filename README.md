@@ -1,12 +1,12 @@
 # 起航学习仓库 :laughing: :wink: :angry: :cry: :heart: :+1:
 
-## 目录：
-<u>关于仓库的使用请优先参阅**Docs**文件夹下内容。</u>
-参阅每个文件夹时请优先阅读该文件夹下Main_floder-name.md文档中的内容<br>
+## 目录： :monocle_face:
+关于仓库的使用请优先参阅**Docs**文件夹下内容。
+参阅每个文件夹时请优先阅读该文件夹下**Main_floder-name.md**文档中的内容<br>
 **main分支已开启保护，如果要提交内容请先提交到未保护分支，然后提交pr**<br>
 **克隆失败或克隆速度慢请参考Docs下文档内容**
 ***
-:monocle_face:
+
 - [目录：]
 <details>
 <summary>Docs(点击展开)</summary>
