@@ -1,6 +1,6 @@
 # 起航学习仓库 :laughing: :wink: :angry: :cry: :heart: :+1:
 
-## 目录：
+## 目录：:smiling_imp:
 <u>关于仓库的使用请优先参阅**Docs**文件夹下内容。</u>
 参阅每个文件夹时请优先阅读该文件夹下Main_floder-name.md文档中的内容<br>
 **main分支已开启保护，如果要提交内容请先提交到未保护分支，然后提交pr**<br>
