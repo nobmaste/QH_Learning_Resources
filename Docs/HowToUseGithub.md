@@ -22,3 +22,9 @@ issue一般时项目有问题提出的地方，类似于这个项目的小论坛
 可以参考这篇博文：https://zhuanlan.zhihu.com/p/51199833
 ## markdown使用方法
 markdown语法可以直接看菜鸟教程或参考这个文档格式
+## 如何解决git clone下载慢，下载失败的问题
+使用命令如下两条命令：<br>
+1. 设置缓存区大小<br>
+`git config --global http.postBuffer 157286400`<br>
+2. 设置克隆深度<br>
+`git clone --depth 1 git@github.com:nobmaste/QH_Learning_Resources.git`<br>
