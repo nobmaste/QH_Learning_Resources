@@ -1,0 +1,221 @@
+C51 COMPILER V9.05   AD9854                                                                07/16/2018 20:16:56 PAGE 1   
+
+
+C51 COMPILER V9.05, COMPILATION OF MODULE AD9854
+OBJECT MODULE PLACED IN AD9854.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE AD9854.c BROWSE DEBUG OBJECTEXTEND TABS(2)
+
+line level    source
+
+   1          #include <AD9854.h>
+   2          #include <intrins.h>
+   3          #include <reg52.h>
+   4          #include <init.h>
+   5          
+   6          
+   7          
+   8          //**********************以下为系统时钟以及其相关变量设置**************************/
+   9          /* 
+  10            此处根据自己的需要设置系统时钟以及与其相关的因子，一次需且只需开启一个   
+  11            CLK_Set为时钟倍频设置，可设置4~20倍倍频，但最大不能超过300MHZ
+  12            Freq_mult_ulong和Freq_mult_doulle均为2的48次方除以系统时钟，一个为长整形，一个为双精度型
+  13          */
+  14          //#define CLK_Set 7
+  15          //const ulong  Freq_mult_ulong  = 1340357;
+  16          //const double Freq_mult_doulle = 1340357.032;
+  17          
+  18          //#define CLK_Set 9
+  19          //const ulong  Freq_mult_ulong  = 1042500;     
+  20          //const double Freq_mult_doulle = 1042499.9137431;
+  21          
+  22          //#define CLK_Set 8
+  23          //const ulong  Freq_mult_ulong  = 1172812;
+  24          //const double Freq_mult_doulle = 1172812.403;
+  25          
+  26          #define CLK_Set 10
+  27          const ulong  Freq_mult_ulong  = 938250;
+  28          const double Freq_mult_doulle = 938249.9224;
+  29          
+  30          uchar FreqWord[6];              //6个字节频率控制字
+  31          
+  32          //**************************修改硬件时要修改的部分********************************/
+  33           // AD9854寄存器地址
+  34          #define PHASE1  0x00    //phase adjust register #1
+  35          #define PHASE2  0x01    //phase adjust register #2
+  36          #define FREQ1   0x02    //frequency tuning word 1
+  37          #define FREQ2   0x03    //frequency tuning word 2
+  38          #define DELFQ   0x04    //delta frequency word
+  39          #define UPDCK   0x05    //update clock
+  40          #define RAMPF   0x06    //ramp rate clock
+  41          #define CONTR   0x07    //control register
+  42          #define SHAPEI  0x08    //output shape key I mult
+  43          #define SHAPEQ  0x09    //output shape key Q mult 
+  44          #define RAMPO   0x0A    //output shape key ramp rate
+  45          #define CDAC    0x0B    //QDAC
+  46          
+  47          // 控制线配置
+  48          sbit AD9854_RST   = P3^4;       // 开关电源板
+  49          sbit AD9854_UDCLK = P3^5;
+  50          sbit AD9854_SCLK  = P3^6;       // WR/SCLK
+  51          sbit AD9854_CS    = P3^7;       // RD/CS
+  52          sbit AD9854_FDATA = P3^2;       // fsk/bpsk/hold
+  53          sbit AD9854_OSK   = P3^1; 
+  54          sbit AD9854_SP    = P3^0;
+  55          
+C51 COMPILER V9.05   AD9854                                                                07/16/2018 20:16:56 PAGE 2   
+
+  56          // I/O 配置
+  57          sbit SDI          = P1^0;       // A0/SDIO
+  58          sbit SDO          = P1^1;       // A1/SDO 
+  59          sbit IO_RST       = P1^2;       // A2/IORST
+  60          
+  61          // I/O驱动  使用别名
+  62          #define SPI_IO_RST_Set IO_RST = 1
+  63          #define SPI_IO_RST_Clr IO_RST = 0
+  64          #define SPI_SDO_Set    SDO = 1
+  65          #define SPI_SDO_Clr    SDO = 0
+  66          #define SPI_SDI_Set    SDI = 1
+  67          #define SPI_SDI_Clr    SDI = 0
+  68          
+  69          //====================================================================================
+  70          //函数名称:void AD9854_WR_Byte(uchar Adata)
+  71          //函数功能:AD9854串行口写入数据
+  72          //入口参数:Adata : 8位二进制数
+  73          //出口参数:无
+  74          //====================================================================================
+  75          void AD9854_WR_Byte(uchar Adata)
+  76          {
+  77   1        unsigned char  i;
+  78   1        
+  79   1        for(i=8;i>0;i--)
+  80   1        {
+  81   2          if(Adata&0x80)            
+  82   2            SPI_SDI_Set;
+  83   2          else
+  84   2            SPI_SDI_Clr;
+  85   2          Adata <<= 1;    
+  86   2          AD9854_SCLK  = 1;
+  87   2          AD9854_SCLK  = 0;
+  88   2        }
+  89   1      }
+  90          
+  91          //====================================================================================
+  92          //函数名称:void AD9854_Init(void)
+  93          //函数功能:AD9854初始化
+  94          //入口参数:无
+  95          //出口参数:无
+  96          //====================================================================================
+  97          void AD9854_Init(void)
+  98          { 
+  99   1        AD9854_SP = 0;                  //串行模式选择
+ 100   1        AD9854_SCLK= 0;                 //将读、写控制端口设为无效
+ 101   1        AD9854_UDCLK = 0;
+ 102   1        AD9854_RST = 1;                 //复位AD9854
+ 103   1        AD9854_RST = 0;
+ 104   1        IO_RST = 0;
+ 105   1        AD9854_CS= 0;
+ 106   1        
+ 107   1        AD9854_WR_Byte(CONTR);
+ 108   1        AD9854_WR_Byte(0x10);             //关闭比较器
+ 109   1        
+ 110   1        AD9854_WR_Byte(CLK_Set);          //设置系统时钟倍频       
+ 111   1        AD9854_WR_Byte(0x00);             //设置系统为模式0，由外部更新
+ 112   1        AD9854_WR_Byte(0x60);             //设置为可调节幅度，取消插值补偿,关闭Sinc效应
+ 113   1      
+ 114   1        AD9854_UDCLK=1;                   //更新AD9854输出
+ 115   1        AD9854_UDCLK=0;
+ 116   1      }
+ 117          
+C51 COMPILER V9.05   AD9854                                                                07/16/2018 20:16:56 PAGE 3   
+
+ 118          //====================================================================================
+ 119          //函数名称:void Freq_convert(long Freq)
+ 120          //函数功能:正弦信号频率数据转换
+ 121          //入口参数:Freq   需要转换的频率，取值从0~SYSCLK/2
+ 122          //出口参数:无   但是影响全局变量FreqWord[6]的值
+ 123          //说明：   该算法位多字节相乘算法，有公式FTW = (Desired Output Frequency × 2N)/SYSCLK
+ 124          //         得到该算法，其中N=48，Desired Output Frequency 为所需要的频率，即Freq，SYSCLK
+ 125          //         为可编程的系统时钟，FTW为48Bit的频率控制字，即FreqWord[6]
+ 126          //====================================================================================
+ 127          void Freq_convert(long Freq)   
+ 128          { 
+ 129   1        ulong FreqBuf;
+ 130   1        ulong Temp=Freq_mult_ulong;            
+ 131   1      
+ 132   1        uchar Array_Freq[4];           //将输入频率因子分为四个字节
+ 133   1        Array_Freq[0]=(uchar)Freq;
+ 134   1        Array_Freq[1]=(uchar)(Freq>>8);
+ 135   1        Array_Freq[2]=(uchar)(Freq>>16);
+ 136   1        Array_Freq[3]=(uchar)(Freq>>24);
+ 137   1      
+ 138   1        FreqBuf=Temp*Array_Freq[0];                  
+ 139   1        FreqWord[0]=FreqBuf;    
+ 140   1        FreqBuf>>=8;
+ 141   1      
+ 142   1        FreqBuf+=(Temp*Array_Freq[1]);
+ 143   1        FreqWord[1]=FreqBuf;
+ 144   1        FreqBuf>>=8;
+ 145   1      
+ 146   1        FreqBuf+=(Temp*Array_Freq[2]);
+ 147   1        FreqWord[2]=FreqBuf;
+ 148   1        FreqBuf>>=8;
+ 149   1      
+ 150   1        FreqBuf+=(Temp*Array_Freq[3]);
+ 151   1        FreqWord[3]=FreqBuf;
+ 152   1        FreqBuf>>=8;
+ 153   1      
+ 154   1        FreqWord[4]=FreqBuf;
+ 155   1        FreqWord[5]=FreqBuf>>8; 
+ 156   1      
+ 157   1      }  
+ 158          
+ 159          //====================================================================================
+ 160          //函数名称:void AD9854_SetSine(ulong Freq,uint Shape)
+ 161          //函数功能:AD9854正弦波产生程序
+ 162          //入口参数:Freq   频率设置，取值范围为0~(1/2)*SYSCLK
+ 163          //         Shape  幅度设置. 为12 Bit,取值范围为(0~4095) ,取值越大,幅度越大 
+ 164          //出口参数:无
+ 165          //====================================================================================
+ 166          void AD9854_SetSine(ulong Freq,uint Shape)
+ 167          {
+ 168   1        uchar count;
+ 169   1        uchar i=0;
+ 170   1        
+ 171   1        Freq_convert(Freq);              //频率转换
+ 172   1        
+ 173   1        for(count=6;count>0;)               //写入6字节的频率控制字  
+ 174   1        {
+ 175   2          if(i==0)
+ 176   2            AD9854_WR_Byte(FREQ1);
+ 177   2          AD9854_WR_Byte(FreqWord[--count]);
+ 178   2          i++;
+ 179   2        }
+C51 COMPILER V9.05   AD9854                                                                07/16/2018 20:16:56 PAGE 4   
+
+ 180   1        
+ 181   1        AD9854_WR_Byte(SHAPEI);             //设置I通道幅度
+ 182   1        AD9854_WR_Byte(Shape>>8);
+ 183   1        AD9854_WR_Byte((uchar)(Shape&0xff));
+ 184   1        
+ 185   1        AD9854_WR_Byte(SHAPEQ);             //设置Q通道幅度
+ 186   1        AD9854_WR_Byte(Shape>>8);
+ 187   1        AD9854_WR_Byte((uchar)(Shape&0xff));
+ 188   1      
+ 189   1        AD9854_UDCLK=1;                     //更新AD9854输出
+ 190   1        AD9854_UDCLK=0;
+ 191   1      }
+ 192          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    419    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     14      23
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

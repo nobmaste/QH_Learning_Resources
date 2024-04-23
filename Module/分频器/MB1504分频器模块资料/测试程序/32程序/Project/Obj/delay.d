@@ -1,0 +1,14 @@
+.\obj\delay.o: ..\User\Delay.c
+.\obj\delay.o: ..\CMSIS\DeviceSupport\STM32F10x\stm32f10x.h
+.\obj\delay.o: ..\CMSIS\CoreSupport\core_cm3.h
+.\obj\delay.o: E:\keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\obj\delay.o: ..\CMSIS\DeviceSupport\STM32F10x\system_stm32f10x.h
+.\obj\delay.o: ..\CMSIS\DeviceSupport\STM32F10x\stm32f10x_conf.h
+.\obj\delay.o: ..\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h
+.\obj\delay.o: ..\CMSIS\DeviceSupport\STM32F10x\stm32f10x.h
+.\obj\delay.o: ..\STM32F10x_StdPeriph_Driver\inc\stm32f10x_fsmc.h
+.\obj\delay.o: ..\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h
+.\obj\delay.o: ..\STM32F10x_StdPeriph_Driver\inc\stm32f10x_pwr.h
+.\obj\delay.o: ..\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h
+.\obj\delay.o: ..\STM32F10x_StdPeriph_Driver\inc\misc.h
+.\obj\delay.o: ..\User\Delay.h

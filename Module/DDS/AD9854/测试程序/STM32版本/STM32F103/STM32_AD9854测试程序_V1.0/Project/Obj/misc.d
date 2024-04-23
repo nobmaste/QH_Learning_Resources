@@ -1,0 +1,11 @@
+.\Obj\misc.o: ..\STM32F10x_StdPeriph_Driver\src\misc.c
+.\Obj\misc.o: ..\STM32F10x_StdPeriph_Driver\inc\misc.h
+.\Obj\misc.o: ..\CMSIS\DeviceSupport\STM32F10x\stm32f10x.h
+.\Obj\misc.o: ..\CMSIS\CoreSupport\core_cm3.h
+.\Obj\misc.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\Obj\misc.o: ..\CMSIS\DeviceSupport\STM32F10x\system_stm32f10x.h
+.\Obj\misc.o: ..\CMSIS\DeviceSupport\STM32F10x\stm32f10x_conf.h
+.\Obj\misc.o: ..\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h
+.\Obj\misc.o: ..\CMSIS\DeviceSupport\STM32F10x\stm32f10x.h
+.\Obj\misc.o: ..\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h
+.\Obj\misc.o: ..\STM32F10x_StdPeriph_Driver\inc\misc.h

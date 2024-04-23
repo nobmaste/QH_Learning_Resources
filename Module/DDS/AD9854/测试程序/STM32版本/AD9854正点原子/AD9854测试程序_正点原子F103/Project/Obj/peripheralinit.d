@@ -1,0 +1,13 @@
+.\obj\peripheralinit.o: ..\User\PeripheralInit.c
+.\obj\peripheralinit.o: ..\CMSIS\DeviceSupport\STM32F10x\stm32f10x.h
+.\obj\peripheralinit.o: ..\CMSIS\CoreSupport\core_cm3.h
+.\obj\peripheralinit.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\obj\peripheralinit.o: ..\CMSIS\DeviceSupport\STM32F10x\system_stm32f10x.h
+.\obj\peripheralinit.o: ..\CMSIS\DeviceSupport\STM32F10x\stm32f10x_conf.h
+.\obj\peripheralinit.o: ..\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h
+.\obj\peripheralinit.o: ..\CMSIS\DeviceSupport\STM32F10x\stm32f10x.h
+.\obj\peripheralinit.o: ..\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h
+.\obj\peripheralinit.o: ..\STM32F10x_StdPeriph_Driver\inc\misc.h
+.\obj\peripheralinit.o: ..\User\Delay.h
+.\obj\peripheralinit.o: ..\User\CharLCD.h
+.\obj\peripheralinit.o: ..\User\PeripheralInit.h

@@ -1,0 +1,117 @@
+C51 COMPILER V9.00   MAIN                                                                  05/14/2017 18:48:05 PAGE 1   
+
+
+C51 COMPILER V9.00, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN main.OBJ
+COMPILER INVOKED BY: F:\keil\C51\BIN\C51.EXE main.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          /*          
+   2          //数字锁相环（MB1504）驱动程序  
+   3          //针对晶体 采用 12M 步进采用 10 KHz 的驱动程序  
+   4          //        12M / 10K = 1200 = 0x04b0  
+   5          //        Refer counter          = ( 0x04b0 << 1 ) | 0x8001          SW = 32  
+   6          //        Refer counter          = ( 0x0960 ) | 0x8001  
+   7          // Refer counter          = 0x8961 ;  
+   8            
+   9          */   
+  10          #include < reg52.h >   
+  11          #include < intrins.h >   
+  12             
+  13          sbit CLK  = P1^0;        //// 9 脚   
+  14          sbit DATA = P1^1;        //// 10脚   
+  15          sbit LE   = P1^2;        //// 11脚   
+  16             
+  17          void Send16Bit( unsigned int SendData )   
+  18          {   
+  19   1        unsigned char i;   
+  20   1        unsigned int SendMiddle;    
+  21   1         
+  22   1        SendMiddle = SendData;   
+  23   1         LE = 0;         
+  24   1         CLK = 0;   
+  25   1        for( i = 0; i < 16; i ++ )   
+  26   1                {   
+  27   2                      DATA = ( SendMiddle & 0x8000 );   
+  28   2                      _nop_( );        CLK = 1;   
+  29   2                      _nop_( );        CLK = 0;   
+  30   2                      SendMiddle = SendMiddle << 1;   
+  31   2                }   
+  32   1        LE = 1;          _nop_( );          LE = 0;   
+  33   1      }   
+  34             
+  35          void Send11Bit( unsigned int SendData )   
+  36          {   
+  37   1        unsigned char i;   
+  38   1        unsigned int  SendMiddle;   
+  39   1           
+  40   1        SendMiddle = SendData;   
+  41   1        LE = 0;        CLK = 0;   
+  42   1        for( i = 0; i < 11; i ++ )   
+  43   1                {   
+  44   2               DATA = ( SendData & 0x8000 );   
+  45   2               _nop_( );        CLK = 1;   
+  46   2               _nop_( );        CLK = 0;   
+  47   2               SendData = SendData << 1;   
+  48   2              }   
+  49   1      }   
+  50             
+  51          void Send8Bit( unsigned char SendData )   
+  52          {   
+  53   1        unsigned char i;   
+  54   1        unsigned char SendMiddle;   
+  55   1         
+C51 COMPILER V9.00   MAIN                                                                  05/14/2017 18:48:05 PAGE 2   
+
+  56   1        SendMiddle = SendData;   
+  57   1        for( i = 0; i < 8; i ++ )   
+  58   1                {   
+  59   2               DATA = ( SendData & 0x80 );   
+  60   2               _nop_( );        CLK = 1;   
+  61   2               _nop_( );        CLK = 0;   
+  62   2               SendData = SendData << 1;   
+  63   2              }   
+  64   1        LE = 1;        _nop_( );        LE = 0;   
+  65   1      }   
+  66             
+  67          void SendReferF( void )   
+  68          { //针对晶体 采用 12M    
+  69   1        Send16Bit( 0x8961 ); // 12M Crystal   
+  70   1      }   
+  71             
+  72          void FrequenceToSend( unsigned int FrequenceD )   
+  73          {   
+  74   1        unsigned char AD = 0,        i  = 0;   
+  75   1        unsigned int  ND = 0,          
+  76   1         
+  77   1                MiddleF = FrequenceD;   
+  78   1                ND = ( unsigned int  ) ( MiddleF / 128 );   
+  79   1                AD = ( unsigned char ) ( MiddleF % 128 );   
+  80   1                ND = ND <<7;                AD = AD << 1;        AD = AD & 0xfe;//////////   
+  81   1                Send11Bit( ND );        Send8Bit( AD );   
+  82   1       //  }   
+  83   1      }   
+  84             
+  85          void main( void )   
+  86          {   
+  87   1      SendReferF( );           ////MB1504   送基准数 // 初始化   
+  88   1      FrequenceToSend( 4000 );  ////MB1504        送30 M    
+  89   1      while( 1 )   
+  90   1              {   
+  91   2              }   
+  92   1      }  
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    164    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       4
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

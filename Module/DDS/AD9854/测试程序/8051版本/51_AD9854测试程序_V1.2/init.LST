@@ -1,0 +1,191 @@
+C51 COMPILER V9.06   INIT                                                                  06/06/2017 10:23:38 PAGE 1   
+
+
+C51 COMPILER V9.06, COMPILATION OF MODULE INIT
+OBJECT MODULE PLACED IN init.OBJ
+COMPILER INVOKED BY: D:\keil_32\C51\BIN\C51.EXE init.c BROWSE DEBUG OBJECTEXTEND TABS(2)
+
+line level    source
+
+   1          #include <init.h>
+   2          #include <reg52.h>
+   3          #include <intrins.h>
+   4          
+   5           //--------------------------------------------------------------
+   6          // 函数功能: 系统初始化
+   7          // 入口参数: 无
+   8          // 返回参数: 无
+   9          //  全局变量: 无   
+  10          // 备注：
+  11          //--------------------------------------------------------------
+  12          void init(void)
+  13          {
+  14   1          LCD_Init();           //液晶初始化
+  15   1          P3 = 0xFF; 
+  16   1          P2 = 0xFF;
+  17   1          P1 = 0xFF;
+  18   1          P0 = 0xFF;
+  19   1        
+  20   1          
+  21   1      }
+  22          
+  23          sbit RS = P1^0;   //定义端口 
+  24          sbit RW = P1^1;
+  25          sbit EN = P2^5;
+  26          
+  27          #define RS_CLR RS=0 
+  28          #define RS_SET RS=1
+  29          
+  30          #define RW_CLR RW=0 
+  31          #define RW_SET RW=1 
+  32          
+  33          #define EN_CLR EN=0
+  34          #define EN_SET EN=1
+  35          
+  36          #define DataPort P0
+  37          
+  38          
+  39          
+  40          /*------------------------------------------------
+  41           uS延时函数，含有输入参数 unsigned char t，无返回值
+  42           unsigned char 是定义无符号字符变量，其值的范围是
+  43           0~255 这里使用晶振12M，精确延时请使用汇编,大致延时
+  44           长度如下 T=tx2+5 uS 
+  45          ------------------------------------------------*/
+  46          void DelayUs2x(unsigned char t)
+  47          {   
+  48   1       while(--t);
+  49   1      }
+  50          /*------------------------------------------------
+  51           mS延时函数，含有输入参数 unsigned char t，无返回值
+  52           unsigned char 是定义无符号字符变量，其值的范围是
+  53           0~255 这里使用晶振12M，精确延时请使用汇编
+  54          ------------------------------------------------*/
+  55          void DelayMs(unsigned char t)
+C51 COMPILER V9.06   INIT                                                                  06/06/2017 10:23:38 PAGE 2   
+
+  56          {
+  57   1           
+  58   1       while(t--)
+  59   1       {
+  60   2           //大致延时1mS
+  61   2           DelayUs2x(245);
+  62   2         DelayUs2x(245);
+  63   2       }
+  64   1      }
+  65          /*------------------------------------------------
+  66                        判忙函数
+  67          ------------------------------------------------*/
+  68           bit LCD_Check_Busy(void) 
+  69           { 
+  70   1       RS_CLR; 
+  71   1       RW_SET; 
+  72   1       EN_CLR; 
+  73   1       _nop_(); 
+  74   1       EN_SET;
+  75   1       return (bit)(DataPort & 0x80);//0x80;0x00
+  76   1       }
+  77          /*------------------------------------------------
+  78                        写入命令函数
+  79          ------------------------------------------------*/
+  80           void LCD_Write_Com(unsigned char com) 
+  81           {  
+  82   1       while(LCD_Check_Busy()); //忙则等待
+  83   1       RS_CLR; 
+  84   1       RW_CLR; 
+  85   1       EN_SET; 
+  86   1       DataPort= com; 
+  87   1       _nop_(); 
+  88   1       EN_CLR;
+  89   1       }
+  90          /*------------------------------------------------
+  91                        写入数据函数
+  92          ------------------------------------------------*/
+  93           void LCD_Write_Data(unsigned char Data) 
+  94           { 
+  95   1       while(LCD_Check_Busy()); //忙则等待
+  96   1       RS_SET; 
+  97   1       RW_CLR; 
+  98   1       EN_SET; 
+  99   1       DataPort= Data; 
+ 100   1       _nop_();
+ 101   1       EN_CLR;
+ 102   1       }
+ 103          
+ 104          /*------------------------------------------------
+ 105                          清屏函数
+ 106          ------------------------------------------------*/
+ 107           void LCD_Clear(void) 
+ 108           { 
+ 109   1       LCD_Write_Com(0x01); 
+ 110   1       DelayMs(5);
+ 111   1       }
+ 112          /*------------------------------------------------
+ 113                        写入字符串函数
+ 114          ------------------------------------------------*/
+ 115           void LCD_Write_String(unsigned char x,unsigned char y,unsigned char *s) 
+ 116           {     
+ 117   1       if (y == 0) 
+C51 COMPILER V9.06   INIT                                                                  06/06/2017 10:23:38 PAGE 3   
+
+ 118   1        {     
+ 119   2         LCD_Write_Com(0x80 + x);     //表示第一行
+ 120   2        }
+ 121   1       else 
+ 122   1        {      
+ 123   2        LCD_Write_Com(0xC0 + x);      //表示第二行
+ 124   2        }        
+ 125   1       while (*s) 
+ 126   1        {     
+ 127   2       LCD_Write_Data( *s);     
+ 128   2       s ++;     
+ 129   2        }
+ 130   1       }
+ 131          /*------------------------------------------------
+ 132                        写入字符函数
+ 133          ------------------------------------------------*/
+ 134           void LCD_Write_Char(unsigned char x,unsigned char y,unsigned char Data) 
+ 135           {     
+ 136   1       if (y == 0)    //设置坐标
+ 137   1        {     
+ 138   2        LCD_Write_Com(0x80 + x);     
+ 139   2        }    
+ 140   1       else 
+ 141   1        {     
+ 142   2        LCD_Write_Com(0xC0 + x);     
+ 143   2        }        
+ 144   1       LCD_Write_Data( Data);  
+ 145   1       }
+ 146          /*------------------------------------------------
+ 147                        初始化函数
+ 148          ------------------------------------------------*/
+ 149           void LCD_Init(void) 
+ 150           {
+ 151   1         LCD_Write_Com(0x38);    /*显示模式设置*/ 
+ 152   1         DelayMs(5); 
+ 153   1         LCD_Write_Com(0x38); 
+ 154   1         DelayMs(5); 
+ 155   1         LCD_Write_Com(0x38); 
+ 156   1         DelayMs(5); 
+ 157   1         LCD_Write_Com(0x38);  
+ 158   1         LCD_Write_Com(0x08);    /*显示关闭*/ 
+ 159   1         LCD_Write_Com(0x01);    /*显示清屏*/ 
+ 160   1         LCD_Write_Com(0x06);    /*显示光标移动设置*/ 
+ 161   1         DelayMs(5); 
+ 162   1         LCD_Write_Com(0x0C);    /*显示开及光标设置*/
+ 163   1         }
+ 164            
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    204    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

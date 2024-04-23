@@ -1,0 +1,7 @@
+".\delay.obj",
+".\main.obj",
+".\system_init.obj",
+".\AD9854.obj",
+".\CharLCD.obj" 
+TO "AD9854_V1" 
+RAMSIZE(256) 

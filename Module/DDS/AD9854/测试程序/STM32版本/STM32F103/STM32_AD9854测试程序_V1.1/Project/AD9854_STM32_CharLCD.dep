@@ -1,0 +1,97 @@
+Dependencies for Project 'AD9854', Target 'STM32_CharLCD': (DO NOT MODIFY !)
+F (..\User\main.c)(0x5CD80765)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I..\User -I..\CMSIS -I..\CMSIS\CoreSupport -I..\CMSIS\DeviceSupport\STM32F10x -I..\STM32F10x_StdPeriph_Driver\inc -I..\User\Delay -I..\User\CharLCD -I..\User\PeripheralInit -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\ST\STM32F10x -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -o ".\Obj\main.o" --omf_browse ".\Obj\main.crf" --depend ".\Obj\main.d")
+I (..\CMSIS\DeviceSupport\STM32F10x\stm32f10x.h)(0x52FD8CE6)
+I (..\CMSIS\CoreSupport\core_cm3.h)(0x52FD8CE6)
+I (C:\Keil\ARM\ARMCC\bin\..\include\stdint.h)(0x4EB0D284)
+I (..\CMSIS\DeviceSupport\STM32F10x\system_stm32f10x.h)(0x52FD8CE6)
+I (..\CMSIS\DeviceSupport\STM32F10x\stm32f10x_conf.h)(0x52FD8CE6)
+I (..\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x52FD8CE0)
+I (..\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x52FD8CE0)
+I (..\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x52FD8CDE)
+I (..\User\Delay.h)(0x535D2496)
+I (..\User\CharLCD.h)(0x55A503AC)
+I (..\User\PeripheralInit.h)(0x53009751)
+I (..\User\AD9854.h)(0x55A90884)
+F (..\User\PeripheralInit.c)(0x543A0EEB)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I..\User -I..\CMSIS -I..\CMSIS\CoreSupport -I..\CMSIS\DeviceSupport\STM32F10x -I..\STM32F10x_StdPeriph_Driver\inc -I..\User\Delay -I..\User\CharLCD -I..\User\PeripheralInit -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\ST\STM32F10x -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -o ".\Obj\peripheralinit.o" --omf_browse ".\Obj\peripheralinit.crf" --depend ".\Obj\peripheralinit.d")
+I (..\CMSIS\DeviceSupport\STM32F10x\stm32f10x.h)(0x52FD8CE6)
+I (..\CMSIS\CoreSupport\core_cm3.h)(0x52FD8CE6)
+I (C:\Keil\ARM\ARMCC\bin\..\include\stdint.h)(0x4EB0D284)
+I (..\CMSIS\DeviceSupport\STM32F10x\system_stm32f10x.h)(0x52FD8CE6)
+I (..\CMSIS\DeviceSupport\STM32F10x\stm32f10x_conf.h)(0x52FD8CE6)
+I (..\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x52FD8CE0)
+I (..\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x52FD8CE0)
+I (..\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x52FD8CDE)
+I (..\User\Delay.h)(0x535D2496)
+I (..\User\CharLCD.h)(0x55A503AC)
+I (..\User\PeripheralInit.h)(0x53009751)
+F (..\User\CharLCD.c)(0x543A0EE9)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I..\User -I..\CMSIS -I..\CMSIS\CoreSupport -I..\CMSIS\DeviceSupport\STM32F10x -I..\STM32F10x_StdPeriph_Driver\inc -I..\User\Delay -I..\User\CharLCD -I..\User\PeripheralInit -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\ST\STM32F10x -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -o ".\Obj\charlcd.o" --omf_browse ".\Obj\charlcd.crf" --depend ".\Obj\charlcd.d")
+I (..\CMSIS\DeviceSupport\STM32F10x\stm32f10x.h)(0x52FD8CE6)
+I (..\CMSIS\CoreSupport\core_cm3.h)(0x52FD8CE6)
+I (C:\Keil\ARM\ARMCC\bin\..\include\stdint.h)(0x4EB0D284)
+I (..\CMSIS\DeviceSupport\STM32F10x\system_stm32f10x.h)(0x52FD8CE6)
+I (..\CMSIS\DeviceSupport\STM32F10x\stm32f10x_conf.h)(0x52FD8CE6)
+I (..\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x52FD8CE0)
+I (..\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x52FD8CE0)
+I (..\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x52FD8CDE)
+I (..\User\Delay.h)(0x535D2496)
+I (..\User\CharLCD.h)(0x55A503AC)
+F (..\User\Delay.c)(0x55A481B8)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I..\User -I..\CMSIS -I..\CMSIS\CoreSupport -I..\CMSIS\DeviceSupport\STM32F10x -I..\STM32F10x_StdPeriph_Driver\inc -I..\User\Delay -I..\User\CharLCD -I..\User\PeripheralInit -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\ST\STM32F10x -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -o ".\Obj\delay.o" --omf_browse ".\Obj\delay.crf" --depend ".\Obj\delay.d")
+I (..\CMSIS\DeviceSupport\STM32F10x\stm32f10x.h)(0x52FD8CE6)
+I (..\CMSIS\CoreSupport\core_cm3.h)(0x52FD8CE6)
+I (C:\Keil\ARM\ARMCC\bin\..\include\stdint.h)(0x4EB0D284)
+I (..\CMSIS\DeviceSupport\STM32F10x\system_stm32f10x.h)(0x52FD8CE6)
+I (..\CMSIS\DeviceSupport\STM32F10x\stm32f10x_conf.h)(0x52FD8CE6)
+I (..\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x52FD8CE0)
+I (..\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x52FD8CE0)
+I (..\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x52FD8CDE)
+I (..\User\Delay.h)(0x535D2496)
+F (..\User\AD9854.c)(0x5DCD0270)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I..\User -I..\CMSIS -I..\CMSIS\CoreSupport -I..\CMSIS\DeviceSupport\STM32F10x -I..\STM32F10x_StdPeriph_Driver\inc -I..\User\Delay -I..\User\CharLCD -I..\User\PeripheralInit -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\ST\STM32F10x -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -o ".\Obj\ad9854.o" --omf_browse ".\Obj\ad9854.crf" --depend ".\Obj\ad9854.d")
+I (..\CMSIS\DeviceSupport\STM32F10x\stm32f10x.h)(0x52FD8CE6)
+I (..\CMSIS\CoreSupport\core_cm3.h)(0x52FD8CE6)
+I (C:\Keil\ARM\ARMCC\bin\..\include\stdint.h)(0x4EB0D284)
+I (..\CMSIS\DeviceSupport\STM32F10x\system_stm32f10x.h)(0x52FD8CE6)
+I (..\CMSIS\DeviceSupport\STM32F10x\stm32f10x_conf.h)(0x52FD8CE6)
+I (..\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x52FD8CE0)
+I (..\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x52FD8CE0)
+I (..\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x52FD8CDE)
+I (..\User\AD9854.h)(0x55A90884)
+I (..\User\Delay.h)(0x535D2496)
+F (..\STM32F10x_StdPeriph_Driver\src\misc.c)(0x52FD8CDE)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I..\User -I..\CMSIS -I..\CMSIS\CoreSupport -I..\CMSIS\DeviceSupport\STM32F10x -I..\STM32F10x_StdPeriph_Driver\inc -I..\User\Delay -I..\User\CharLCD -I..\User\PeripheralInit -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\ST\STM32F10x -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -o ".\Obj\misc.o" --omf_browse ".\Obj\misc.crf" --depend ".\Obj\misc.d")
+I (..\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x52FD8CDE)
+I (..\CMSIS\DeviceSupport\STM32F10x\stm32f10x.h)(0x52FD8CE6)
+I (..\CMSIS\CoreSupport\core_cm3.h)(0x52FD8CE6)
+I (C:\Keil\ARM\ARMCC\bin\..\include\stdint.h)(0x4EB0D284)
+I (..\CMSIS\DeviceSupport\STM32F10x\system_stm32f10x.h)(0x52FD8CE6)
+I (..\CMSIS\DeviceSupport\STM32F10x\stm32f10x_conf.h)(0x52FD8CE6)
+I (..\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x52FD8CE0)
+I (..\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x52FD8CE0)
+F (..\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c)(0x52FD8CDE)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I..\User -I..\CMSIS -I..\CMSIS\CoreSupport -I..\CMSIS\DeviceSupport\STM32F10x -I..\STM32F10x_StdPeriph_Driver\inc -I..\User\Delay -I..\User\CharLCD -I..\User\PeripheralInit -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\ST\STM32F10x -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -o ".\Obj\stm32f10x_gpio.o" --omf_browse ".\Obj\stm32f10x_gpio.crf" --depend ".\Obj\stm32f10x_gpio.d")
+I (..\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x52FD8CE0)
+I (..\CMSIS\DeviceSupport\STM32F10x\stm32f10x.h)(0x52FD8CE6)
+I (..\CMSIS\CoreSupport\core_cm3.h)(0x52FD8CE6)
+I (C:\Keil\ARM\ARMCC\bin\..\include\stdint.h)(0x4EB0D284)
+I (..\CMSIS\DeviceSupport\STM32F10x\system_stm32f10x.h)(0x52FD8CE6)
+I (..\CMSIS\DeviceSupport\STM32F10x\stm32f10x_conf.h)(0x52FD8CE6)
+I (..\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x52FD8CE0)
+I (..\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x52FD8CDE)
+F (..\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c)(0x52FD8CDE)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I..\User -I..\CMSIS -I..\CMSIS\CoreSupport -I..\CMSIS\DeviceSupport\STM32F10x -I..\STM32F10x_StdPeriph_Driver\inc -I..\User\Delay -I..\User\CharLCD -I..\User\PeripheralInit -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\ST\STM32F10x -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -o ".\Obj\stm32f10x_rcc.o" --omf_browse ".\Obj\stm32f10x_rcc.crf" --depend ".\Obj\stm32f10x_rcc.d")
+I (..\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x52FD8CE0)
+I (..\CMSIS\DeviceSupport\STM32F10x\stm32f10x.h)(0x52FD8CE6)
+I (..\CMSIS\CoreSupport\core_cm3.h)(0x52FD8CE6)
+I (C:\Keil\ARM\ARMCC\bin\..\include\stdint.h)(0x4EB0D284)
+I (..\CMSIS\DeviceSupport\STM32F10x\system_stm32f10x.h)(0x52FD8CE6)
+I (..\CMSIS\DeviceSupport\STM32F10x\stm32f10x_conf.h)(0x52FD8CE6)
+I (..\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x52FD8CE0)
+I (..\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x52FD8CDE)
+F (..\CMSIS\CoreSupport\core_cm3.c)(0x52FD8CE6)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I..\User -I..\CMSIS -I..\CMSIS\CoreSupport -I..\CMSIS\DeviceSupport\STM32F10x -I..\STM32F10x_StdPeriph_Driver\inc -I..\User\Delay -I..\User\CharLCD -I..\User\PeripheralInit -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\ST\STM32F10x -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -o ".\Obj\core_cm3.o" --omf_browse ".\Obj\core_cm3.crf" --depend ".\Obj\core_cm3.d")
+I (C:\Keil\ARM\ARMCC\bin\..\include\stdint.h)(0x4EB0D284)
+F (..\CMSIS\DeviceSupport\STM32F10x\system_stm32f10x.c)(0x52FD8CE6)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I..\User -I..\CMSIS -I..\CMSIS\CoreSupport -I..\CMSIS\DeviceSupport\STM32F10x -I..\STM32F10x_StdPeriph_Driver\inc -I..\User\Delay -I..\User\CharLCD -I..\User\PeripheralInit -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\ST\STM32F10x -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -o ".\Obj\system_stm32f10x.o" --omf_browse ".\Obj\system_stm32f10x.crf" --depend ".\Obj\system_stm32f10x.d")
+I (..\CMSIS\DeviceSupport\STM32F10x\stm32f10x.h)(0x52FD8CE6)
+I (..\CMSIS\CoreSupport\core_cm3.h)(0x52FD8CE6)
+I (C:\Keil\ARM\ARMCC\bin\..\include\stdint.h)(0x4EB0D284)
+I (..\CMSIS\DeviceSupport\STM32F10x\system_stm32f10x.h)(0x52FD8CE6)
+I (..\CMSIS\DeviceSupport\STM32F10x\stm32f10x_conf.h)(0x52FD8CE6)
+I (..\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x52FD8CE0)
+I (..\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x52FD8CE0)
+I (..\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x52FD8CDE)
+F (..\CMSIS\DeviceSupport\STM32F10x\startup_stm32f10x_hd.s)(0x52FD8CE6)(--cpu Cortex-M3 -g --apcs=interwork --pd "__MICROLIB SETA 1" -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\ST\STM32F10x --list ".\List\startup_stm32f10x_hd.lst" --xref -o ".\Obj\startup_stm32f10x_hd.o" --depend ".\Obj\startup_stm32f10x_hd.d")

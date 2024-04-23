@@ -1,0 +1,12 @@
+.\Obj\ad9854.o: ..\User\AD9854.c
+.\Obj\ad9854.o: ..\CMSIS\DeviceSupport\STM32F10x\stm32f10x.h
+.\Obj\ad9854.o: ..\CMSIS\CoreSupport\core_cm3.h
+.\Obj\ad9854.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\Obj\ad9854.o: ..\CMSIS\DeviceSupport\STM32F10x\system_stm32f10x.h
+.\Obj\ad9854.o: ..\CMSIS\DeviceSupport\STM32F10x\stm32f10x_conf.h
+.\Obj\ad9854.o: ..\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h
+.\Obj\ad9854.o: ..\CMSIS\DeviceSupport\STM32F10x\stm32f10x.h
+.\Obj\ad9854.o: ..\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h
+.\Obj\ad9854.o: ..\STM32F10x_StdPeriph_Driver\inc\misc.h
+.\Obj\ad9854.o: ..\User\AD9854.h
+.\Obj\ad9854.o: ..\User\Delay.h

@@ -1,0 +1,5 @@
+"main.obj",
+"AD9854.obj",
+"init.obj" 
+TO "AD9854" 
+RAMSIZE(256) 

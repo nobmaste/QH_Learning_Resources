@@ -1,0 +1,28 @@
+--cpu=Cortex-M4.fp
+"mb1504\startup_stm32f401xc.o"
+"mb1504\main.o"
+"mb1504\gpio.o"
+"mb1504\stm32f4xx_it.o"
+"mb1504\stm32f4xx_hal_msp.o"
+"mb1504\stm32f4xx_hal_tim.o"
+"mb1504\stm32f4xx_hal_tim_ex.o"
+"mb1504\stm32f4xx_hal_rcc.o"
+"mb1504\stm32f4xx_hal_rcc_ex.o"
+"mb1504\stm32f4xx_hal_flash.o"
+"mb1504\stm32f4xx_hal_flash_ex.o"
+"mb1504\stm32f4xx_hal_flash_ramfunc.o"
+"mb1504\stm32f4xx_hal_gpio.o"
+"mb1504\stm32f4xx_hal_dma_ex.o"
+"mb1504\stm32f4xx_hal_dma.o"
+"mb1504\stm32f4xx_hal_pwr.o"
+"mb1504\stm32f4xx_hal_pwr_ex.o"
+"mb1504\stm32f4xx_hal_cortex.o"
+"mb1504\stm32f4xx_hal.o"
+"mb1504\stm32f4xx_hal_exti.o"
+"mb1504\system_stm32f4xx.o"
+"mb1504\mb1504.o"
+"mb1504\delay.o"
+--strict --scatter "MB1504\MB1504.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "MB1504.map" -o MB1504\MB1504.axf

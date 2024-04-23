@@ -1,0 +1,192 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        05/14/2017  18:48:05  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+F:\KEIL\C51\BIN\BL51.EXE main.obj TO xc RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  main.obj (MAIN)
+  F:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  xc (MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0003H     UNIT         _DATA_GROUP_
+            IDATA   000BH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0034H     UNIT         ?PR?_FREQUENCETOSEND?MAIN
+            CODE    0037H     0021H     UNIT         ?PR?_SEND16BIT?MAIN
+            CODE    0058H     0020H     UNIT         ?PR?_SEND11BIT?MAIN
+            CODE    0078H     001CH     UNIT         ?PR?_SEND8BIT?MAIN
+            CODE    0094H     000CH     UNIT         ?PR?MAIN?MAIN
+            CODE    00A0H     000CH     UNIT         ?C_C51STARTUP
+            CODE    00ACH     0007H     UNIT         ?PR?SENDREFERF?MAIN
+
+
+
+OVERLAY MAP OF MODULE:   xc (MAIN)
+
+
+SEGMENT                             DATA_GROUP 
+  +--> CALLED SEGMENT             START    LENGTH
+-------------------------------------------------
+?C_C51STARTUP                     -----    -----
+  +--> ?PR?MAIN?MAIN
+
+?PR?MAIN?MAIN                     -----    -----
+  +--> ?PR?SENDREFERF?MAIN
+  +--> ?PR?_FREQUENCETOSEND?MAIN
+
+?PR?SENDREFERF?MAIN               -----    -----
+  +--> ?PR?_SEND16BIT?MAIN
+
+?PR?_FREQUENCETOSEND?MAIN         0008H    0001H
+  +--> ?PR?_SEND11BIT?MAIN
+  +--> ?PR?_SEND8BIT?MAIN
+
+?PR?_SEND11BIT?MAIN               0009H    0002H
+
+?PR?_SEND8BIT?MAIN                0009H    0001H
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/14/2017  18:48:05  PAGE 2
+
+
+
+
+
+SYMBOL TABLE OF MODULE:  xc (MAIN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00B0H         PUBLIC        P3
+  D:00A8H         PUBLIC        IE
+  C:0058H         PUBLIC        _Send11Bit
+  B:0090H.2       PUBLIC        LE
+  C:0037H         PUBLIC        _Send16Bit
+  D:00B8H         PUBLIC        IP
+  B:0090H.1       PUBLIC        DATA
+  C:0094H         PUBLIC        main
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  C:00ACH         PUBLIC        SendReferF
+  B:0090H.0       PUBLIC        CLK
+  C:0078H         PUBLIC        _Send8Bit
+  D:00C8H         PUBLIC        T2CON
+  C:0003H         PUBLIC        _FrequenceToSend
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          _SEND16BIT
+  D:0006H         SYMBOL        SendData
+  -------         DO            
+  D:0005H         SYMBOL        i
+  D:0006H         SYMBOL        SendMiddle
+  -------         ENDDO         
+  C:0037H         LINE#         17
+  C:0037H         LINE#         18
+  C:0037H         LINE#         22
+  C:0037H         LINE#         23
+  C:0039H         LINE#         24
+  C:003BH         LINE#         25
+  C:003DH         LINE#         26
+  C:003DH         LINE#         27
+  C:0041H         LINE#         28
+  C:0044H         LINE#         29
+  C:0047H         LINE#         30
+  C:004EH         LINE#         31
+  C:0052H         LINE#         32
+  C:0057H         LINE#         33
+  -------         ENDPROC       _SEND16BIT
+  -------         PROC          _SEND11BIT
+  D:0006H         SYMBOL        SendData
+  -------         DO            
+  D:0005H         SYMBOL        i
+  D:0009H         SYMBOL        SendMiddle
+  -------         ENDDO         
+  C:0058H         LINE#         35
+  C:0058H         LINE#         36
+  C:0058H         LINE#         40
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/14/2017  18:48:05  PAGE 3
+
+
+  C:005CH         LINE#         41
+  C:0060H         LINE#         42
+  C:0062H         LINE#         43
+  C:0062H         LINE#         44
+  C:0066H         LINE#         45
+  C:0069H         LINE#         46
+  C:006CH         LINE#         47
+  C:0073H         LINE#         48
+  C:0077H         LINE#         49
+  -------         ENDPROC       _SEND11BIT
+  -------         PROC          _SEND8BIT
+  D:0007H         SYMBOL        SendData
+  -------         DO            
+  D:0006H         SYMBOL        i
+  D:0009H         SYMBOL        SendMiddle
+  -------         ENDDO         
+  C:0078H         LINE#         51
+  C:0078H         LINE#         52
+  C:0078H         LINE#         56
+  C:007AH         LINE#         57
+  C:007CH         LINE#         58
+  C:007CH         LINE#         59
+  C:0080H         LINE#         60
+  C:0083H         LINE#         61
+  C:0086H         LINE#         62
+  C:008AH         LINE#         63
+  C:008EH         LINE#         64
+  C:0093H         LINE#         65
+  -------         ENDPROC       _SEND8BIT
+  -------         PROC          SENDREFERF
+  C:00ACH         LINE#         67
+  C:00ACH         LINE#         68
+  C:00ACH         LINE#         69
+  -------         ENDPROC       SENDREFERF
+  -------         PROC          _FREQUENCETOSEND
+  D:0004H         SYMBOL        FrequenceD
+  -------         DO            
+  D:0003H         SYMBOL        AD
+  D:0008H         SYMBOL        i
+  D:0006H         SYMBOL        ND
+  D:0004H         SYMBOL        MiddleF
+  -------         ENDDO         
+  C:0003H         LINE#         72
+  C:0007H         LINE#         73
+  C:0007H         LINE#         74
+  C:000BH         LINE#         75
+  C:000CH         LINE#         77
+  C:000CH         LINE#         78
+  C:0019H         LINE#         79
+  C:001DH         LINE#         80
+  C:002FH         LINE#         81
+  -------         ENDPROC       _FREQUENCETOSEND
+  -------         PROC          MAIN
+  C:0094H         LINE#         85
+  C:0094H         LINE#         86
+  C:0094H         LINE#         87
+  C:0097H         LINE#         88
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/14/2017  18:48:05  PAGE 4
+
+
+  C:009EH         LINE#         89
+  C:009EH         LINE#         90
+  C:009EH         LINE#         91
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        MAIN
+
+Program Size: data=12.0 xdata=0 code=179
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
