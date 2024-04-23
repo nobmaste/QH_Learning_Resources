@@ -40,6 +40,8 @@
         - [声源定位](Competition/National_Undergraduate_Electronics_Design_Contest/project/声源定位/)
         - [线路负载及故障检测](Competition/National_Undergraduate_Electronics_Design_Contest/project/线路负载及故障检测/)
         - [有源二分音频放大电路](Competition/National_Undergraduate_Electronics_Design_Contest/project/有源二分频音频放大电路/)
+        - [放大器非线性失真研究装置](Competition/National_Undergraduate_Electronics_Design_Contest/project/放大器非线性失真研究装置/)
+        - [简易电路特性测量](Competition/National_Undergraduate_Electronics_Design_Contest/project/简易电路特性测量/)
 </details>
 
 <details>
