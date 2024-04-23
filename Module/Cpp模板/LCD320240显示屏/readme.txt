@@ -1,0 +1,2 @@
+1、将两个c\cpp文件加入到HARDWARE中
+2、在FWlib文件夹下加入FSMC相关的.c文件
