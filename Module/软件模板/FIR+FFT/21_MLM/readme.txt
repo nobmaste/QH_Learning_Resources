@@ -1,0 +1,1 @@
+一些可能缺失的头文件在headfile中有，请检查C:\Keil_v5\ARM\Pack\ARM\CMSIS\4.2.0\CMSIS\Include目录下是否 有这些文件
