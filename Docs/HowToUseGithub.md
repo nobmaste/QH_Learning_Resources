@@ -28,3 +28,11 @@ markdown语法可以直接看菜鸟教程或参考这个文档格式
 `git config --global http.postBuffer 157286400`<br>
 2. 设置克隆深度<br>
 `git clone --depth 1 git@github.com:nobmaste/QH_Learning_Resources.git`<br>
+## 如何修改hosts文件来提高git pull同步速度
+hosts文件在`C:\Windows\System32\drivers\etc`目录下，打开为文本，在其中最下面添加以下内容<br>
+`140.82.113.3  github.com`<br>
+`151.101.1.6 github.global.ssl.fastly.net`<br>
+`140.82.114.10  codeload.github.com`<br>
+`199.232.68.133 raw.githubusercontent.com`<br>
+`199.232.68.133 githubusercontent.com`<br>
+其中github.global.ssl.fastly.net地址可能会变更，可以在https://sites.ipaddress.com/fastly.net/ 网站搜索获取最新地址
