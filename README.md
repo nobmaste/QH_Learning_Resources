@@ -97,6 +97,10 @@
     - [FPGA](Skill_Developing/FPGA)
       - [E-BOOK](Skill_Developing/FPGA/E-BOOK/) 
     - [硬件相关](Skill_Developing/硬件相关/)
+    - [编译相关](Skill_Developing/编译相关/)
+    - [电源](Skill_Developing/电源/)
+    - [汇编](Skill_Developing/汇编/)
+    - [四轴](Skill_Developing/四轴/)
 </details>
 
 ***
