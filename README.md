@@ -134,4 +134,6 @@
 <br>
 <br>
 <u></u>
-![LOGO](https://github.com/nobmaste/QH_Learning_Resources/blob/main/Docs/img/logo.jpg)
+<p align="center">
+    <img src="https://github.com/nobmaste/QH_Learning_Resources/blob/main/Docs/img/logo.jpg" width="200" height="200" style="border-radius: 50%;">
+</p>
