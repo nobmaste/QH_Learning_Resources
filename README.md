@@ -56,10 +56,20 @@
     - [软件模板](Module/软件模板/)
       - [ADC+定时器+DMA](Module/软件模板/ADC+定时器+DMA/)
       - [FIR+FFT](Module/软件模板/FIR+FFT/)
+    - [程控滤波](Module/程控滤波/)
+      - [MAX262](Module/程控滤波/MAX262_STM32.rar)
     - [程控放大器](Module/程控放大器/)
       - [AD603](Module/程控放大器/AD603_P_VGA/)
     - [分频器](Module/分频器/)
       - [MB1504](Module/分频器/MB1504分频器模块资料/)
+    - [角度传感器](Module/角度传感器/)
+      - [MPU6050](Module/角度传感器/MPU6050_STMHAL库硬件IIC.zip)
+    - [屏幕_显示](Module/屏幕_显示/)
+      - [ILI193_LCD](Module/屏幕_显示/ILI93_LCD显示屏_STM32HAL.zip)
+      - [OLED](Module/屏幕_显示/OLED_STM32.zip)
+      - [TFTLCD_ST8835S](Module/屏幕_显示/TFTLCD_ST8835S_STM32F1_HAL.zip)
+    - [气压传感器](Module/气压传感器/)
+      - [MS5611](Module/气压传感器/MS5611_STM32.rar)
     - [数字电位器](Module/数字电位器/)
       - [AD5142](Module/数字电位器/AD5142A/)
     - [DAC](Module/DAC/)
@@ -101,6 +111,7 @@
     - [电源](Skill_Developing/电源/)
     - [汇编](Skill_Developing/汇编/)
     - [四轴](Skill_Developing/四轴/)
+    - [单片机](Skill_Developing/单片机/)
 </details>
 
 ***
