@@ -140,4 +140,4 @@
 
 ## Star History
 
-[!Star History Chart](https://star-history.com/#nobmaste/QH_Learning_Resources&Date)
+![Star History Chart](https://api.star-history.com/svg?repos=nobmaste/QH_Learning_Resources&type=Date)
