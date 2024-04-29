@@ -134,6 +134,7 @@
 <br>
 <br>
 <u></u>
+![GitHub commit activity](https://github-readme-stats.vercel.app/api/pin/?username=nobmaste&repo=QH_Learning_Resources)
 <p align="center">
     <img src="https://github.com/nobmaste/QH_Learning_Resources/blob/main/Docs/img/logo.jpg" width="200" height="200" style="border-radius: 50%;">
 </p>
