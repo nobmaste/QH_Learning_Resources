@@ -135,10 +135,9 @@
 <br>
 <u></u>
 <p align="center">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=nobmaste&repo=QH_Learning_Resources" alt="GitHub commit activity" style="display: inline; margin-right: 10px;">
     <img src="https://github.com/nobmaste/QH_Learning_Resources/blob/main/Docs/img/logo.jpg" width="200" height="200" style="border-radius: 50%; display: inline;">
 </p>
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=nobmaste/QH_Learning_Resources&type=Date)](https://star-history.com/#nobmaste/QH_Learning_Resources&Date)
+[!Star History Chart](https://star-history.com/#nobmaste/QH_Learning_Resources&Date)
