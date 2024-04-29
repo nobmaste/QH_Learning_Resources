@@ -134,9 +134,10 @@
 <br>
 <br>
 <u></u>
-![GitHub commit activity](https://github-readme-stats.vercel.app/api/pin/?username=nobmaste&repo=QH_Learning_Resources)
-![GitHub stars](https://img.shields.io/github/stars/nobmaste/QH_Learning_Resources?style=social)
-![GitHub commit history](https://ghchart.rshah.org/nobmaste)
 <p align="center">
-    <img src="https://github.com/nobmaste/QH_Learning_Resources/blob/main/Docs/img/logo.jpg" width="200" height="200" style="border-radius: 50%;">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=nobmaste&repo=QH_Learning_Resources" alt="GitHub commit activity" style="display: inline; margin-right: 10px;">
+    <img src="https://github.com/nobmaste/QH_Learning_Resources/blob/main/Docs/img/logo.jpg" width="200" height="200" style="border-radius: 50%; display: inline;">
 </p>
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=nobmaste/QH_Learning_Resources&type=Date)](https://star-history.com/#nobmaste/QH_Learning_Resources&Date)
