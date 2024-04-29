@@ -67,7 +67,7 @@
     - [屏幕_显示](Module/屏幕_显示/)
       - [ILI193_LCD](Module/屏幕_显示/ILI93_LCD显示屏_STM32HAL.zip)
       - [OLED](Module/屏幕_显示/OLED_STM32.zip)
-      - [TFTLCD_ST8835S](Module/屏幕_显示/TFTLCD_ST8835S_STM32F1_HAL.zip)
+      - [TFTLCD_ST7735S](Module/屏幕_显示/TFTLCD_ST7735S_STM32F1_HAL.zip)
     - [气压传感器](Module/气压传感器/)
       - [MS5611](Module/气压传感器/MS5611_STM32.rar)
     - [数字电位器](Module/数字电位器/)
