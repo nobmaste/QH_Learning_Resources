@@ -112,6 +112,7 @@
     - [汇编](Skill_Developing/汇编/)
     - [四轴](Skill_Developing/四轴/)
     - [单片机](Skill_Developing/单片机/)
+    - [Yolo](Skill_Developing/yolo/)
 </details>
 
 ***
