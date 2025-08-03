@@ -1,0 +1,9 @@
+.\objects\ad9959.o: Hardware\AD9959.c
+.\objects\ad9959.o: Hardware\AD9959.h
+.\objects\ad9959.o: D:\Keil5\Core\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\ad9959.o: D:\Keil5\Core\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\ad9959.o: ..\test\inc/hw_memmap.h
+.\objects\ad9959.o: ..\test\inc/hw_types.h
+.\objects\ad9959.o: ..\test\driverlib/sysctl.h
+.\objects\ad9959.o: ..\test\driverlib/gpio.h
+.\objects\ad9959.o: ..\test\driverlib/pin_map.h

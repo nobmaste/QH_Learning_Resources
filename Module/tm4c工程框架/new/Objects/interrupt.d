@@ -1,0 +1,9 @@
+.\objects\interrupt.o: driverlib\interrupt.c
+.\objects\interrupt.o: D:\Keil5\Core\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\interrupt.o: D:\Keil5\Core\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\interrupt.o: ..\test\inc/hw_ints.h
+.\objects\interrupt.o: ..\test\inc/hw_nvic.h
+.\objects\interrupt.o: ..\test\inc/hw_types.h
+.\objects\interrupt.o: ..\test\driverlib/cpu.h
+.\objects\interrupt.o: ..\test\driverlib/debug.h
+.\objects\interrupt.o: ..\test\driverlib/interrupt.h

@@ -1,0 +1,12 @@
+.\objects\hibernate.o: driverlib\hibernate.c
+.\objects\hibernate.o: D:\Keil5\Core\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\hibernate.o: D:\Keil5\Core\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\hibernate.o: D:\Keil5\Core\ARM\ARMCC\Bin\..\include\time.h
+.\objects\hibernate.o: ..\test\inc/hw_hibernate.h
+.\objects\hibernate.o: ..\test\inc/hw_ints.h
+.\objects\hibernate.o: ..\test\inc/hw_sysctl.h
+.\objects\hibernate.o: ..\test\inc/hw_types.h
+.\objects\hibernate.o: ..\test\driverlib/debug.h
+.\objects\hibernate.o: ..\test\driverlib/hibernate.h
+.\objects\hibernate.o: ..\test\driverlib/interrupt.h
+.\objects\hibernate.o: ..\test\driverlib/sysctl.h
