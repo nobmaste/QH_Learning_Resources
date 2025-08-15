@@ -1,0 +1,116 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.39.0.0
+Copyright (C) 2023 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Kai Murphy, CJLU, LIC=BUURY-IB0TN-UHP8H-W7BHQ-FI8F6-S55QU
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.39.0.0
+Toolchain Path:  D:\Keil5\Core\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 7 (build 960)
+Assembler:       Armasm.exe V5.06 update 7 (build 960)
+Linker/Locator:  ArmLink.exe V5.06 update 7 (build 960)
+Library Manager: ArmAr.exe V5.06 update 7 (build 960)
+Hex Converter:   FromElf.exe V5.06 update 7 (build 960)
+CPU DLL:         SARMCM3.DLL V5.39.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      lmidk-agdi.dll V???
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+C:\Users\Administrator\Desktop\tiproject\test\test.uvprojx
+Project File Date:  07/15/2025
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'D:\Keil5\Core\ARM\ARMCC\Bin'
+Build target 'Target 1'
+Note: source file '.\driverlib\adc.c' - object file renamed from '.\Objects\adc.o' to '.\Objects\adc_1.o'.
+compiling main.c...
+ADC.h(40): warning:  #1-D: last line of file ends without a newline
+  #endif // __ADC_DMA_H__
+main.c(65): warning:  #223-D: function "fabsf" declared implicitly
+      float min_diff = fabsf(target - array[0]);
+main.c: 2 warnings, 0 errors
+linking...
+Program Size: Code=5300 RO-data=1516 RW-data=164 ZI-data=1012  
+FromELF: creating hex file...
+".\Objects\test.axf" - 0 Error(s), 2 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM::CMSIS@5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: ARM
+                https://www.keil.com/pack/ARM.CMSIS-DSP.1.15.0.pack
+                ARM::CMSIS-DSP@1.15.0
+                CMSIS Embedded Compute Library
+   * Component: DSP Variant: Source Version: 1.15.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.TM4C_DFP.1.1.0.pack
+                Keil::TM4C_DFP@1.1.0
+                Texas Instruments Tiva C Series Device Support and Examples
+   * Component: Startup Version: 1.0.1
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/_Target_1
+  D:/Keil5/Pack/ARM/CMSIS-DSP/1.15.0/Include
+  D:/Keil5/Pack/ARM/CMSIS-DSP/1.15.0/PrivateInclude
+  D:/Keil5/Pack/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  D:/Keil5/Pack/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE@5.6.0
+
+   * Component: ARM::CMSIS:DSP&Source@1.15.0
+      Source file:   Source/BayesFunctions/BayesFunctions.c
+      Source file:   Source/ControllerFunctions/ControllerFunctions.c
+      Source file:   Source/CommonTables/CommonTables.c
+      Include file:  Include/arm_math_f16.h
+      Include file:  Include/arm_common_tables.h
+      Include file:  Include/arm_const_structs.h
+      Include file:  Include/arm_math.h
+      Include file:  Include/arm_common_tables_f16.h
+      Source file:   Source/BasicMathFunctions/BasicMathFunctions.c
+      Source file:   Source/QuaternionMathFunctions/QuaternionMathFunctions.c
+      Include file:  Include/arm_const_structs_f16.h
+      Source file:   Source/ComplexMathFunctions/ComplexMathFunctions.c
+      Source file:   Source/FastMathFunctions/FastMathFunctions.c
+      Source file:   Source/SupportFunctions/SupportFunctions.c
+      Source file:   Source/CommonTables/CommonTablesF16.c
+      Source file:   Source/BasicMathFunctions/BasicMathFunctionsF16.c
+      Source file:   Source/MatrixFunctions/MatrixFunctionsF16.c
+      Source file:   Source/InterpolationFunctions/InterpolationFunctionsF16.c
+      Source file:   Source/StatisticsFunctions/StatisticsFunctionsF16.c
+      Source file:   Source/SupportFunctions/SupportFunctionsF16.c
+      Source file:   Source/FastMathFunctions/FastMathFunctionsF16.c
+      Source file:   Source/DistanceFunctions/DistanceFunctionsF16.c
+      Source file:   Source/SVMFunctions/SVMFunctionsF16.c
+      Source file:   Source/BayesFunctions/BayesFunctionsF16.c
+      Source file:   Source/FilteringFunctions/FilteringFunctions.c
+      Source file:   Source/StatisticsFunctions/StatisticsFunctions.c
+      Source file:   Source/SVMFunctions/SVMFunctions.c
+      Source file:   Source/TransformFunctions/TransformFunctions.c
+      Source file:   Source/InterpolationFunctions/InterpolationFunctions.c
+      Source file:   Source/ComplexMathFunctions/ComplexMathFunctionsF16.c
+      Source file:   Source/FilteringFunctions/FilteringFunctionsF16.c
+      Source file:   Source/MatrixFunctions/MatrixFunctions.c
+      Source file:   Source/DistanceFunctions/DistanceFunctions.c
+      Source file:   Source/TransformFunctions/TransformFunctionsF16.c
+
+   * Component: Keil::Device:Startup@1.0.1
+      Source file:   Device/Source/system_TM4C123.c
+      Include file:  Device/Include/TM4C123/TM4C123.h
+      Source file:   Device/Source/ARM/startup_TM4C123.s
+Build Time Elapsed:  00:00:03
+</pre>
+</body>
+</html>

@@ -1,0 +1,11 @@
+.\objects\pga113.o: Hardware\pga113.c
+.\objects\pga113.o: D:\Keil5\Core\ARM\ARMCC\Bin\..\include\math.h
+.\objects\pga113.o: D:\Keil5\Core\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\pga113.o: D:\Keil5\Core\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\pga113.o: ..\test\inc/hw_memmap.h
+.\objects\pga113.o: ..\test\inc/hw_types.h
+.\objects\pga113.o: ..\test\driverlib/sysctl.h
+.\objects\pga113.o: ..\test\driverlib/gpio.h
+.\objects\pga113.o: Hardware\pga113.h
+.\objects\pga113.o: D:\Keil5\Pack\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\system_TM4C123.h
+.\objects\pga113.o: ..\test\tim.h

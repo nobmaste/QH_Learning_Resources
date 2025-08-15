@@ -1,0 +1,11 @@
+.\objects\uart.o: driverlib\uart.c
+.\objects\uart.o: D:\Keil5\Core\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\uart.o: D:\Keil5\Core\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\uart.o: ..\test\inc/hw_ints.h
+.\objects\uart.o: ..\test\inc/hw_memmap.h
+.\objects\uart.o: ..\test\inc/hw_sysctl.h
+.\objects\uart.o: ..\test\inc/hw_types.h
+.\objects\uart.o: ..\test\inc/hw_uart.h
+.\objects\uart.o: ..\test\driverlib/debug.h
+.\objects\uart.o: ..\test\driverlib/interrupt.h
+.\objects\uart.o: ..\test\driverlib/uart.h

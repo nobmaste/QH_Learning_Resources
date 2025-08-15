@@ -1,0 +1,12 @@
+.\objects\sysctl.o: driverlib\sysctl.c
+.\objects\sysctl.o: D:\Keil5\Core\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\sysctl.o: D:\Keil5\Core\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\sysctl.o: ..\test\inc/hw_ints.h
+.\objects\sysctl.o: ..\test\inc/hw_nvic.h
+.\objects\sysctl.o: ..\test\inc/hw_sysctl.h
+.\objects\sysctl.o: ..\test\inc/hw_types.h
+.\objects\sysctl.o: ..\test\inc/hw_flash.h
+.\objects\sysctl.o: ..\test\driverlib/cpu.h
+.\objects\sysctl.o: ..\test\driverlib/debug.h
+.\objects\sysctl.o: ..\test\driverlib/interrupt.h
+.\objects\sysctl.o: ..\test\driverlib/sysctl.h
